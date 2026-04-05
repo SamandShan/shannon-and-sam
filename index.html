@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shannon & Sam — February 20, 2027</title>
+<meta name="description" content="Shannon Guthrie & Samuel Boyd are getting married February 20, 2027 in Melbourne, Florida. RSVP and find all wedding details here.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        body: ['Jost', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        linen:  '#e8ddd4',
+        rose:   '#d4a090',
+        sunset: '#b07060',
+        glass:  '#c8d0d4',
+        leaf:   '#8a9e8c',
+        olive:  '#5a7060',
+        ivory:  '#f5f0e8',
+        cream:  '#faf8f5',
+        bark:   '#3a3228',
+        drift:  '#6a5e54',
+        sand:   '#9a8e84',
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ── BASE ── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 300;
+  background: #faf8f5;
+  color: #3a3228;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal.d1 { transition-delay: 0.10s; }
+.reveal.d2 { transition-delay: 0.20s; }
+.reveal.d3 { transition-delay: 0.30s; }
+.reveal.d4 { transition-delay: 0.42s; }
+
+/* ── TYPOGRAPHY HELPERS ── */
+.section-label {
+  font-size: 0.64rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #8a9e8c;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #3a3228;
+}
+.section-title em { font-style: italic; color: #b07060; }
+.section-divider { width: 48px; height: 1px; background: #d4a090; }
+
+/* ── NAV ── */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.5rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              padding    0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+#nav.scrolled {
+  background: rgba(250, 248, 245, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 0 rgba(58,50,40,0.06), 0 4px 24px rgba(58,50,40,0.06);
+}
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: #faf8f5;
+  letter-spacing: 0.03em;
+  transition: color 0.4s ease;
+}
+#nav.scrolled .nav-brand { color: #3a3228; }
+.nav-link {
+  font-size: 0.64rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(250,248,245,0.85);
+  transition: color 0.28s ease;
+}
+#nav.scrolled .nav-link { color: #6a5e54; }
+.nav-link:hover { color: #d4a090 !important; }
+.nav-link:focus-visible { outline: 2px solid #d4a090; outline-offset: 3px; border-radius: 2px; }
+
+/* Mobile menu */
+.mob-menu {
+  position: fixed; inset: 0; z-index: 99;
+  background: #faf8f5;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2.25rem;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.mob-menu.open { opacity: 1; pointer-events: auto; }
+.mob-link {
+  font-size: 0.78rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: #3a3228; transition: color 0.25s ease;
+}
+.mob-link:hover { color: #d4a090; }
+
+/* ── HERO ── */
+.hero {
+  position: relative; height: 100vh; min-height: 680px;
+  display: flex; align-items: flex-end; justify-content: center;
+  padding-bottom: 5.5rem; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('brand_assets/FE96CF1C-9ABD-4EE4-A06E-807E0D50D7F6_4_5005_c.jpeg') center 20% / cover no-repeat;
+  transform: scale(1.08);
+  will-change: transform;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(58,50,40,0.04)  0%,
+    rgba(58,50,40,0.18) 45%,
+    rgba(58,50,40,0.68) 100%
+  );
+}
+/* soft color wash layer */
+.hero-wash {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to bottom, transparent 55%, rgba(176,112,96,0.18) 100%);
+}
+
+/* ── COUNTDOWN ── */
+.cd-sep {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: rgba(250,248,245,0.32);
+  align-self: flex-start;
+  margin-top: 0.12rem;
+}
+
+/* ── SCROLL CUE ── */
+@keyframes cue {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(7px); }
+}
+.scroll-cue { animation: cue 2.6s ease-in-out infinite; }
+
+/* ── STORY IMAGES ── */
+.story-img { overflow: hidden; border-radius: 3px; }
+.story-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.65s cubic-bezier(0.22,1,0.36,1);
+}
+.story-img:hover img { transform: scale(1.04); }
+
+/* ── PROPOSAL GRID ── */
+.prop-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.75rem;
+  margin-top: 3rem;
+}
+.prop-grid .tall { grid-row: span 2; }
+.prop-item { overflow: hidden; border-radius: 3px; cursor: pointer; position: relative; }
+.prop-item img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  min-height: 230px;
+  transition: transform 0.65s cubic-bezier(0.22,1,0.36,1);
+}
+.prop-item.tall img { min-height: 480px; }
+.prop-item::after { content:''; position:absolute; inset:0; background:rgba(58,50,40,0); transition:background 0.3s ease; }
+.prop-item:hover img { transform: scale(1.05); }
+.prop-item:hover::after { background: rgba(58,50,40,0.1); }
+@media (max-width: 768px) {
+  .prop-grid { grid-template-columns: 1fr 1fr; }
+  .prop-grid .tall { grid-row: span 1; }
+}
+@media (max-width: 480px) { .prop-grid { grid-template-columns: 1fr; } }
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(24,20,16,0.96);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.lightbox.open { opacity: 1; pointer-events: auto; }
+.lightbox-img {
+  max-height: 90vh; max-width: 90vw;
+  object-fit: contain; border-radius: 3px;
+  transition: opacity 0.18s ease;
+}
+.lb-btn {
+  position: absolute; background: none;
+  border: 1px solid rgba(250,248,245,0.2);
+  color: rgba(250,248,245,0.7);
+  border-radius: 50%; cursor: pointer;
+  width: 48px; height: 48px;
+  font-size: 1.3rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.lb-btn:hover { background: rgba(250,248,245,0.1); color: #faf8f5; }
+.lb-btn:focus-visible { outline: 2px solid #d4a090; }
+#lbClose { top: 1.5rem; right: 1.5rem; font-size: 1.6rem; }
+#lbPrev  { left: 1.5rem; top: 50%; transform: translateY(-50%); }
+#lbNext  { right: 1.5rem; top: 50%; transform: translateY(-50%); }
+
+/* ── SCHEDULE TIMELINE ── */
+.timeline { position: relative; padding-left: 1.25rem; }
+.timeline::before {
+  content: ''; position: absolute;
+  left: 0; top: 0.6rem; bottom: 0;
+  width: 1px; background: rgba(250,248,245,0.1);
+}
+.tl-dot {
+  position: absolute; left: -1.6rem; top: 0.45rem;
+  width: 8px; height: 8px; border-radius: 50%; background: #d4a090;
+  transform: translateX(-3px); flex-shrink: 0;
+}
+
+/* ── GALLERY MASONRY ── */
+.gal-grid { columns: 3; column-gap: 0.75rem; }
+.gal-item { break-inside: avoid; margin-bottom: 0.75rem; overflow: hidden; border-radius: 3px; cursor: pointer; }
+.gal-item img { width: 100%; display: block; transition: transform 0.65s cubic-bezier(0.22,1,0.36,1); }
+.gal-item:hover img { transform: scale(1.04); }
+@media (max-width: 640px) { .gal-grid { columns: 2; } }
+
+/* ── CARDS (hover lift) ── */
+.card-lift {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(58,50,40,0.1), 0 2px 8px rgba(58,50,40,0.06);
+}
+
+/* ── REC CARDS ── */
+.rec-card {
+  border-radius: 8px; padding: 1rem 1.2rem;
+  background: #f5f0e8;
+  border: 1px solid rgba(90,112,96,0.13);
+  transition: transform 0.25s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+.rec-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(58,50,40,0.09); }
+.rec-card.featured { border-color: rgba(212,160,144,0.45); background: linear-gradient(135deg, #f5f0e8 0%, rgba(212,160,144,0.08) 100%); }
+.rec-card.hidden { display: none !important; }
+
+/* ── FILTER BTNS ── */
+.filter-btn {
+  background: none;
+  border: 1px solid rgba(90,112,96,0.22);
+  color: #6a5e54;
+  font-family: 'Jost', sans-serif; font-weight: 300;
+  font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 0.48rem 1.2rem; border-radius: 30px; cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.filter-btn.active, .filter-btn:hover { background: #5a7060; color: #faf8f5; border-color: #5a7060; }
+.filter-btn:focus-visible { outline: 2px solid #5a7060; outline-offset: 3px; }
+
+/* ── MAP ── */
+.map-frame {
+  width: 100%; height: 430px; border: none; display: block;
+  filter: grayscale(12%) contrast(0.96) brightness(1.03) saturate(0.88);
+}
+
+/* ── FAQ ── */
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.42s cubic-bezier(0.22,1,0.36,1); }
+.faq-item.open .faq-answer { max-height: 350px; }
+.faq-icon { transition: transform 0.35s cubic-bezier(0.22,1,0.36,1); color: #d4a090; flex-shrink: 0; line-height: 1; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-q {
+  width: 100%; background: none; border: none; cursor: pointer; text-align: left;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  padding: 1.25rem 0;
+  font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400;
+  color: #3a3228;
+  transition: color 0.25s ease;
+}
+.faq-q:hover { color: #b07060; }
+.faq-q:focus-visible { outline: 2px solid #d4a090; outline-offset: 2px; border-radius: 2px; }
+
+/* ── BUTTONS ── */
+.btn-olive {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #5a7060; color: #faf8f5; border: 1px solid #5a7060;
+  font-family: 'Jost', sans-serif; font-weight: 300;
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  padding: 0.9rem 2.1rem; border-radius: 40px; cursor: pointer;
+  transition: background 0.28s ease, color 0.28s ease;
+}
+.btn-olive:hover { background: transparent; color: #5a7060; }
+.btn-olive:focus-visible { outline: 2px solid #5a7060; outline-offset: 3px; }
+.btn-olive:active { transform: scale(0.98); }
+
+.btn-ghost-olive {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: transparent; color: #6a5e54;
+  border: 1px solid rgba(90,78,68,0.3);
+  font-family: 'Jost', sans-serif; font-weight: 300;
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  padding: 0.9rem 2.1rem; border-radius: 40px; cursor: pointer;
+  transition: background 0.28s ease, color 0.28s ease, border-color 0.28s ease;
+}
+.btn-ghost-olive:hover { background: #5a7060; color: #faf8f5; border-color: #5a7060; }
+.btn-ghost-olive:focus-visible { outline: 2px solid #5a7060; outline-offset: 3px; }
+.btn-ghost-olive:active { transform: scale(0.98); }
+
+.btn-submit {
+  width: 100%; background: #b07060; color: #faf8f5; border: 1px solid #b07060;
+  font-family: 'Jost', sans-serif; font-weight: 300;
+  font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+  padding: 1rem 2rem; border-radius: 40px; cursor: pointer;
+  transition: background 0.28s ease, color 0.28s ease;
+}
+.btn-submit:hover { background: transparent; color: #b07060; }
+.btn-submit:focus-visible { outline: 2px solid #b07060; outline-offset: 3px; }
+.btn-submit:active { transform: scale(0.98); }
+.btn-submit:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+/* ── FORM ── */
+.f-label {
+  display: block; font-size: 0.64rem; letter-spacing: 0.17em;
+  text-transform: uppercase; color: #9a8e84; margin-bottom: 0.42rem;
+}
+.f-input {
+  width: 100%; background: #f5f0e8;
+  border: 1px solid rgba(90,112,96,0.15); border-radius: 6px;
+  padding: 0.8rem 1rem;
+  font-family: 'Jost', sans-serif; font-weight: 300; font-size: 0.9rem;
+  color: #3a3228; outline: none; appearance: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.f-input:focus {
+  border-color: #d4a090;
+  box-shadow: 0 0 0 3px rgba(212,160,144,0.14);
+}
+.radio-wrap { position: relative; }
+.radio-wrap input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
+.radio-lbl {
+  display: flex; align-items: center; justify-content: center;
+  padding: 0.75rem 1rem;
+  background: #f5f0e8; border: 1px solid rgba(90,112,96,0.15);
+  border-radius: 6px; cursor: pointer;
+  font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #6a5e54;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.radio-wrap input[type="radio"]:checked + .radio-lbl { background: #5a7060; color: #faf8f5; border-color: #5a7060; }
+.radio-lbl:hover { border-color: #8a9e8c; }
+
+/* ── FAMILY CARD hover ── */
+.fam-card {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.3s ease;
+}
+.fam-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(58,50,40,0.09); }
+
+/* ── HOTEL CARD ── */
+.hotel-card {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.3s ease;
+}
+.hotel-card:hover { transform: translateX(4px); box-shadow: 0 8px 32px rgba(58,50,40,0.09); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+  section { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav id="nav" aria-label="Site navigation">
+  <a href="#hero" class="nav-brand">Shannon <em style="font-style:italic;color:#d4a090">&</em> Sam</a>
+
+  <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
+    <li><a href="#story"    class="nav-link">Our Story</a></li>
+    <li><a href="#schedule" class="nav-link">Schedule</a></li>
+    <li><a href="#travel"   class="nav-link">Travel</a></li>
+    <li><a href="#recs"     class="nav-link">Local Tips</a></li>
+    <li><a href="#faq"      class="nav-link">FAQ</a></li>
+    <li><a href="#rsvp"     class="nav-link">RSVP</a></li>
+  </ul>
+
+  <button id="navToggle" class="md:hidden relative z-[102] flex flex-col gap-[5px] bg-transparent border-0 cursor-pointer p-1" aria-label="Toggle menu" aria-expanded="false">
+    <span id="b1" class="block w-6 h-px bg-[#faf8f5]" style="transition:transform 0.3s ease,background 0.4s ease;"></span>
+    <span id="b2" class="block w-6 h-px bg-[#faf8f5]" style="transition:opacity 0.3s ease,background 0.4s ease;"></span>
+    <span id="b3" class="block w-6 h-px bg-[#faf8f5]" style="transition:transform 0.3s ease,background 0.4s ease;"></span>
+  </button>
+</nav>
+
+<div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <a href="#story"    class="mob-link" data-mob>Our Story</a>
+  <a href="#proposal" class="mob-link" data-mob>Proposal</a>
+  <a href="#schedule" class="mob-link" data-mob>Schedule</a>
+  <a href="#gallery"  class="mob-link" data-mob>Gallery</a>
+  <a href="#travel"   class="mob-link" data-mob>Travel</a>
+  <a href="#recs"     class="mob-link" data-mob>Local Tips</a>
+  <a href="#faq"      class="mob-link" data-mob>FAQ</a>
+  <a href="#registry" class="mob-link" data-mob>Registry</a>
+  <a href="#rsvp"     class="mob-link" data-mob>RSVP</a>
+</div>
+
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero" id="hero" aria-label="Hero">
+  <div class="hero-bg" id="heroBg" role="img" aria-label="Shannon and Sam on the beach"></div>
+  <div class="hero-wash"></div>
+
+  <div class="relative z-10 text-center text-[#faf8f5] px-6 pb-2">
+    <p class="text-[0.64rem] tracking-[0.3em] uppercase mb-4 opacity-75">We're getting married</p>
+    <h1 class="font-display font-light leading-none tracking-[-0.02em] mb-3"
+        style="font-size:clamp(3.75rem, 12vw, 9rem);">
+      Shannon<br>
+      <em style="font-size:0.52em; color:#d4a090;">&</em><br>
+      Sam
+    </h1>
+    <p class="text-[0.7rem] tracking-[0.25em] uppercase mb-8 opacity-70">
+      February 20, 2027 &nbsp;·&nbsp; Melbourne, Florida
+    </p>
+
+    <!-- Countdown -->
+    <div id="countdown" class="flex items-start justify-center gap-3 sm:gap-6">
+      <div class="text-center">
+        <span id="cd-d" class="font-display font-light block leading-none" style="font-size:clamp(2rem,6vw,3.5rem)">—</span>
+        <span class="block text-[0.53rem] tracking-[0.2em] uppercase opacity-55 mt-1.5">Days</span>
+      </div>
+      <span class="cd-sep">·</span>
+      <div class="text-center">
+        <span id="cd-h" class="font-display font-light block leading-none" style="font-size:clamp(2rem,6vw,3.5rem)">—</span>
+        <span class="block text-[0.53rem] tracking-[0.2em] uppercase opacity-55 mt-1.5">Hours</span>
+      </div>
+      <span class="cd-sep">·</span>
+      <div class="text-center">
+        <span id="cd-m" class="font-display font-light block leading-none" style="font-size:clamp(2rem,6vw,3.5rem)">—</span>
+        <span class="block text-[0.53rem] tracking-[0.2em] uppercase opacity-55 mt-1.5">Minutes</span>
+      </div>
+      <span class="cd-sep">·</span>
+      <div class="text-center">
+        <span id="cd-s" class="font-display font-light block leading-none" style="font-size:clamp(2rem,6vw,3.5rem)">—</span>
+        <span class="block text-[0.53rem] tracking-[0.2em] uppercase opacity-55 mt-1.5">Seconds</span>
+      </div>
+    </div>
+  </div>
+
+  <a href="#story" class="scroll-cue absolute bottom-8 left-1/2 flex flex-col items-center gap-1.5"
+     style="color:rgba(250,248,245,0.45); transition:color 0.3s ease;"
+     onmouseenter="this.style.color='rgba(250,248,245,0.8)'"
+     onmouseleave="this.style.color='rgba(250,248,245,0.45)'"
+     aria-label="Scroll to our story">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</section>
+
+
+<!-- ═══════════════════ OUR STORY ═══════════════════ -->
+<section id="story" class="bg-[#f5f0e8] py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+
+      <!-- Text -->
+      <div class="reveal">
+        <p class="section-label mb-3">A love story</p>
+        <h2 class="section-title mb-5">How It All <em>Began</em></h2>
+        <div class="section-divider mb-8"></div>
+        <p class="text-[#6a5e54] text-[1.02rem] leading-[1.85] mb-5">
+          It started with a shared shift at The Chart House restaurant in Melbourne — Shannon behind the host stand, Sam clearing tables as a busser. Trained together as servers, something clicked from the very first day.
+        </p>
+        <blockquote class="font-display italic text-[1.45rem] leading-snug text-[#b07060] my-7 pl-5 border-l-2 border-[#d4a090]">
+          "Friends for 10 years. Together for 5. Partners for life."
+        </blockquote>
+        <p class="text-[#6a5e54] text-[1.02rem] leading-[1.85] mb-5">
+          What started as a friendship built on late-night shifts and a shared love of the Florida coast slowly became something more. Through the years, they became each other's person — the one you call first, the one you want beside you on every adventure.
+        </p>
+        <p class="text-[#6a5e54] text-[1.02rem] leading-[1.85]">
+          Five years ago, friendship became love. And on one golden sunrise at their beach, it became forever.
+        </p>
+      </div>
+
+      <!-- Photos -->
+      <div class="grid grid-cols-2 gap-3 reveal d2">
+        <div class="story-img col-span-2" style="aspect-ratio:16/9;">
+          <img src="brand_assets/4223A753-9CEA-43DC-BBC7-84E762E8E331_4_5005_c.jpeg"
+               alt="Shannon and Sam embracing on the beach" loading="lazy">
+        </div>
+        <div class="story-img" style="aspect-ratio:3/4;">
+          <img src="brand_assets/6C0B5C59-C004-4A17-A8BD-F52E4DEF136A_1_105_c.jpeg"
+               alt="Couple on a waterfront dock at sunset" loading="lazy">
+        </div>
+        <div class="story-img" style="aspect-ratio:3/4;">
+          <img src="brand_assets/0FDA3067-74AE-42CF-8C7F-C189119737BF_4_5005_c.jpeg"
+               alt="Shannon and Sam at a celebration under string lights" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ PROPOSAL ═══════════════════ -->
+<section id="proposal" class="bg-[#faf8f5] py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="text-center reveal">
+      <p class="section-label mb-3">February 2024</p>
+      <h2 class="section-title mb-5">She Said <em>Yes</em></h2>
+      <div class="section-divider mx-auto mb-6"></div>
+      <p class="text-[#6a5e54] max-w-[540px] mx-auto leading-relaxed">
+        Sam surprised Shannon with what she thought was a sunrise surf session at "their beach" — only to walk out and find him on one knee, surrounded by roses planted in the sand, champagne, and the perfect song playing.
+      </p>
+    </div>
+
+    <div class="prop-grid" id="propGallery">
+      <div class="prop-item tall" data-src="brand_assets/C090E8AD-EE51-4E77-B4CF-B9419D3E8AEB_4_5005_c.jpeg">
+        <img src="brand_assets/C090E8AD-EE51-4E77-B4CF-B9419D3E8AEB_4_5005_c.jpeg"
+             alt="Shannon and Sam surrounded by roses at the proposal" loading="lazy">
+      </div>
+      <div class="prop-item" data-src="brand_assets/45FD3181-E414-4765-8AEA-013A8542C6F9_4_5005_c.jpeg">
+        <img src="brand_assets/45FD3181-E414-4765-8AEA-013A8542C6F9_4_5005_c.jpeg"
+             alt="Champagne and ring reveal on the beach" loading="lazy">
+      </div>
+      <div class="prop-item" data-src="brand_assets/5F50A2E3-8E54-421C-BF20-00D301078A38_4_5005_c.jpeg">
+        <img src="brand_assets/5F50A2E3-8E54-421C-BF20-00D301078A38_4_5005_c.jpeg"
+             alt="Ring close-up embrace" loading="lazy">
+      </div>
+      <div class="prop-item" data-src="brand_assets/F339CE71-B321-4182-997B-D063CA34A9E8_4_5005_c.jpeg">
+        <img src="brand_assets/F339CE71-B321-4182-997B-D063CA34A9E8_4_5005_c.jpeg"
+             alt="Roses planted in the sand at dusk" loading="lazy">
+      </div>
+      <div class="prop-item" data-src="brand_assets/1716767B-1995-4EEB-83BE-FD03E19E0C7E_4_5005_c.jpeg">
+        <img src="brand_assets/1716767B-1995-4EEB-83BE-FD03E19E0C7E_4_5005_c.jpeg"
+             alt="Rose silhouettes against the sunset sky" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-btn" id="lbClose" aria-label="Close">×</button>
+  <button class="lb-btn" id="lbPrev" aria-label="Previous photo">‹</button>
+  <img class="lightbox-img" id="lbImg" src="" alt="Gallery photo">
+  <button class="lb-btn" id="lbNext" aria-label="Next photo">›</button>
+</div>
+
+
+<!-- ═══════════════════ SCHEDULE ═══════════════════ -->
+<section id="schedule" class="bg-[#5a7060] py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+
+    <div class="text-center reveal">
+      <p class="text-[0.64rem] tracking-[0.28em] uppercase text-[#8a9e8c] mb-3">Plan your visit</p>
+      <h2 class="font-display font-light text-[#faf8f5] leading-tight mb-5 tracking-[-0.02em]"
+          style="font-size:clamp(2.25rem,5vw,3.75rem);">
+        Wedding <em class="italic text-[#d4a090]">Weekend</em>
+      </h2>
+      <div class="w-12 h-px bg-[#d4a090] mx-auto mb-16"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 md:gap-20">
+
+      <!-- Friday -->
+      <div class="reveal d1">
+        <h3 class="font-display text-[#d4a090] font-light text-2xl mb-1">Friday Evening</h3>
+        <p class="text-[0.68rem] tracking-[0.14em] uppercase text-[#faf8f5]/38 mb-9">February 19th, 2027</p>
+        <div class="timeline space-y-9">
+          <div class="relative">
+            <div class="tl-dot"></div>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#faf8f5]/40 block mb-1.5">5:00 PM</span>
+            <h4 class="font-display text-[#faf8f5] text-xl font-light mb-1">Rehearsal Dinner</h4>
+            <p class="text-[#faf8f5]/55 text-sm">Casa Bonita, Melbourne FL</p>
+            <span class="inline-block mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase px-3 py-1 rounded-full border border-[#d4a090]/30 text-[#d4a090]">Wedding party only</span>
+          </div>
+          <div class="relative">
+            <div class="tl-dot"></div>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#faf8f5]/40 block mb-1.5">7:00 PM</span>
+            <h4 class="font-display text-[#faf8f5] text-xl font-light mb-1">Welcome Party</h4>
+            <p class="text-[#faf8f5]/55 text-sm">Location TBD — details coming soon</p>
+            <span class="inline-block mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase px-3 py-1 rounded-full border border-[#8a9e8c]/40 text-[#8a9e8c]">All guests welcome</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Saturday -->
+      <div class="reveal d2">
+        <h3 class="font-display text-[#d4a090] font-light text-2xl mb-1">The Big Day</h3>
+        <p class="text-[0.68rem] tracking-[0.14em] uppercase text-[#faf8f5]/38 mb-9">February 20th, 2027</p>
+        <div class="timeline space-y-9">
+          <div class="relative">
+            <div class="tl-dot"></div>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#faf8f5]/40 block mb-1.5">2:45 PM</span>
+            <h4 class="font-display text-[#faf8f5] text-xl font-light mb-1">Guests Arrive</h4>
+            <p class="text-[#faf8f5]/55 text-sm">Please be seated before the ceremony begins</p>
+          </div>
+          <div class="relative">
+            <div class="tl-dot"></div>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#faf8f5]/40 block mb-1.5">3:00 PM</span>
+            <h4 class="font-display text-[#faf8f5] text-xl font-light mb-1">Ceremony</h4>
+            <p class="text-[#faf8f5]/55 text-sm">3306 Calle Del Mar, Melbourne FL<br>The Guthrie Family Home</p>
+          </div>
+          <div class="relative">
+            <div class="tl-dot"></div>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#faf8f5]/40 block mb-1.5">Immediately After</span>
+            <h4 class="font-display text-[#faf8f5] text-xl font-light mb-1">Cocktail Hour & Reception</h4>
+            <p class="text-[#faf8f5]/55 text-sm">Same backyard — the celebration begins right away</p>
+          </div>
+        </div>
+
+        <div class="mt-10 p-5 rounded-r-sm border-l-2 border-[#d4a090]" style="background:rgba(250,248,245,0.05);">
+          <p class="text-[#faf8f5]/60 text-sm leading-relaxed">
+            <span class="text-[#faf8f5]/80">Dress code:</span> Semi-formal. Fully outdoors on grass — please wear or bring comfortable shoes. February highs average 74°F — expect a perfect evening.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ GALLERY ═══════════════════ -->
+<section id="gallery" class="bg-[#f5f0e8] py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="text-center reveal mb-12">
+      <p class="section-label mb-3">Shannon & Sam</p>
+      <h2 class="section-title mb-4">The <em>Gallery</em></h2>
+      <div class="section-divider mx-auto"></div>
+    </div>
+    <div class="gal-grid" id="mainGallery">
+      <div class="gal-item" data-src="brand_assets/FE96CF1C-9ABD-4EE4-A06E-807E0D50D7F6_4_5005_c.jpeg">
+        <img src="brand_assets/FE96CF1C-9ABD-4EE4-A06E-807E0D50D7F6_4_5005_c.jpeg" alt="Sam lifting Shannon on the beach" loading="lazy">
+      </div>
+      <div class="gal-item" data-src="brand_assets/415C44F8-6596-41F0-B9C9-8C63529995C3_4_5005_c.jpeg">
+        <img src="brand_assets/415C44F8-6596-41F0-B9C9-8C63529995C3_4_5005_c.jpeg" alt="Shannon and Sam smiling" loading="lazy">
+      </div>
+      <div class="gal-item" data-src="brand_assets/76406C57-145B-407C-81A9-190360440979_4_5005_c.jpeg">
+        <img src="brand_assets/76406C57-145B-407C-81A9-190360440979_4_5005_c.jpeg" alt="Couple kissing on the beach" loading="lazy">
+      </div>
+      <div class="gal-item" data-src="brand_assets/ADA65DCA-F369-4D3B-AC2E-1541B99865CC_1_105_c.jpeg">
+        <img src="brand_assets/ADA65DCA-F369-4D3B-AC2E-1541B99865CC_1_105_c.jpeg" alt="Beach selfie" loading="lazy">
+      </div>
+      <div class="gal-item" data-src="brand_assets/8641DFB6-70DC-4E01-B531-06ADB82D3CB1_4_5005_c.jpeg">
+        <img src="brand_assets/8641DFB6-70DC-4E01-B531-06ADB82D3CB1_4_5005_c.jpeg" alt="Couple at a venue with palm trees" loading="lazy">
+      </div>
+      <div class="gal-item" data-src="brand_assets/082DAA70-359A-45E8-AFEE-A4D91B2A9DC7_4_5005_c.jpeg">
+        <img src="brand_assets/082DAA70-359A-45E8-AFEE-A4D91B2A9DC7_4_5005_c.jpeg" alt="Dancing together outdoors" loading="lazy">
+      </div>
+      <div class="gal-item" data-src="brand_assets/C267A956-626B-43F5-ADB3-3102D3D98F64_4_5005_c.jpeg">
+        <img src="brand_assets/C267A956-626B-43F5-ADB3-3102D3D98F64_4_5005_c.jpeg" alt="Couple on a porch swing at Christmas" loading="lazy">
+      </div>
+      <div class="gal-item" data-src="brand_assets/A2837B3B-A1CA-448A-9256-0BDE6115A589_1_105_c.jpeg">
+        <img src="brand_assets/A2837B3B-A1CA-448A-9256-0BDE6115A589_1_105_c.jpeg" alt="Painting with a Twist date night" loading="lazy">
+      </div>
+      <div class="gal-item" data-src="brand_assets/FB37700A-1731-4430-9731-F42216CFEEF4_4_5005_c.jpeg">
+        <img src="brand_assets/FB37700A-1731-4430-9731-F42216CFEEF4_4_5005_c.jpeg" alt="Romantic sunset waterfront moment" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ FAMILY & OFFICIANT ═══════════════════ -->
+<section id="family" class="bg-[#faf8f5] py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="text-center reveal">
+      <p class="section-label mb-3">The people who matter most</p>
+      <h2 class="section-title mb-5">Family & <em>Officiant</em></h2>
+      <div class="section-divider mx-auto mb-5"></div>
+      <p class="text-[#6a5e54] max-w-[520px] mx-auto leading-relaxed">
+        We are surrounded by so much love. A special thank you to the families who are making this day possible.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-5 mt-14">
+      <div class="fam-card reveal d1 bg-[#f5f0e8] rounded-xl p-8 text-center">
+        <div class="w-14 h-14 rounded-full bg-[#e8ddd4] flex items-center justify-center text-2xl mx-auto mb-5" aria-hidden="true">🌸</div>
+        <p class="text-[0.6rem] tracking-[0.2em] uppercase text-[#8a9e8c] mb-2">Shannon's Parents</p>
+        <h3 class="font-display text-[#3a3228] font-light mb-2" style="font-size:1.45rem;">Sandy & Keith Boyd</h3>
+        <p class="text-[#9a8e84] text-sm leading-relaxed">Loving parents of the bride, sharing their daughter with the Guthrie family.</p>
+      </div>
+      <div class="fam-card reveal d2 bg-[#f5f0e8] rounded-xl p-8 text-center">
+        <div class="w-14 h-14 rounded-full bg-[#e8ddd4] flex items-center justify-center text-2xl mx-auto mb-5" aria-hidden="true">🏡</div>
+        <p class="text-[0.6rem] tracking-[0.2em] uppercase text-[#8a9e8c] mb-2">Sam's Parents & Hosts</p>
+        <h3 class="font-display text-[#3a3228] font-light mb-2" style="font-size:1.45rem;">Tom & Carol Guthrie</h3>
+        <p class="text-[#9a8e84] text-sm leading-relaxed">Gracious hosts welcoming everyone to their beautiful Melbourne home.</p>
+      </div>
+      <div class="fam-card reveal d3 bg-[#f5f0e8] rounded-xl p-8 text-center">
+        <div class="w-14 h-14 rounded-full bg-[#e8ddd4] flex items-center justify-center text-2xl mx-auto mb-5" aria-hidden="true">✨</div>
+        <p class="text-[0.6rem] tracking-[0.2em] uppercase text-[#8a9e8c] mb-2">Officiant</p>
+        <h3 class="font-display text-[#3a3228] font-light mb-2" style="font-size:1.45rem;">Michael Fagen</h3>
+        <p class="text-[#9a8e84] text-sm leading-relaxed">Longtime family friend honored to unite Shannon and Sam in marriage.</p>
+      </div>
+    </div>
+
+    <!-- Family photo placeholder -->
+    <div class="reveal mt-6 bg-[#f5f0e8] rounded-xl border border-[#e8ddd4] flex flex-col items-center justify-center gap-3 text-[#9a8e84]" style="aspect-ratio:21/8;">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <circle cx="8.5" cy="8.5" r="1.5"/>
+        <path d="m21 15-5-5L5 21"/>
+      </svg>
+      <p class="text-[0.75rem] tracking-[0.1em]">Family group photos coming soon</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ TRAVEL & HOTELS ═══════════════════ -->
+<section id="travel" class="bg-[#e8ddd4] py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="text-center reveal">
+      <p class="section-label mb-3">Getting here</p>
+      <h2 class="section-title mb-4">Travel & <em>Hotels</em></h2>
+      <div class="section-divider mx-auto mb-16"></div>
+    </div>
+
+    <div class="grid md:grid-cols-[1.55fr_1fr] gap-10">
+      <!-- Hotels -->
+      <div>
+        <p class="text-[0.64rem] tracking-[0.2em] uppercase text-[#6a5e54] mb-6">Recommended Hotels</p>
+        <div class="space-y-4">
+          <article class="hotel-card reveal d1 bg-[#faf8f5] rounded-xl p-5 flex gap-4 items-start" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+            <div class="w-11 h-11 rounded-full bg-[#c8d0d4] flex items-center justify-center text-lg flex-shrink-0" aria-hidden="true">🏨</div>
+            <div>
+              <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#8a9e8c] mb-1">Downtown Melbourne</p>
+              <h3 class="font-display text-[#3a3228] font-light text-xl mb-1">Hotel Melby</h3>
+              <p class="text-[#6a5e54] text-sm leading-relaxed">Boutique hotel in the heart of downtown — walkable to restaurants, bars, and nightlife.</p>
+              <span class="inline-block mt-2 text-[0.58rem] tracking-[0.1em] uppercase bg-[#e8ddd4] text-[#9a8e84] px-3 py-1 rounded-full">Room block coming soon</span>
+            </div>
+          </article>
+          <article class="hotel-card reveal d2 bg-[#faf8f5] rounded-xl p-5 flex gap-4 items-start" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+            <div class="w-11 h-11 rounded-full bg-[#c8d0d4] flex items-center justify-center text-lg flex-shrink-0" aria-hidden="true">🌊</div>
+            <div>
+              <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#8a9e8c] mb-1">Oceanfront</p>
+              <h3 class="font-display text-[#3a3228] font-light text-xl mb-1">The Element Melbourne Oceanfront</h3>
+              <p class="text-[#6a5e54] text-sm leading-relaxed">Wake up to ocean views — a short drive from the venue.</p>
+              <span class="inline-block mt-2 text-[0.58rem] tracking-[0.1em] uppercase bg-[#e8ddd4] text-[#9a8e84] px-3 py-1 rounded-full">Room block coming soon</span>
+            </div>
+          </article>
+          <article class="hotel-card reveal d3 bg-[#faf8f5] rounded-xl p-5 flex gap-4 items-start" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+            <div class="w-11 h-11 rounded-full bg-[#c8d0d4] flex items-center justify-center text-lg flex-shrink-0" aria-hidden="true">✈️</div>
+            <div>
+              <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#8a9e8c] mb-1">Near Airport</p>
+              <h3 class="font-display text-[#3a3228] font-light text-xl mb-1">Hyatt Place Melbourne Airport</h3>
+              <p class="text-[#6a5e54] text-sm leading-relaxed">Convenient for guests flying into Melbourne International.</p>
+              <span class="inline-block mt-2 text-[0.58rem] tracking-[0.1em] uppercase bg-[#e8ddd4] text-[#9a8e84] px-3 py-1 rounded-full">Room block coming soon</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Aside -->
+      <div class="space-y-5">
+        <div class="reveal d1 bg-[#faf8f5] rounded-xl p-6" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+          <h3 class="font-display text-[#3a3228] font-light text-xl mb-5">Airports</h3>
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <span class="text-xl mt-0.5" aria-hidden="true">✈️</span>
+              <div>
+                <p class="text-[#3a3228] text-sm font-normal">Orlando International (MCO)</p>
+                <p class="text-[#9a8e84] text-xs mt-0.5">~1 hour from venue · Most flight options</p>
+                <span class="inline-block mt-1.5 text-[0.57rem] tracking-[0.12em] uppercase bg-[#8a9e8c]/15 text-[#5a7060] px-2.5 py-0.5 rounded-full">Recommended</span>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xl mt-0.5" aria-hidden="true">🛩️</span>
+              <div>
+                <p class="text-[#3a3228] text-sm font-normal">Melbourne International (MLB)</p>
+                <p class="text-[#9a8e84] text-xs mt-0.5">Very convenient · Limited flights</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal d2 bg-[#faf8f5] rounded-xl p-6" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+          <h3 class="font-display text-[#3a3228] font-light text-xl mb-4">Parking</h3>
+          <div class="flex gap-3">
+            <span class="text-xl" aria-hidden="true">🚗</span>
+            <p class="text-[#6a5e54] text-sm leading-relaxed">Venue parking is very limited. We strongly encourage guests to <strong class="font-normal text-[#3a3228]">carpool or use Uber/Lyft</strong>.</p>
+          </div>
+        </div>
+        <div class="reveal d3 bg-[#faf8f5] rounded-xl p-6" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+          <h3 class="font-display text-[#3a3228] font-light text-xl mb-4">February Weather</h3>
+          <div class="flex gap-3">
+            <span class="text-xl" aria-hidden="true">🌤️</span>
+            <p class="text-[#6a5e54] text-sm leading-relaxed">Highs ~74°F · Lows ~60°F · The driest month of the year — minimal rain and plenty of sunshine.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ LOCAL RECS ═══════════════════ -->
+<section id="recs" class="bg-[#faf8f5] py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="text-center reveal">
+      <p class="section-label mb-3">Explore Melbourne</p>
+      <h2 class="section-title mb-5">Local <em>Favorites</em></h2>
+      <div class="section-divider mx-auto mb-5"></div>
+      <p class="text-[#6a5e54] max-w-[460px] mx-auto leading-relaxed">Shannon & Sam's handpicked favorites — make a full weekend of it.</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-2 mt-10 mb-10 reveal d1" role="group" aria-label="Filter recommendations">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="eat">Eat</button>
+      <button class="filter-btn" data-filter="drink">Drink</button>
+      <button class="filter-btn" data-filter="explore">Explore</button>
+      <button class="filter-btn" data-filter="activity">Activities</button>
+      <button class="filter-btn" data-filter="shop">Shop</button>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3" id="recsGrid">
+
+      <!-- EAT (15) -->
+      <div class="rec-card featured" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">The Chart House <span style="color:#d4a090;">★</span></p>
+        <p class="text-[0.7rem] text-[#9a8e84] mt-1">Where Shannon & Sam met</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Djon's Steak & Lobster</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Ichabod's Dockside</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">The Surfinista</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Skewers Mediterranean</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Red Ginger</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Trattoria Bella</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Villa Palma Ristorante</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Mister O1 Pizza</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">FM Pizza Oven</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Pineapples</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">BJ's Restaurant</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Bubbakoo's Burritos</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Cowboy Coffee</p>
+      </div>
+      <div class="rec-card" data-cat="eat">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Thai Thai II</p>
+      </div>
+
+      <!-- DRINK (9) -->
+      <div class="rec-card" data-cat="drink">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Dolly's Wine Bar</p>
+      </div>
+      <div class="rec-card" data-cat="drink">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Hell 'n Blazes Brewing</p>
+      </div>
+      <div class="rec-card" data-cat="drink">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Intracoastal Brewing</p>
+      </div>
+      <div class="rec-card" data-cat="drink">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Lou's Blues Bar & Grill</p>
+      </div>
+      <div class="rec-card" data-cat="drink">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Meg O'Malley's Irish Pub</p>
+      </div>
+      <div class="rec-card" data-cat="drink">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Monkey Bar</p>
+      </div>
+      <div class="rec-card" data-cat="drink">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Mainstreet Pub</p>
+      </div>
+      <div class="rec-card" data-cat="drink">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">BB's Beach Bar</p>
+      </div>
+      <div class="rec-card" data-cat="drink">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">The County Line Saloon</p>
+      </div>
+
+      <!-- EXPLORE (6) -->
+      <div class="rec-card" data-cat="explore">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Brevard Zoo</p>
+      </div>
+      <div class="rec-card" data-cat="explore">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Canova Beach Park</p>
+      </div>
+      <div class="rec-card" data-cat="explore">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Sebastian Inlet State Park</p>
+      </div>
+      <div class="rec-card" data-cat="explore">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Turkey Creek Sanctuary</p>
+      </div>
+      <div class="rec-card" data-cat="explore">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Bass Pro Shops</p>
+      </div>
+      <div class="rec-card" data-cat="explore">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Pieloch Dog Park</p>
+      </div>
+
+      <!-- ACTIVITIES (3) -->
+      <div class="rec-card" data-cat="activity">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Activities</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Andretti Thrill Park</p>
+      </div>
+      <div class="rec-card" data-cat="activity">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Activities</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Arcade Monsters Melbourne</p>
+      </div>
+      <div class="rec-card" data-cat="activity">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Activities</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Shore Lanes Palm Bay</p>
+        <p class="text-[0.7rem] text-[#9a8e84] mt-1">Bowling!</p>
+      </div>
+
+      <!-- SHOP (5) -->
+      <div class="rec-card" data-cat="shop">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Shop</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Casa Bonita</p>
+      </div>
+      <div class="rec-card" data-cat="shop">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Shop</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Catalyst Shop</p>
+      </div>
+      <div class="rec-card" data-cat="shop">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Shop</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">The Salty Shack</p>
+      </div>
+      <div class="rec-card" data-cat="shop">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Shop</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Longboard House</p>
+      </div>
+      <div class="rec-card" data-cat="shop">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Shop</p>
+        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Melbourne Square</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ MAP ═══════════════════ -->
+<section id="map" class="bg-[#f5f0e8]">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 pt-24 pb-12">
+    <div class="text-center reveal">
+      <p class="section-label mb-3">The venue</p>
+      <h2 class="section-title mb-4">Find <em>Us</em></h2>
+      <div class="section-divider mx-auto mb-4"></div>
+      <p class="text-[#6a5e54]">3306 Calle Del Mar, Melbourne, FL &nbsp;·&nbsp; The Guthrie Family Home</p>
+    </div>
+  </div>
+  <iframe
+    class="map-frame"
+    src="https://maps.google.com/maps?q=3306+Calle+Del+Mar+Melbourne+FL&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    title="Venue location — 3306 Calle Del Mar, Melbourne FL"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<section id="faq" class="bg-[#faf8f5] py-24 md:py-32">
+  <div class="max-w-2xl mx-auto px-6 md:px-8">
+    <div class="text-center reveal">
+      <p class="section-label mb-3">Need to know</p>
+      <h2 class="section-title mb-4">Frequently Asked <em>Questions</em></h2>
+      <div class="section-divider mx-auto mb-12"></div>
+    </div>
+
+    <div id="faqList">
+      <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
+        <button class="faq-q" aria-expanded="false">
+          When should I arrive?
+          <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Please arrive no later than 2:45 PM — the ceremony begins at 3:00 PM sharp. We'd love for everyone to be settled in before we walk down the aisle.</p>
+        </div>
+      </div>
+      <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
+        <button class="faq-q" aria-expanded="false">
+          Is the ceremony indoors or outdoors?
+          <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Fully outdoors in the Guthrie family's backyard. Think lush greenery, string lights in the trees, long banquet tables, and warm candlelight — it's going to be beautiful.</p>
+        </div>
+      </div>
+      <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
+        <button class="faq-q" aria-expanded="false">
+          What's the weather like in February?
+          <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Melbourne in February is stunning. Average highs around 74°F (23°C), lows around 60°F (16°C). It's actually the driest month of the year — minimal rain and plenty of sunshine. Basically perfect.</p>
+        </div>
+      </div>
+      <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
+        <button class="faq-q" aria-expanded="false">
+          What's the dress code?
+          <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Semi-formal. The ceremony and reception are fully outdoors on grass — we <em>strongly</em> encourage you to wear or bring comfortable shoes. Think elegant but practical. Florals, linens, and soft tones are always welcome.</p>
+        </div>
+      </div>
+      <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
+        <button class="faq-q" aria-expanded="false">
+          Are children invited?
+          <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">This is an adults-only celebration. We hope you'll enjoy a wonderful child-free evening with us!</p>
+        </div>
+      </div>
+      <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
+        <button class="faq-q" aria-expanded="false">
+          Can I bring a plus-one?
+          <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Plus-ones are by invitation only and will be specified on your individual invitation. Questions? Email us at <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#b07060] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>.</p>
+        </div>
+      </div>
+      <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
+        <button class="faq-q" aria-expanded="false">
+          Will there be an open bar?
+          <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Yes! We'll have a full open bar. Please enjoy responsibly — and remember, venue parking is very limited, so make use of Uber/Lyft.</p>
+        </div>
+      </div>
+      <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
+        <button class="faq-q" aria-expanded="false">
+          I have dietary restrictions — who do I contact?
+          <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" role="region">
+          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Please note any dietary restrictions in your RSVP, or email us directly at <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#b07060] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>. We want everyone to be well fed!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ REGISTRY ═══════════════════ -->
+<section id="registry" class="bg-[#c8d0d4] py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-2 gap-16 md:gap-28 items-center">
+
+      <!-- Text -->
+      <div class="reveal">
+        <p class="section-label mb-3">A gift of adventure</p>
+        <h2 class="section-title mb-5">Honeymoon <em>Fund</em></h2>
+        <div class="section-divider mb-8"></div>
+        <p class="text-[#6a5e54] leading-[1.85] mb-5">
+          Your presence at our wedding is the greatest gift we could ask for. If you'd like to give something more, we'd love your contribution to our honeymoon adventure — surfing the waves of the Maldives together.
+        </p>
+        <p class="text-[#6a5e54] leading-[1.85] mb-8">
+          A traditional registry is on its way — we'll share the link here as soon as it's ready.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <button class="btn-olive" onclick="alert('Honeymoon fund link coming soon! Thank you so much for your generosity. 🌊')">
+            Contribute to Fund
+          </button>
+          <button class="btn-ghost-olive" onclick="alert('Registry link coming soon! Check back soon.')">
+            Registry Coming Soon
+          </button>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="reveal d2 relative">
+        <div class="overflow-hidden rounded-xl" style="aspect-ratio:4/5;">
+          <img src="brand_assets/6C3A6F46-8399-4A1C-9843-000C031E5F73_4_5005_c.jpeg"
+               alt="Shannon and Sam glimpsed through tropical foliage at sunset"
+               loading="lazy"
+               class="w-full h-full object-cover"
+               style="transition: transform 0.7s cubic-bezier(0.22,1,0.36,1);"
+               onmouseenter="this.style.transform='scale(1.04)'"
+               onmouseleave="this.style.transform=''">
+        </div>
+        <div class="absolute -bottom-4 -left-4 bg-[#faf8f5] rounded-2xl p-4 text-center"
+             style="box-shadow:0 8px 32px rgba(58,50,40,0.14); min-width:128px;">
+          <div class="text-3xl mb-1" aria-hidden="true">🌊</div>
+          <p class="text-[#6a5e54] text-xs leading-snug font-light">Surfing the<br>Maldives</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ RSVP ═══════════════════ -->
+<section id="rsvp" class="bg-[#f5f0e8] py-24 md:py-32">
+  <div class="max-w-xl mx-auto px-6 md:px-8">
+    <div class="text-center reveal">
+      <p class="section-label mb-3">We hope to see you there</p>
+      <h2 class="section-title mb-4">RSVP</h2>
+      <div class="section-divider mx-auto mb-5"></div>
+      <p class="text-[#6a5e54]">Kindly respond by <strong class="font-normal text-[#b07060]">January 20, 2027</strong></p>
+    </div>
+
+    <div class="mt-10 bg-[#faf8f5] rounded-2xl p-8 md:p-10 reveal d1"
+         style="box-shadow:0 4px 40px rgba(58,50,40,0.07),0 1px 4px rgba(58,50,40,0.04);">
+
+      <!-- Success state -->
+      <div id="formSuccess" class="hidden text-center py-8">
+        <div class="text-5xl mb-5" aria-hidden="true">🎉</div>
+        <h3 class="font-display text-[#3a3228] font-light mb-3" style="font-size:2rem;">You're on the list!</h3>
+        <p class="text-[#6a5e54]">We can't wait to celebrate with you in Melbourne, Florida.</p>
+      </div>
+
+      <!-- Form -->
+      <form id="rsvpForm" action="https://formspree.io/f/xojppzed" method="POST" novalidate>
+
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label class="f-label" for="firstName">First Name</label>
+            <input class="f-input" type="text" id="firstName" name="firstName" placeholder="Shannon" required autocomplete="given-name">
+          </div>
+          <div>
+            <label class="f-label" for="lastName">Last Name</label>
+            <input class="f-input" type="text" id="lastName" name="lastName" placeholder="Guthrie" required autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="f-label" for="email">Email Address</label>
+          <input class="f-input" type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email">
+        </div>
+
+        <div class="mb-4">
+          <label class="f-label">Will you be attending?</label>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="radio-wrap">
+              <input type="radio" id="rsvp-yes" name="attending" value="Joyfully Accepts" required>
+              <label class="radio-lbl" for="rsvp-yes">Joyfully Accepts</label>
+            </div>
+            <div class="radio-wrap">
+              <input type="radio" id="rsvp-no" name="attending" value="Regretfully Declines">
+              <label class="radio-lbl" for="rsvp-no">Regretfully Declines</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="f-label" for="dietary">Dietary Restrictions</label>
+          <input class="f-input" type="text" id="dietary" name="dietary"
+                 placeholder="Vegetarian, gluten-free, allergies… (leave blank if none)">
+        </div>
+
+        <div class="mb-4">
+          <label class="f-label" for="song">Song Request 🎵</label>
+          <input class="f-input" type="text" id="song" name="song"
+                 placeholder="What song will get you on the dance floor?">
+        </div>
+
+        <div class="mb-6">
+          <label class="f-label" for="message">Message for Shannon & Sam</label>
+          <textarea class="f-input" id="message" name="message" rows="3"
+                    placeholder="Share some love, a memory, or words of wisdom…"
+                    style="resize:vertical; min-height:90px;"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">Send RSVP</button>
+        <p class="text-center text-[#9a8e84] text-xs mt-3">Your response goes directly to Shannon & Sam</p>
+      </form>
+    </div>
+
+    <p class="text-center text-[#9a8e84] text-sm mt-6">
+      Questions? Email <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#b07060] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="bg-[#3a3228] text-[#faf8f5]/45 py-16 text-center">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="font-display font-light text-[#faf8f5] mb-2 tracking-[-0.01em]" style="font-size:clamp(2rem,5vw,3rem);">
+      Shannon <em class="italic text-[#d4a090]">&</em> Sam
+    </div>
+    <p class="text-[0.63rem] tracking-[0.25em] uppercase mb-8">February 20, 2027 · Melbourne, Florida</p>
+    <div class="w-10 h-px bg-[#faf8f5]/15 mx-auto mb-6"></div>
+    <a href="mailto:shannonandsamuelboyd@gmail.com"
+       class="text-[#d4a090] text-sm"
+       style="transition:opacity 0.28s ease;"
+       onmouseenter="this.style.opacity='0.7'"
+       onmouseleave="this.style.opacity='1'">
+      shannonandsamuelboyd@gmail.com
+    </a>
+    <ul class="flex flex-wrap justify-center gap-x-7 gap-y-3 list-none mt-10 mb-10">
+      <li><a href="#story"    class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Our Story</a></li>
+      <li><a href="#proposal" class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Proposal</a></li>
+      <li><a href="#schedule" class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Schedule</a></li>
+      <li><a href="#gallery"  class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Gallery</a></li>
+      <li><a href="#travel"   class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Travel</a></li>
+      <li><a href="#recs"     class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Local Tips</a></li>
+      <li><a href="#faq"      class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">FAQ</a></li>
+      <li><a href="#registry" class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Registry</a></li>
+      <li><a href="#rsvp"     class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">RSVP</a></li>
+    </ul>
+    <p class="text-[0.68rem] text-[#faf8f5]/18">Made with love for Shannon & Sam · 2027</p>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════ JAVASCRIPT ═══════════════════ -->
+<script>
+'use strict';
+
+// ── NAV ──────────────────────────────────────────────
+const nav      = document.getElementById('nav');
+const heroBg   = document.getElementById('heroBg');
+const b1 = document.getElementById('b1');
+const b2 = document.getElementById('b2');
+const b3 = document.getElementById('b3');
+let menuOpen = false;
+
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  const scrolled = y > 60;
+  nav.classList.toggle('scrolled', scrolled);
+  // Update hamburger bar color when not scrolled
+  const barColor = scrolled ? '#3a3228' : '#faf8f5';
+  b1.style.background = barColor;
+  b2.style.background = barColor;
+  b3.style.background = barColor;
+  // Parallax hero
+  if (y < window.innerHeight * 1.2) {
+    heroBg.style.transform = `scale(1.08) translateY(${y * 0.26}px)`;
+  }
+}, { passive: true });
+
+const toggle   = document.getElementById('navToggle');
+const mobMenu  = document.getElementById('mobMenu');
+
+function openMenu() {
+  menuOpen = true;
+  mobMenu.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  toggle.setAttribute('aria-expanded', 'true');
+  b1.style.transform = 'rotate(45deg) translate(4px, 4px)';
+  b2.style.opacity   = '0';
+  b3.style.transform = 'rotate(-45deg) translate(4px, -4px)';
+}
+function closeMenu() {
+  menuOpen = false;
+  mobMenu.classList.remove('open');
+  document.body.style.overflow = '';
+  toggle.setAttribute('aria-expanded', 'false');
+  b1.style.transform = '';
+  b2.style.opacity   = '';
+  b3.style.transform = '';
+}
+
+toggle.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
+document.querySelectorAll('[data-mob]').forEach(a => a.addEventListener('click', closeMenu));
+
+// ── COUNTDOWN ────────────────────────────────────────
+const weddingDate = new Date('2027-02-20T15:00:00');
+const cdD = document.getElementById('cd-d');
+const cdH = document.getElementById('cd-h');
+const cdM = document.getElementById('cd-m');
+const cdS = document.getElementById('cd-s');
+const p2  = n => String(n).padStart(2, '0');
+
+function tick() {
+  const diff = weddingDate - new Date();
+  if (diff <= 0) {
+    document.getElementById('countdown').innerHTML =
+      '<p style="font-family:\'Cormorant Garamond\',serif;font-size:1.5rem;font-style:italic;opacity:0.9">Today\'s the day! 🎉</p>';
+    return;
+  }
+  cdD.textContent = p2(Math.floor(diff / 86400000));
+  cdH.textContent = p2(Math.floor((diff % 86400000) / 3600000));
+  cdM.textContent = p2(Math.floor((diff % 3600000)  / 60000));
+  cdS.textContent = p2(Math.floor((diff % 60000)    / 1000));
+}
+tick();
+setInterval(tick, 1000);
+
+// ── SCROLL REVEAL ─────────────────────────────────────
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// ── LIGHTBOX ─────────────────────────────────────────
+let lbGallery = [], lbIdx = 0;
+const lb    = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+
+function lbOpen(srcs, idx) {
+  lbGallery = srcs; lbIdx = idx;
+  lbImg.src = srcs[idx];
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('lbClose').focus();
+}
+function lbClose() {
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function lbMove(dir) {
+  lbIdx = (lbIdx + dir + lbGallery.length) % lbGallery.length;
+  lbImg.style.opacity = '0';
+  setTimeout(() => { lbImg.src = lbGallery[lbIdx]; lbImg.style.opacity = '1'; }, 160);
+}
+
+document.getElementById('lbClose').addEventListener('click', lbClose);
+document.getElementById('lbPrev').addEventListener('click',  () => lbMove(-1));
+document.getElementById('lbNext').addEventListener('click',  () => lbMove(1));
+lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape')      lbClose();
+  if (e.key === 'ArrowLeft')   lbMove(-1);
+  if (e.key === 'ArrowRight')  lbMove(1);
+});
+
+// Wire proposal gallery
+const pItems = [...document.querySelectorAll('#propGallery .prop-item')];
+const pSrcs  = pItems.map(el => el.dataset.src);
+pItems.forEach((el, i) => el.addEventListener('click', () => lbOpen(pSrcs, i)));
+
+// Wire main gallery
+const gItems = [...document.querySelectorAll('#mainGallery .gal-item')];
+const gSrcs  = gItems.map(el => el.dataset.src);
+gItems.forEach((el, i) => el.addEventListener('click', () => lbOpen(gSrcs, i)));
+
+// ── LOCAL RECS FILTER ────────────────────────────────
+const filterBtns = document.querySelectorAll('.filter-btn');
+const recCards   = document.querySelectorAll('#recsGrid .rec-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    recCards.forEach(card => {
+      card.classList.toggle('hidden', f !== 'all' && card.dataset.cat !== f);
+    });
+  });
+});
+
+// ── FAQ ACCORDION ────────────────────────────────────
+document.querySelectorAll('#faqList .faq-item').forEach(item => {
+  const btn = item.querySelector('.faq-q');
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('#faqList .faq-item.open').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ── RSVP FORM ────────────────────────────────────────
+const rsvpForm = document.getElementById('rsvpForm');
+rsvpForm.addEventListener('submit', async e => {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const res = await fetch(rsvpForm.action, {
+      method: 'POST',
+      body: new FormData(rsvpForm),
+      headers: { Accept: 'application/json' },
+    });
+    if (res.ok) {
+      rsvpForm.style.display = 'none';
+      document.getElementById('formSuccess').classList.remove('hidden');
+    } else {
+      throw new Error('Server error');
+    }
+  } catch {
+    btn.textContent = 'Send RSVP';
+    btn.disabled = false;
+    alert('Something went wrong — please email us directly at shannonandsamuelboyd@gmail.com');
+  }
+});
+</script>
+</body>
+</html>
