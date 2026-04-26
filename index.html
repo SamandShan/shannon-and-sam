@@ -20,17 +20,17 @@ tailwind.config = {
         ui:     ['Jost', 'Montserrat', 'system-ui', 'sans-serif'],
       },
       colors: {
-        linen:  '#e8ddd4',
-        rose:   '#d4a090',
-        sunset: '#b07060',
-        glass:  '#c8d0d4',
-        leaf:   '#8a9e8c',
-        olive:  '#5a7060',
-        ivory:  '#f5f0e8',
-        cream:  '#faf8f5',
-        bark:   '#3a3228',
-        drift:  '#6a5e54',
-        sand:   '#9a8e84',
+        ivory:  '#fdf9f4',
+        cream:  '#f7f0e4',
+        linen:  '#ede3d4',
+        sand:   '#e8ddd0',
+        stone:  '#a09080',
+        taupe:  '#7a6050',
+        blush:  '#c9917f',
+        clay:   '#b07060',
+        bark:   '#3a2c1e',
+        drift:  '#6a5848',
+        mist:   '#9a8878',
       }
     }
   }
@@ -43,8 +43,8 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 300;
-  background: #faf8f5;
-  color: #3a3228;
+  background: #fdf9f4;
+  color: #3a2c1e;
   line-height: 1.75;
   overflow-x: hidden;
 }
@@ -68,7 +68,7 @@ img { display: block; max-width: 100%; }
   font-size: 0.64rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: #8a9e8c;
+  color: #a09080;
 }
 .section-title {
   font-family: 'Bodoni Moda', Didot, 'Bodoni 72', serif;
@@ -76,7 +76,7 @@ img { display: block; max-width: 100%; }
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: #3a3228;
+  color: #3a2c1e;
 }
 .section-title em {
   font-family: 'Great Vibes', 'Bickham Script Pro', cursive;
@@ -86,7 +86,7 @@ img { display: block; max-width: 100%; }
   font-size: 1.18em;
   letter-spacing: 0;
 }
-.section-divider { width: 48px; height: 1px; background: #d4a090; }
+.section-divider { width: 48px; height: 1px; background: #c9917f; }
 
 /* ── NAV ── */
 #nav {
@@ -98,35 +98,35 @@ img { display: block; max-width: 100%; }
               box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 #nav.scrolled {
-  background: rgba(250, 248, 245, 0.96);
+  background: rgba(253, 249, 244, 0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   padding: 1rem 2rem;
-  box-shadow: 0 1px 0 rgba(58,50,40,0.06), 0 4px 24px rgba(58,50,40,0.06);
+  box-shadow: 0 1px 0 rgba(58,44,30,0.06), 0 4px 24px rgba(58,44,30,0.06);
 }
 .nav-brand {
   font-family: 'Bodoni Moda', Didot, 'Bodoni 72', serif;
   font-size: 1.2rem;
-  color: #faf8f5;
+  color: #fdf9f4;
   letter-spacing: 0.04em;
   transition: color 0.4s ease;
 }
-#nav.scrolled .nav-brand { color: #3a3228; }
+#nav.scrolled .nav-brand { color: #3a2c1e; }
 .nav-link {
   font-size: 0.64rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(250,248,245,0.85);
+  color: rgba(253,249,244,0.85);
   transition: color 0.28s ease;
 }
-#nav.scrolled .nav-link { color: #6a5e54; }
-.nav-link:hover { color: #d4a090 !important; }
-.nav-link:focus-visible { outline: 2px solid #d4a090; outline-offset: 3px; border-radius: 2px; }
+#nav.scrolled .nav-link { color: #6a5848; }
+.nav-link:hover { color: #c9917f !important; }
+.nav-link:focus-visible { outline: 2px solid #c9917f; outline-offset: 3px; border-radius: 2px; }
 
 /* Mobile menu */
 .mob-menu {
   position: fixed; inset: 0; z-index: 99;
-  background: #faf8f5;
+  background: #fdf9f4;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 2.25rem;
   opacity: 0; pointer-events: none;
@@ -135,9 +135,9 @@ img { display: block; max-width: 100%; }
 .mob-menu.open { opacity: 1; pointer-events: auto; }
 .mob-link {
   font-size: 0.78rem; letter-spacing: 0.25em; text-transform: uppercase;
-  color: #3a3228; transition: color 0.25s ease;
+  color: #3a2c1e; transition: color 0.25s ease;
 }
-.mob-link:hover { color: #d4a090; }
+.mob-link:hover { color: #c9917f; }
 
 /* ── HERO ── */
 .hero {
@@ -240,8 +240,8 @@ img { display: block; max-width: 100%; }
   display: flex; align-items: center; justify-content: center;
   transition: background 0.2s ease, color 0.2s ease;
 }
-.lb-btn:hover { background: rgba(250,248,245,0.1); color: #faf8f5; }
-.lb-btn:focus-visible { outline: 2px solid #d4a090; }
+.lb-btn:hover { background: rgba(250,248,245,0.1); color: #fdf9f4; }
+.lb-btn:focus-visible { outline: 2px solid #c9917f; }
 #lbClose { top: 1.5rem; right: 1.5rem; font-size: 1.6rem; }
 #lbPrev  { left: 1.5rem; top: 50%; transform: translateY(-50%); }
 #lbNext  { right: 1.5rem; top: 50%; transform: translateY(-50%); }
@@ -255,7 +255,7 @@ img { display: block; max-width: 100%; }
 }
 .tl-dot {
   position: absolute; left: -1.6rem; top: 0.45rem;
-  width: 8px; height: 8px; border-radius: 50%; background: #d4a090;
+  width: 8px; height: 8px; border-radius: 50%; background: #c9917f;
   transform: translateX(-3px); flex-shrink: 0;
 }
 
@@ -279,28 +279,28 @@ img { display: block; max-width: 100%; }
 /* ── REC CARDS ── */
 .rec-card {
   border-radius: 8px; padding: 1rem 1.2rem;
-  background: #f5f0e8;
-  border: 1px solid rgba(90,112,96,0.13);
+  background: #f7f0e4;
+  border: 1px solid rgba(160,144,128,0.18);
   transition: transform 0.25s cubic-bezier(0.22,1,0.36,1),
               box-shadow 0.25s ease,
               border-color 0.25s ease;
 }
-.rec-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(58,50,40,0.09); }
-.rec-card.featured { border-color: rgba(212,160,144,0.45); background: linear-gradient(135deg, #f5f0e8 0%, rgba(212,160,144,0.08) 100%); }
+.rec-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(58,44,30,0.09); }
+.rec-card.featured { border-color: rgba(201,145,127,0.45); background: linear-gradient(135deg, #f7f0e4 0%, rgba(201,145,127,0.08) 100%); }
 .rec-card.hidden { display: none !important; }
 
 /* ── FILTER BTNS ── */
 .filter-btn {
   background: none;
-  border: 1px solid rgba(90,112,96,0.22);
-  color: #6a5e54;
+  border: 1px solid rgba(160,144,128,0.3);
+  color: #6a5848;
   font-family: 'Jost', sans-serif; font-weight: 300;
   font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase;
   padding: 0.48rem 1.2rem; border-radius: 30px; cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
-.filter-btn.active, .filter-btn:hover { background: #5a7060; color: #faf8f5; border-color: #5a7060; }
-.filter-btn:focus-visible { outline: 2px solid #5a7060; outline-offset: 3px; }
+.filter-btn.active, .filter-btn:hover { background: #7a6050; color: #fdf9f4; border-color: #7a6050; }
+.filter-btn:focus-visible { outline: 2px solid #7a6050; outline-offset: 3px; }
 
 /* ── MAP ── */
 .map-frame {
@@ -311,47 +311,47 @@ img { display: block; max-width: 100%; }
 /* ── FAQ ── */
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.42s cubic-bezier(0.22,1,0.36,1); }
 .faq-item.open .faq-answer { max-height: 350px; }
-.faq-icon { transition: transform 0.35s cubic-bezier(0.22,1,0.36,1); color: #d4a090; flex-shrink: 0; line-height: 1; }
+.faq-icon { transition: transform 0.35s cubic-bezier(0.22,1,0.36,1); color: #c9917f; flex-shrink: 0; line-height: 1; }
 .faq-item.open .faq-icon { transform: rotate(45deg); }
 .faq-q {
   width: 100%; background: none; border: none; cursor: pointer; text-align: left;
   display: flex; justify-content: space-between; align-items: center; gap: 1rem;
   padding: 1.25rem 0;
   font-family: 'Bodoni Moda', Didot, serif; font-size: 1.2rem; font-weight: 400;
-  color: #3a3228;
+  color: #3a2c1e;
   transition: color 0.25s ease;
 }
 .faq-q:hover { color: #b07060; }
-.faq-q:focus-visible { outline: 2px solid #d4a090; outline-offset: 2px; border-radius: 2px; }
+.faq-q:focus-visible { outline: 2px solid #c9917f; outline-offset: 2px; border-radius: 2px; }
 
 /* ── BUTTONS ── */
 .btn-olive {
   display: inline-flex; align-items: center; justify-content: center;
-  background: #5a7060; color: #faf8f5; border: 1px solid #5a7060;
+  background: #7a6050; color: #fdf9f4; border: 1px solid #7a6050;
   font-family: 'Jost', sans-serif; font-weight: 300;
   font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
   padding: 0.9rem 2.1rem; border-radius: 40px; cursor: pointer;
   transition: background 0.28s ease, color 0.28s ease;
 }
-.btn-olive:hover { background: transparent; color: #5a7060; }
-.btn-olive:focus-visible { outline: 2px solid #5a7060; outline-offset: 3px; }
+.btn-olive:hover { background: transparent; color: #7a6050; }
+.btn-olive:focus-visible { outline: 2px solid #7a6050; outline-offset: 3px; }
 .btn-olive:active { transform: scale(0.98); }
 
 .btn-ghost-olive {
   display: inline-flex; align-items: center; justify-content: center;
-  background: transparent; color: #6a5e54;
-  border: 1px solid rgba(90,78,68,0.3);
+  background: transparent; color: #6a5848;
+  border: 1px solid rgba(122,96,80,0.3);
   font-family: 'Jost', sans-serif; font-weight: 300;
   font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
   padding: 0.9rem 2.1rem; border-radius: 40px; cursor: pointer;
   transition: background 0.28s ease, color 0.28s ease, border-color 0.28s ease;
 }
-.btn-ghost-olive:hover { background: #5a7060; color: #faf8f5; border-color: #5a7060; }
-.btn-ghost-olive:focus-visible { outline: 2px solid #5a7060; outline-offset: 3px; }
+.btn-ghost-olive:hover { background: #7a6050; color: #fdf9f4; border-color: #7a6050; }
+.btn-ghost-olive:focus-visible { outline: 2px solid #7a6050; outline-offset: 3px; }
 .btn-ghost-olive:active { transform: scale(0.98); }
 
 .btn-submit {
-  width: 100%; background: #b07060; color: #faf8f5; border: 1px solid #b07060;
+  width: 100%; background: #b07060; color: #fdf9f4; border: 1px solid #b07060;
   font-family: 'Jost', sans-serif; font-weight: 300;
   font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
   padding: 1rem 2rem; border-radius: 40px; cursor: pointer;
@@ -365,33 +365,33 @@ img { display: block; max-width: 100%; }
 /* ── FORM ── */
 .f-label {
   display: block; font-size: 0.64rem; letter-spacing: 0.17em;
-  text-transform: uppercase; color: #9a8e84; margin-bottom: 0.42rem;
+  text-transform: uppercase; color: #9a8878; margin-bottom: 0.42rem;
 }
 .f-input {
-  width: 100%; background: #f5f0e8;
-  border: 1px solid rgba(90,112,96,0.15); border-radius: 6px;
+  width: 100%; background: #f7f0e4;
+  border: 1px solid rgba(160,144,128,0.22); border-radius: 6px;
   padding: 0.8rem 1rem;
   font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: 1rem;
-  color: #3a3228; outline: none; appearance: none;
+  color: #3a2c1e; outline: none; appearance: none;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 .f-input:focus {
-  border-color: #d4a090;
-  box-shadow: 0 0 0 3px rgba(212,160,144,0.14);
+  border-color: #c9917f;
+  box-shadow: 0 0 0 3px rgba(201,145,127,0.14);
 }
 .radio-wrap { position: relative; }
 .radio-wrap input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
 .radio-lbl {
   display: flex; align-items: center; justify-content: center;
   padding: 0.75rem 1rem;
-  background: #f5f0e8; border: 1px solid rgba(90,112,96,0.15);
+  background: #f7f0e4; border: 1px solid rgba(160,144,128,0.22);
   border-radius: 6px; cursor: pointer;
   font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase;
-  color: #6a5e54;
+  color: #6a5848;
   transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
-.radio-wrap input[type="radio"]:checked + .radio-lbl { background: #5a7060; color: #faf8f5; border-color: #5a7060; }
-.radio-lbl:hover { border-color: #8a9e8c; }
+.radio-wrap input[type="radio"]:checked + .radio-lbl { background: #7a6050; color: #fdf9f4; border-color: #7a6050; }
+.radio-lbl:hover { border-color: #a09080; }
 
 /* ── FAMILY CARD hover ── */
 .fam-card {
@@ -417,7 +417,7 @@ img { display: block; max-width: 100%; }
 
 <!-- ═══════════════════ NAV ═══════════════════ -->
 <nav id="nav" aria-label="Site navigation">
-  <a href="#hero" class="nav-brand">Shannon <span style="font-family:'Great Vibes',cursive; font-size:1.2em; color:#d4a090; font-weight:400; letter-spacing:0; vertical-align:-0.05em;">&amp;</span> Sam</a>
+  <a href="#hero" class="nav-brand">Shannon <span style="font-family:'Great Vibes',cursive; font-size:1.2em; color:#c9917f; font-weight:400; letter-spacing:0; vertical-align:-0.05em;">&amp;</span> Sam</a>
 
   <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
     <li><a href="#story"    class="nav-link">Our Story</a></li>
@@ -429,9 +429,9 @@ img { display: block; max-width: 100%; }
   </ul>
 
   <button id="navToggle" class="md:hidden relative z-[102] flex flex-col gap-[5px] bg-transparent border-0 cursor-pointer p-1" aria-label="Toggle menu" aria-expanded="false">
-    <span id="b1" class="block w-6 h-px bg-[#faf8f5]" style="transition:transform 0.3s ease,background 0.4s ease;"></span>
-    <span id="b2" class="block w-6 h-px bg-[#faf8f5]" style="transition:opacity 0.3s ease,background 0.4s ease;"></span>
-    <span id="b3" class="block w-6 h-px bg-[#faf8f5]" style="transition:transform 0.3s ease,background 0.4s ease;"></span>
+    <span id="b1" class="block w-6 h-px bg-[#fdf9f4]" style="transition:transform 0.3s ease,background 0.4s ease;"></span>
+    <span id="b2" class="block w-6 h-px bg-[#fdf9f4]" style="transition:opacity 0.3s ease,background 0.4s ease;"></span>
+    <span id="b3" class="block w-6 h-px bg-[#fdf9f4]" style="transition:transform 0.3s ease,background 0.4s ease;"></span>
   </button>
 </nav>
 
@@ -453,12 +453,12 @@ img { display: block; max-width: 100%; }
   <div class="hero-bg" id="heroBg" role="img" aria-label="Shannon and Sam on the beach"></div>
   <div class="hero-wash"></div>
 
-  <div class="relative z-10 text-center text-[#faf8f5] px-6 pb-2">
+  <div class="relative z-10 text-center text-[#fdf9f4] px-6 pb-2">
     <p class="text-[0.62rem] tracking-[0.35em] uppercase mb-5 opacity-60" style="font-family:'Jost',sans-serif;">We're getting married</p>
     <h1 class="font-display font-light leading-none tracking-[-0.02em] mb-3"
         style="font-size:clamp(3.75rem, 12vw, 9rem);">
       Shannon<br>
-      <span style="font-family:'Great Vibes','Bickham Script Pro',cursive; font-size:0.58em; color:#d4a090; font-weight:400; letter-spacing:0;">&amp;</span><br>
+      <span style="font-family:'Great Vibes','Bickham Script Pro',cursive; font-size:0.58em; color:#c9917f; font-weight:400; letter-spacing:0;">&amp;</span><br>
       Sam
     </h1>
     <p class="text-[0.62rem] tracking-[0.32em] uppercase mb-8 opacity-60" style="font-family:'Jost',sans-serif;">
@@ -500,7 +500,7 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ OUR STORY ═══════════════════ -->
-<section id="story" class="bg-[#f5f0e8] py-24 md:py-32">
+<section id="story" class="bg-[#f7f0e4] py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 md:px-10">
     <div class="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
 
@@ -509,17 +509,17 @@ img { display: block; max-width: 100%; }
         <p class="section-label mb-3">A love story</p>
         <h2 class="section-title mb-5">How It All <em>Began</em></h2>
         <div class="section-divider mb-8"></div>
-        <p class="text-[#6a5e54] text-[1.02rem] leading-[1.85] mb-5">
+        <p class="text-[#6a5848] text-[1.02rem] leading-[1.85] mb-5">
           It started with a shared shift at The Chart House restaurant in Melbourne — Shannon behind the host stand, Sam clearing tables as a busser. Trained together as servers, something clicked from the very first day.
         </p>
-        <blockquote class="text-[#b07060] my-7 pl-5 border-l-2 border-[#d4a090]"
+        <blockquote class="text-[#b07060] my-7 pl-5 border-l-2 border-[#c9917f]"
                     style="font-family:'Great Vibes','Bickham Script Pro',cursive; font-size:clamp(1.6rem,3vw,2.1rem); line-height:1.45; font-weight:400;">
           "Friends for 10 years. Together for 5. Partners for life."
         </blockquote>
-        <p class="text-[#6a5e54] text-[1.02rem] leading-[1.85] mb-5">
+        <p class="text-[#6a5848] text-[1.02rem] leading-[1.85] mb-5">
           What started as a friendship built on late-night shifts and a shared love of the Florida coast slowly became something more. Through the years, they became each other's person — the one you call first, the one you want beside you on every adventure.
         </p>
-        <p class="text-[#6a5e54] text-[1.02rem] leading-[1.85]">
+        <p class="text-[#6a5848] text-[1.02rem] leading-[1.85]">
           Five years ago, friendship became love. And on one golden sunrise at their beach, it became forever.
         </p>
       </div>
@@ -546,13 +546,13 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ PROPOSAL ═══════════════════ -->
-<section id="proposal" class="bg-[#faf8f5] py-24 md:py-32">
+<section id="proposal" class="bg-[#fdf9f4] py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 md:px-10">
     <div class="text-center reveal">
       <p class="section-label mb-3">February 2024</p>
       <h2 class="section-title mb-5">She Said <em>Yes</em></h2>
       <div class="section-divider mx-auto mb-6"></div>
-      <p class="text-[#6a5e54] max-w-[540px] mx-auto leading-relaxed">
+      <p class="text-[#6a5848] max-w-[540px] mx-auto leading-relaxed">
         Sam surprised Shannon with what she thought was a sunrise surf session at "their beach" — only to walk out and find him on one knee, surrounded by roses planted in the sand, champagne, and the perfect song playing.
       </p>
     </div>
@@ -592,70 +592,70 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ SCHEDULE ═══════════════════ -->
-<section id="schedule" class="bg-[#5a7060] py-24 md:py-32">
+<section id="schedule" class="bg-[#3a2c1e] py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 md:px-10">
 
     <div class="text-center reveal">
-      <p class="text-[0.64rem] tracking-[0.28em] uppercase text-[#8a9e8c] mb-3">Plan your visit</p>
-      <h2 class="font-display font-light text-[#faf8f5] leading-tight mb-5 tracking-[-0.02em]"
+      <p class="text-[0.64rem] tracking-[0.28em] uppercase text-[#a09080] mb-3">Plan your visit</p>
+      <h2 class="font-display font-light text-[#fdf9f4] leading-tight mb-5 tracking-[-0.02em]"
           style="font-size:clamp(2.25rem,5vw,3.75rem);">
-        Wedding <em class="italic text-[#d4a090]">Weekend</em>
+        Wedding <em class="italic text-[#c9917f]">Weekend</em>
       </h2>
-      <div class="w-12 h-px bg-[#d4a090] mx-auto mb-16"></div>
+      <div class="w-12 h-px bg-[#c9917f] mx-auto mb-16"></div>
     </div>
 
     <div class="grid md:grid-cols-2 gap-12 md:gap-20">
 
       <!-- Friday -->
       <div class="reveal d1">
-        <h3 class="font-display text-[#d4a090] font-light text-2xl mb-1">Friday Evening</h3>
-        <p class="text-[0.68rem] tracking-[0.14em] uppercase text-[#faf8f5]/38 mb-9">February 19th, 2027</p>
+        <h3 class="font-display text-[#c9917f] font-light text-2xl mb-1">Friday Evening</h3>
+        <p class="text-[0.68rem] tracking-[0.14em] uppercase text-[#fdf9f4]/38 mb-9">February 19th, 2027</p>
         <div class="timeline space-y-9">
           <div class="relative">
             <div class="tl-dot"></div>
-            <span class="text-[0.68rem] tracking-[0.1em] text-[#faf8f5]/40 block mb-1.5">5:00 PM</span>
-            <h4 class="font-display text-[#faf8f5] text-xl font-light mb-1">Rehearsal Dinner</h4>
-            <p class="text-[#faf8f5]/55 text-sm">Casa Bonita, Melbourne FL</p>
-            <span class="inline-block mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase px-3 py-1 rounded-full border border-[#d4a090]/30 text-[#d4a090]">Wedding party only</span>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#fdf9f4]/40 block mb-1.5">5:00 PM</span>
+            <h4 class="font-display text-[#fdf9f4] text-xl font-light mb-1">Rehearsal Dinner</h4>
+            <p class="text-[#fdf9f4]/55 text-sm">Casa Bonita, Melbourne FL</p>
+            <span class="inline-block mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase px-3 py-1 rounded-full border border-[#c9917f]/30 text-[#c9917f]">Wedding party only</span>
           </div>
           <div class="relative">
             <div class="tl-dot"></div>
-            <span class="text-[0.68rem] tracking-[0.1em] text-[#faf8f5]/40 block mb-1.5">7:00 PM</span>
-            <h4 class="font-display text-[#faf8f5] text-xl font-light mb-1">Welcome Party</h4>
-            <p class="text-[#faf8f5]/55 text-sm">Location TBD — details coming soon</p>
-            <span class="inline-block mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase px-3 py-1 rounded-full border border-[#8a9e8c]/40 text-[#8a9e8c]">All guests welcome</span>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#fdf9f4]/40 block mb-1.5">7:00 PM</span>
+            <h4 class="font-display text-[#fdf9f4] text-xl font-light mb-1">Welcome Party</h4>
+            <p class="text-[#fdf9f4]/55 text-sm">Location TBD — details coming soon</p>
+            <span class="inline-block mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase px-3 py-1 rounded-full border border-[#a09080]/40 text-[#a09080]">All guests welcome</span>
           </div>
         </div>
       </div>
 
       <!-- Saturday -->
       <div class="reveal d2">
-        <h3 class="font-display text-[#d4a090] font-light text-2xl mb-1">The Big Day</h3>
-        <p class="text-[0.68rem] tracking-[0.14em] uppercase text-[#faf8f5]/38 mb-9">February 20th, 2027</p>
+        <h3 class="font-display text-[#c9917f] font-light text-2xl mb-1">The Big Day</h3>
+        <p class="text-[0.68rem] tracking-[0.14em] uppercase text-[#fdf9f4]/38 mb-9">February 20th, 2027</p>
         <div class="timeline space-y-9">
           <div class="relative">
             <div class="tl-dot"></div>
-            <span class="text-[0.68rem] tracking-[0.1em] text-[#faf8f5]/40 block mb-1.5">2:45 PM</span>
-            <h4 class="font-display text-[#faf8f5] text-xl font-light mb-1">Guests Arrive</h4>
-            <p class="text-[#faf8f5]/55 text-sm">Please be seated before the ceremony begins</p>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#fdf9f4]/40 block mb-1.5">2:45 PM</span>
+            <h4 class="font-display text-[#fdf9f4] text-xl font-light mb-1">Guests Arrive</h4>
+            <p class="text-[#fdf9f4]/55 text-sm">Please be seated before the ceremony begins</p>
           </div>
           <div class="relative">
             <div class="tl-dot"></div>
-            <span class="text-[0.68rem] tracking-[0.1em] text-[#faf8f5]/40 block mb-1.5">3:00 PM</span>
-            <h4 class="font-display text-[#faf8f5] text-xl font-light mb-1">Ceremony</h4>
-            <p class="text-[#faf8f5]/55 text-sm">3306 Calle Del Mar, Melbourne FL<br>The Guthrie Family Home</p>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#fdf9f4]/40 block mb-1.5">3:00 PM</span>
+            <h4 class="font-display text-[#fdf9f4] text-xl font-light mb-1">Ceremony</h4>
+            <p class="text-[#fdf9f4]/55 text-sm">3306 Calle Del Mar, Melbourne FL<br>The Guthrie Family Home</p>
           </div>
           <div class="relative">
             <div class="tl-dot"></div>
-            <span class="text-[0.68rem] tracking-[0.1em] text-[#faf8f5]/40 block mb-1.5">Immediately After</span>
-            <h4 class="font-display text-[#faf8f5] text-xl font-light mb-1">Cocktail Hour & Reception</h4>
-            <p class="text-[#faf8f5]/55 text-sm">Same backyard — the celebration begins right away</p>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#fdf9f4]/40 block mb-1.5">Immediately After</span>
+            <h4 class="font-display text-[#fdf9f4] text-xl font-light mb-1">Cocktail Hour & Reception</h4>
+            <p class="text-[#fdf9f4]/55 text-sm">Same backyard — the celebration begins right away</p>
           </div>
         </div>
 
-        <div class="mt-10 p-5 rounded-r-sm border-l-2 border-[#d4a090]" style="background:rgba(250,248,245,0.05);">
-          <p class="text-[#faf8f5]/60 text-sm leading-relaxed">
-            <span class="text-[#faf8f5]/80">Dress code:</span> Semi-formal. Fully outdoors on grass — please wear or bring comfortable shoes. February highs average 74°F — expect a perfect evening.
+        <div class="mt-10 p-5 rounded-r-sm border-l-2 border-[#c9917f]" style="background:rgba(250,248,245,0.05);">
+          <p class="text-[#fdf9f4]/60 text-sm leading-relaxed">
+            <span class="text-[#fdf9f4]/80">Dress code:</span> Semi-formal. Fully outdoors on grass — please wear or bring comfortable shoes. February highs average 74°F — expect a perfect evening.
           </p>
         </div>
       </div>
@@ -666,7 +666,7 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ GALLERY ═══════════════════ -->
-<section id="gallery" class="bg-[#f5f0e8] py-24 md:py-32">
+<section id="gallery" class="bg-[#f7f0e4] py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 md:px-10">
     <div class="text-center reveal mb-12">
       <p class="section-label mb-3">Shannon & Sam</p>
@@ -707,40 +707,40 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ FAMILY & OFFICIANT ═══════════════════ -->
-<section id="family" class="bg-[#faf8f5] py-24 md:py-32">
+<section id="family" class="bg-[#fdf9f4] py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 md:px-10">
     <div class="text-center reveal">
       <p class="section-label mb-3">The people who matter most</p>
       <h2 class="section-title mb-5">Family & <em>Officiant</em></h2>
       <div class="section-divider mx-auto mb-5"></div>
-      <p class="text-[#6a5e54] max-w-[520px] mx-auto leading-relaxed">
+      <p class="text-[#6a5848] max-w-[520px] mx-auto leading-relaxed">
         We are surrounded by so much love. A special thank you to the families who are making this day possible.
       </p>
     </div>
 
     <div class="grid sm:grid-cols-3 gap-5 mt-14">
-      <div class="fam-card reveal d1 bg-[#f5f0e8] rounded-xl p-8 text-center">
-        <div class="w-14 h-14 rounded-full bg-[#e8ddd4] flex items-center justify-center text-2xl mx-auto mb-5" aria-hidden="true">🌸</div>
-        <p class="text-[0.6rem] tracking-[0.2em] uppercase text-[#8a9e8c] mb-2">Shannon's Parents</p>
-        <h3 class="font-display text-[#3a3228] font-light mb-2" style="font-size:1.45rem;">Sandy & Keith Boyd</h3>
-        <p class="text-[#9a8e84] text-sm leading-relaxed">Loving parents of the bride, sharing their daughter with the Guthrie family.</p>
+      <div class="fam-card reveal d1 bg-[#f7f0e4] rounded-xl p-8 text-center">
+        <div class="w-14 h-14 rounded-full bg-[#ede3d4] flex items-center justify-center text-2xl mx-auto mb-5" aria-hidden="true">🌸</div>
+        <p class="text-[0.6rem] tracking-[0.2em] uppercase text-[#a09080] mb-2">Shannon's Parents</p>
+        <h3 class="font-display text-[#3a2c1e] font-light mb-2" style="font-size:1.45rem;">Sandy & Keith Boyd</h3>
+        <p class="text-[#9a8878] text-sm leading-relaxed">Loving parents of the bride, sharing their daughter with the Guthrie family.</p>
       </div>
-      <div class="fam-card reveal d2 bg-[#f5f0e8] rounded-xl p-8 text-center">
-        <div class="w-14 h-14 rounded-full bg-[#e8ddd4] flex items-center justify-center text-2xl mx-auto mb-5" aria-hidden="true">🏡</div>
-        <p class="text-[0.6rem] tracking-[0.2em] uppercase text-[#8a9e8c] mb-2">Sam's Parents & Hosts</p>
-        <h3 class="font-display text-[#3a3228] font-light mb-2" style="font-size:1.45rem;">Tom & Carol Guthrie</h3>
-        <p class="text-[#9a8e84] text-sm leading-relaxed">Gracious hosts welcoming everyone to their beautiful Melbourne home.</p>
+      <div class="fam-card reveal d2 bg-[#f7f0e4] rounded-xl p-8 text-center">
+        <div class="w-14 h-14 rounded-full bg-[#ede3d4] flex items-center justify-center text-2xl mx-auto mb-5" aria-hidden="true">🏡</div>
+        <p class="text-[0.6rem] tracking-[0.2em] uppercase text-[#a09080] mb-2">Sam's Parents & Hosts</p>
+        <h3 class="font-display text-[#3a2c1e] font-light mb-2" style="font-size:1.45rem;">Tom & Carol Guthrie</h3>
+        <p class="text-[#9a8878] text-sm leading-relaxed">Gracious hosts welcoming everyone to their beautiful Melbourne home.</p>
       </div>
-      <div class="fam-card reveal d3 bg-[#f5f0e8] rounded-xl p-8 text-center">
-        <div class="w-14 h-14 rounded-full bg-[#e8ddd4] flex items-center justify-center text-2xl mx-auto mb-5" aria-hidden="true">✨</div>
-        <p class="text-[0.6rem] tracking-[0.2em] uppercase text-[#8a9e8c] mb-2">Officiant</p>
-        <h3 class="font-display text-[#3a3228] font-light mb-2" style="font-size:1.45rem;">Michael Fagen</h3>
-        <p class="text-[#9a8e84] text-sm leading-relaxed">Longtime family friend honored to unite Shannon and Sam in marriage.</p>
+      <div class="fam-card reveal d3 bg-[#f7f0e4] rounded-xl p-8 text-center">
+        <div class="w-14 h-14 rounded-full bg-[#ede3d4] flex items-center justify-center text-2xl mx-auto mb-5" aria-hidden="true">✨</div>
+        <p class="text-[0.6rem] tracking-[0.2em] uppercase text-[#a09080] mb-2">Officiant</p>
+        <h3 class="font-display text-[#3a2c1e] font-light mb-2" style="font-size:1.45rem;">Michael Fagen</h3>
+        <p class="text-[#9a8878] text-sm leading-relaxed">Longtime family friend honored to unite Shannon and Sam in marriage.</p>
       </div>
     </div>
 
     <!-- Family photo placeholder -->
-    <div class="reveal mt-6 bg-[#f5f0e8] rounded-xl border border-[#e8ddd4] flex flex-col items-center justify-center gap-3 text-[#9a8e84]" style="aspect-ratio:21/8;">
+    <div class="reveal mt-6 bg-[#f7f0e4] rounded-xl border border-[#ede3d4] flex flex-col items-center justify-center gap-3 text-[#9a8878]" style="aspect-ratio:21/8;">
       <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35" aria-hidden="true">
         <rect x="3" y="3" width="18" height="18" rx="2"/>
         <circle cx="8.5" cy="8.5" r="1.5"/>
@@ -753,7 +753,7 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ TRAVEL & HOTELS ═══════════════════ -->
-<section id="travel" class="bg-[#e8ddd4] py-24 md:py-32">
+<section id="travel" class="bg-[#ede3d4] py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 md:px-10">
     <div class="text-center reveal">
       <p class="section-label mb-3">Getting here</p>
@@ -764,43 +764,43 @@ img { display: block; max-width: 100%; }
     <div class="grid md:grid-cols-[1.55fr_1fr] gap-10">
       <!-- Hotels -->
       <div>
-        <p class="text-[0.64rem] tracking-[0.2em] uppercase text-[#6a5e54] mb-6">Recommended Hotels</p>
+        <p class="text-[0.64rem] tracking-[0.2em] uppercase text-[#6a5848] mb-6">Recommended Hotels</p>
         <div class="space-y-4">
-          <article class="hotel-card reveal d1 bg-[#faf8f5] rounded-xl p-5 flex gap-4 items-start" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
-            <div class="w-11 h-11 rounded-full bg-[#c8d0d4] flex items-center justify-center text-lg flex-shrink-0" aria-hidden="true">🏨</div>
+          <article class="hotel-card reveal d1 bg-[#fdf9f4] rounded-xl p-5 flex gap-4 items-start" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+            <div class="w-11 h-11 rounded-full bg-[#e8ddd0] flex items-center justify-center text-lg flex-shrink-0" aria-hidden="true">🏨</div>
             <div>
-              <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#8a9e8c] mb-1">Downtown Melbourne</p>
-              <h3 class="font-display text-[#3a3228] font-light text-xl mb-1">Hotel Melby</h3>
-              <p class="text-[#6a5e54] text-sm leading-relaxed">Boutique hotel in the heart of downtown — walkable to restaurants, bars, and nightlife.</p>
-              <div class="mt-2.5 space-y-1.5 text-xs text-[#6a5e54]">
-                <p><span class="text-[#9a8e84]">Group:</span> Shannon and Sam's Wedding &nbsp;·&nbsp; <span class="text-[#9a8e84]">Code:</span> <strong class="font-normal text-[#3a3228]">911</strong></p>
-                <p><span class="text-[#9a8e84]">Discounted valet parking:</span> $15/vehicle/night</p>
-                <p><span class="text-[#9a8e84]">Rate cut-off:</span> January 19, 2027</p>
+              <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#a09080] mb-1">Downtown Melbourne</p>
+              <h3 class="font-display text-[#3a2c1e] font-light text-xl mb-1">Hotel Melby</h3>
+              <p class="text-[#6a5848] text-sm leading-relaxed">Boutique hotel in the heart of downtown — walkable to restaurants, bars, and nightlife.</p>
+              <div class="mt-2.5 space-y-1.5 text-xs text-[#6a5848]">
+                <p><span class="text-[#9a8878]">Group:</span> Shannon and Sam's Wedding &nbsp;·&nbsp; <span class="text-[#9a8878]">Code:</span> <strong class="font-normal text-[#3a2c1e]">911</strong></p>
+                <p><span class="text-[#9a8878]">Discounted valet parking:</span> $15/vehicle/night</p>
+                <p><span class="text-[#9a8878]">Rate cut-off:</span> January 19, 2027</p>
               </div>
-              <a href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=MLBSKUP&arrivalDate=2027-02-19&departureDate=2027-02-21&groupCode=911&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink" target="_blank" rel="noopener" class="inline-block mt-2.5 text-[0.58rem] tracking-[0.1em] uppercase bg-[#5a7060] text-[#faf8f5] px-3 py-1 rounded-full transition-opacity duration-200 hover:opacity-80">Book Room Block</a>
+              <a href="https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=MLBSKUP&arrivalDate=2027-02-19&departureDate=2027-02-21&groupCode=911&room1NumAdults=1&cid=OM%2CWW%2CHILTONLINK%2CEN%2CDirectLink" target="_blank" rel="noopener" class="inline-block mt-2.5 text-[0.58rem] tracking-[0.1em] uppercase bg-[#7a6050] text-[#fdf9f4] px-3 py-1 rounded-full transition-opacity duration-200 hover:opacity-80">Book Room Block</a>
             </div>
           </article>
-          <article class="hotel-card reveal d2 bg-[#faf8f5] rounded-xl p-5 flex gap-4 items-start" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
-            <div class="w-11 h-11 rounded-full bg-[#c8d0d4] flex items-center justify-center text-lg flex-shrink-0" aria-hidden="true">🌊</div>
+          <article class="hotel-card reveal d2 bg-[#fdf9f4] rounded-xl p-5 flex gap-4 items-start" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+            <div class="w-11 h-11 rounded-full bg-[#e8ddd0] flex items-center justify-center text-lg flex-shrink-0" aria-hidden="true">🌊</div>
             <div>
-              <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#8a9e8c] mb-1">Oceanfront</p>
-              <h3 class="font-display text-[#3a3228] font-light text-xl mb-1">The Element Melbourne Oceanfront</h3>
-              <p class="text-[#6a5e54] text-sm leading-relaxed">Wake up to ocean views — a short drive from the venue.</p>
-              <span class="inline-block mt-2 text-[0.58rem] tracking-[0.1em] uppercase bg-[#e8ddd4] text-[#9a8e84] px-3 py-1 rounded-full">Room block coming soon</span>
+              <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#a09080] mb-1">Oceanfront</p>
+              <h3 class="font-display text-[#3a2c1e] font-light text-xl mb-1">The Element Melbourne Oceanfront</h3>
+              <p class="text-[#6a5848] text-sm leading-relaxed">Wake up to ocean views — a short drive from the venue.</p>
+              <span class="inline-block mt-2 text-[0.58rem] tracking-[0.1em] uppercase bg-[#ede3d4] text-[#9a8878] px-3 py-1 rounded-full">Room block coming soon</span>
             </div>
           </article>
-          <article class="hotel-card reveal d3 bg-[#faf8f5] rounded-xl p-5 flex gap-4 items-start" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
-            <div class="w-11 h-11 rounded-full bg-[#c8d0d4] flex items-center justify-center text-lg flex-shrink-0" aria-hidden="true">🌴</div>
+          <article class="hotel-card reveal d3 bg-[#fdf9f4] rounded-xl p-5 flex gap-4 items-start" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+            <div class="w-11 h-11 rounded-full bg-[#e8ddd0] flex items-center justify-center text-lg flex-shrink-0" aria-hidden="true">🌴</div>
             <div>
-              <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#8a9e8c] mb-1">Oceanfront · North A1A</p>
-              <h3 class="font-display text-[#3a3228] font-light text-xl mb-1">Crowne Plaza Melbourne Oceanfront</h3>
-              <p class="text-[#6a5e54] text-sm leading-relaxed">Oceanfront hotel on A1A — great views and easy access to the beach.</p>
-              <div class="mt-2.5 space-y-1.5 text-xs text-[#6a5e54]">
-                <p><span class="text-[#9a8e84]">Group:</span> Guthrie</p>
+              <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#a09080] mb-1">Oceanfront · North A1A</p>
+              <h3 class="font-display text-[#3a2c1e] font-light text-xl mb-1">Crowne Plaza Melbourne Oceanfront</h3>
+              <p class="text-[#6a5848] text-sm leading-relaxed">Oceanfront hotel on A1A — great views and easy access to the beach.</p>
+              <div class="mt-2.5 space-y-1.5 text-xs text-[#6a5848]">
+                <p><span class="text-[#9a8878]">Group:</span> Guthrie</p>
               </div>
               <a href="https://www.ihg.com/crowneplaza/hotels/us/en/find-hotels/select-roomrate?fromRedirect=true&qSrt=sBR&qIta=99801505&icdv=99801505&qSlH=MLBOC&qCiD=18&qCiMy=012027&qCoD=22&qCoMy=012027&qGrpCd=GBW&qAAR=6CBARC&qRtP=6CBARC&setPMCookies=true&qSHBrC=CP&qDest=2605%20North%20A1A,%20Melbourne,%20FL,%20US&showApp=true&adjustMonth=false&srb_u=1&qRmFltr="
                  target="_blank" rel="noopener"
-                 class="inline-block mt-2.5 text-[0.58rem] tracking-[0.1em] uppercase bg-[#5a7060] text-[#faf8f5] px-3 py-1 rounded-full transition-opacity duration-200 hover:opacity-80">Book Room Block</a>
+                 class="inline-block mt-2.5 text-[0.58rem] tracking-[0.1em] uppercase bg-[#7a6050] text-[#fdf9f4] px-3 py-1 rounded-full transition-opacity duration-200 hover:opacity-80">Book Room Block</a>
             </div>
           </article>
         </div>
@@ -808,38 +808,38 @@ img { display: block; max-width: 100%; }
 
       <!-- Aside -->
       <div class="space-y-5">
-        <div class="reveal d1 bg-[#faf8f5] rounded-xl p-6" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
-          <h3 class="font-display text-[#3a3228] font-light text-xl mb-5">Airports</h3>
+        <div class="reveal d1 bg-[#fdf9f4] rounded-xl p-6" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+          <h3 class="font-display text-[#3a2c1e] font-light text-xl mb-5">Airports</h3>
           <div class="space-y-4">
             <div class="flex gap-3">
               <span class="text-xl mt-0.5" aria-hidden="true">✈️</span>
               <div>
-                <p class="text-[#3a3228] text-sm font-normal">Orlando International (MCO)</p>
-                <p class="text-[#9a8e84] text-xs mt-0.5">~1 hour from venue · Most flight options</p>
-                <span class="inline-block mt-1.5 text-[0.57rem] tracking-[0.12em] uppercase bg-[#8a9e8c]/15 text-[#5a7060] px-2.5 py-0.5 rounded-full">Recommended</span>
+                <p class="text-[#3a2c1e] text-sm font-normal">Orlando International (MCO)</p>
+                <p class="text-[#9a8878] text-xs mt-0.5">~1 hour from venue · Most flight options</p>
+                <span class="inline-block mt-1.5 text-[0.57rem] tracking-[0.12em] uppercase bg-[#a09080]/15 text-[#7a6050] px-2.5 py-0.5 rounded-full">Recommended</span>
               </div>
             </div>
             <div class="flex gap-3">
               <span class="text-xl mt-0.5" aria-hidden="true">🛩️</span>
               <div>
-                <p class="text-[#3a3228] text-sm font-normal">Melbourne International (MLB)</p>
-                <p class="text-[#9a8e84] text-xs mt-0.5">Very convenient · Limited flights</p>
+                <p class="text-[#3a2c1e] text-sm font-normal">Melbourne International (MLB)</p>
+                <p class="text-[#9a8878] text-xs mt-0.5">Very convenient · Limited flights</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="reveal d2 bg-[#faf8f5] rounded-xl p-6" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
-          <h3 class="font-display text-[#3a3228] font-light text-xl mb-4">Parking</h3>
+        <div class="reveal d2 bg-[#fdf9f4] rounded-xl p-6" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+          <h3 class="font-display text-[#3a2c1e] font-light text-xl mb-4">Parking</h3>
           <div class="flex gap-3">
             <span class="text-xl" aria-hidden="true">🚗</span>
-            <p class="text-[#6a5e54] text-sm leading-relaxed">Venue parking is very limited. We strongly encourage guests to <strong class="font-normal text-[#3a3228]">carpool or use Uber/Lyft</strong>.</p>
+            <p class="text-[#6a5848] text-sm leading-relaxed">Venue parking is very limited. We strongly encourage guests to <strong class="font-normal text-[#3a2c1e]">carpool or use Uber/Lyft</strong>.</p>
           </div>
         </div>
-        <div class="reveal d3 bg-[#faf8f5] rounded-xl p-6" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
-          <h3 class="font-display text-[#3a3228] font-light text-xl mb-4">February Weather</h3>
+        <div class="reveal d3 bg-[#fdf9f4] rounded-xl p-6" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
+          <h3 class="font-display text-[#3a2c1e] font-light text-xl mb-4">February Weather</h3>
           <div class="flex gap-3">
             <span class="text-xl" aria-hidden="true">🌤️</span>
-            <p class="text-[#6a5e54] text-sm leading-relaxed">Highs ~74°F · Lows ~60°F · The driest month of the year — minimal rain and plenty of sunshine.</p>
+            <p class="text-[#6a5848] text-sm leading-relaxed">Highs ~74°F · Lows ~60°F · The driest month of the year — minimal rain and plenty of sunshine.</p>
           </div>
         </div>
       </div>
@@ -849,13 +849,13 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ LOCAL RECS ═══════════════════ -->
-<section id="recs" class="bg-[#faf8f5] py-24 md:py-32">
+<section id="recs" class="bg-[#fdf9f4] py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 md:px-10">
     <div class="text-center reveal">
       <p class="section-label mb-3">Explore Melbourne</p>
       <h2 class="section-title mb-5">Local <em>Favorites</em></h2>
       <div class="section-divider mx-auto mb-5"></div>
-      <p class="text-[#6a5e54] max-w-[460px] mx-auto leading-relaxed">Shannon & Sam's handpicked favorites — make a full weekend of it.</p>
+      <p class="text-[#6a5848] max-w-[460px] mx-auto leading-relaxed">Shannon & Sam's handpicked favorites — make a full weekend of it.</p>
     </div>
 
     <div class="flex flex-wrap justify-center gap-2 mt-10 mb-10 reveal d1" role="group" aria-label="Filter recommendations">
@@ -871,166 +871,166 @@ img { display: block; max-width: 100%; }
 
       <!-- EAT (15) -->
       <div class="rec-card featured" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">The Chart House <span style="color:#d4a090;">★</span></p>
-        <p class="text-[0.7rem] text-[#9a8e84] mt-1">Where Shannon & Sam met</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">The Chart House <span style="color:#c9917f;">★</span></p>
+        <p class="text-[0.7rem] text-[#9a8878] mt-1">Where Shannon & Sam met</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Djon's Steak & Lobster</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Djon's Steak & Lobster</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Ichabod's Dockside</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Ichabod's Dockside</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">The Surfinista</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">The Surfinista</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Skewers Mediterranean</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Skewers Mediterranean</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Red Ginger</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Red Ginger</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Trattoria Bella</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Trattoria Bella</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Villa Palma Ristorante</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Villa Palma Ristorante</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Mister O1 Pizza</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Mister O1 Pizza</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">FM Pizza Oven</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">FM Pizza Oven</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Pineapples</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Pineapples</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">BJ's Restaurant</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">BJ's Restaurant</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Bubbakoo's Burritos</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Bubbakoo's Burritos</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Cowboy Coffee</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Cowboy Coffee</p>
       </div>
       <div class="rec-card" data-cat="eat">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Eat</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Thai Thai II</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Thai Thai II</p>
       </div>
 
       <!-- DRINK (9) -->
       <div class="rec-card" data-cat="drink">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Dolly's Wine Bar</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Dolly's Wine Bar</p>
       </div>
       <div class="rec-card" data-cat="drink">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Hell 'n Blazes Brewing</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Hell 'n Blazes Brewing</p>
       </div>
       <div class="rec-card" data-cat="drink">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Intracoastal Brewing</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Intracoastal Brewing</p>
       </div>
       <div class="rec-card" data-cat="drink">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Lou's Blues Bar & Grill</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Lou's Blues Bar & Grill</p>
       </div>
       <div class="rec-card" data-cat="drink">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Meg O'Malley's Irish Pub</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Meg O'Malley's Irish Pub</p>
       </div>
       <div class="rec-card" data-cat="drink">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Monkey Bar</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Monkey Bar</p>
       </div>
       <div class="rec-card" data-cat="drink">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Mainstreet Pub</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Mainstreet Pub</p>
       </div>
       <div class="rec-card" data-cat="drink">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">BB's Beach Bar</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">BB's Beach Bar</p>
       </div>
       <div class="rec-card" data-cat="drink">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Drink</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">The County Line Saloon</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">The County Line Saloon</p>
       </div>
 
       <!-- EXPLORE (6) -->
       <div class="rec-card" data-cat="explore">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Brevard Zoo</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Brevard Zoo</p>
       </div>
       <div class="rec-card" data-cat="explore">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Canova Beach Park</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Canova Beach Park</p>
       </div>
       <div class="rec-card" data-cat="explore">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Sebastian Inlet State Park</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Sebastian Inlet State Park</p>
       </div>
       <div class="rec-card" data-cat="explore">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Turkey Creek Sanctuary</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Turkey Creek Sanctuary</p>
       </div>
       <div class="rec-card" data-cat="explore">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Bass Pro Shops</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Bass Pro Shops</p>
       </div>
       <div class="rec-card" data-cat="explore">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Explore</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Pieloch Dog Park</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Pieloch Dog Park</p>
       </div>
 
       <!-- ACTIVITIES (3) -->
       <div class="rec-card" data-cat="activity">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Activities</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Andretti Thrill Park</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Activities</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Andretti Thrill Park</p>
       </div>
       <div class="rec-card" data-cat="activity">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Activities</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Arcade Monsters Melbourne</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Activities</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Arcade Monsters Melbourne</p>
       </div>
       <div class="rec-card" data-cat="activity">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Activities</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Shore Lanes Palm Bay</p>
-        <p class="text-[0.7rem] text-[#9a8e84] mt-1">Bowling!</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Activities</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Shore Lanes Palm Bay</p>
+        <p class="text-[0.7rem] text-[#9a8878] mt-1">Bowling!</p>
       </div>
 
       <!-- SHOP (5) -->
       <div class="rec-card" data-cat="shop">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Shop</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Casa Bonita</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Shop</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Casa Bonita</p>
       </div>
       <div class="rec-card" data-cat="shop">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Shop</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Catalyst Shop</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Shop</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Catalyst Shop</p>
       </div>
       <div class="rec-card" data-cat="shop">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Shop</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">The Salty Shack</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Shop</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">The Salty Shack</p>
       </div>
       <div class="rec-card" data-cat="shop">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Shop</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Longboard House</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Shop</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Longboard House</p>
       </div>
       <div class="rec-card" data-cat="shop">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#8a9e8c] mb-1">Shop</p>
-        <p class="font-display text-[#3a3228]" style="font-size:1.05rem;">Melbourne Square</p>
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Shop</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Melbourne Square</p>
       </div>
 
     </div>
@@ -1039,13 +1039,13 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ MAP ═══════════════════ -->
-<section id="map" class="bg-[#f5f0e8]">
+<section id="map" class="bg-[#f7f0e4]">
   <div class="max-w-6xl mx-auto px-6 md:px-10 pt-24 pb-12">
     <div class="text-center reveal">
       <p class="section-label mb-3">The venue</p>
       <h2 class="section-title mb-4">Find <em>Us</em></h2>
       <div class="section-divider mx-auto mb-4"></div>
-      <p class="text-[#6a5e54]">3306 Calle Del Mar, Melbourne, FL &nbsp;·&nbsp; The Guthrie Family Home</p>
+      <p class="text-[#6a5848]">3306 Calle Del Mar, Melbourne, FL &nbsp;·&nbsp; The Guthrie Family Home</p>
     </div>
   </div>
   <iframe
@@ -1060,7 +1060,7 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ FAQ ═══════════════════ -->
-<section id="faq" class="bg-[#faf8f5] py-24 md:py-32">
+<section id="faq" class="bg-[#fdf9f4] py-24 md:py-32">
   <div class="max-w-2xl mx-auto px-6 md:px-8">
     <div class="text-center reveal">
       <p class="section-label mb-3">Need to know</p>
@@ -1075,7 +1075,7 @@ img { display: block; max-width: 100%; }
           <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Please arrive no later than 2:45 PM — the ceremony begins at 3:00 PM sharp. We'd love for everyone to be settled in before we walk down the aisle.</p>
+          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">Please arrive no later than 2:45 PM — the ceremony begins at 3:00 PM sharp. We'd love for everyone to be settled in before we walk down the aisle.</p>
         </div>
       </div>
       <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
@@ -1084,7 +1084,7 @@ img { display: block; max-width: 100%; }
           <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Fully outdoors in the Guthrie family's backyard. Think lush greenery, string lights in the trees, long banquet tables, and warm candlelight — it's going to be beautiful.</p>
+          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">Fully outdoors in the Guthrie family's backyard. Think lush greenery, string lights in the trees, long banquet tables, and warm candlelight — it's going to be beautiful.</p>
         </div>
       </div>
       <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
@@ -1093,7 +1093,7 @@ img { display: block; max-width: 100%; }
           <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Melbourne in February is stunning. Average highs around 74°F (23°C), lows around 60°F (16°C). It's actually the driest month of the year — minimal rain and plenty of sunshine. Basically perfect.</p>
+          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">Melbourne in February is stunning. Average highs around 74°F (23°C), lows around 60°F (16°C). It's actually the driest month of the year — minimal rain and plenty of sunshine. Basically perfect.</p>
         </div>
       </div>
       <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
@@ -1102,7 +1102,7 @@ img { display: block; max-width: 100%; }
           <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Semi-formal. The ceremony and reception are fully outdoors on grass — we <em>strongly</em> encourage you to wear or bring comfortable shoes. Think elegant but practical. Florals, linens, and soft tones are always welcome.</p>
+          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">Semi-formal. The ceremony and reception are fully outdoors on grass — we <em>strongly</em> encourage you to wear or bring comfortable shoes. Think elegant but practical. Florals, linens, and soft tones are always welcome.</p>
         </div>
       </div>
       <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
@@ -1111,7 +1111,7 @@ img { display: block; max-width: 100%; }
           <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">This is an adults-only celebration. We hope you'll enjoy a wonderful child-free evening with us!</p>
+          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">This is an adults-only celebration. We hope you'll enjoy a wonderful child-free evening with us!</p>
         </div>
       </div>
       <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
@@ -1120,7 +1120,7 @@ img { display: block; max-width: 100%; }
           <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Plus-ones are by invitation only and will be specified on your individual invitation. Questions? Email us at <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#b07060] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>.</p>
+          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">Plus-ones are by invitation only and will be specified on your individual invitation. Questions? Email us at <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#b07060] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>.</p>
         </div>
       </div>
       <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
@@ -1129,7 +1129,7 @@ img { display: block; max-width: 100%; }
           <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Yes! We'll have a full open bar. Please enjoy responsibly — and remember, venue parking is very limited, so make use of Uber/Lyft.</p>
+          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">Yes! We'll have a full open bar. Please enjoy responsibly — and remember, venue parking is very limited, so make use of Uber/Lyft.</p>
         </div>
       </div>
       <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
@@ -1138,7 +1138,7 @@ img { display: block; max-width: 100%; }
           <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <p class="text-[#6a5e54] text-[0.95rem] leading-[1.85] pb-6">Please note any dietary restrictions in your RSVP, or email us directly at <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#b07060] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>. We want everyone to be well fed!</p>
+          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">Please note any dietary restrictions in your RSVP, or email us directly at <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#b07060] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>. We want everyone to be well fed!</p>
         </div>
       </div>
     </div>
@@ -1147,7 +1147,7 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ REGISTRY ═══════════════════ -->
-<section id="registry" class="bg-[#c8d0d4] py-24 md:py-32">
+<section id="registry" class="bg-[#e8ddd0] py-24 md:py-32">
   <div class="max-w-6xl mx-auto px-6 md:px-10">
     <div class="grid md:grid-cols-2 gap-16 md:gap-28 items-center">
 
@@ -1156,10 +1156,10 @@ img { display: block; max-width: 100%; }
         <p class="section-label mb-3">A gift of adventure</p>
         <h2 class="section-title mb-5">Honeymoon <em>Fund</em></h2>
         <div class="section-divider mb-8"></div>
-        <p class="text-[#6a5e54] leading-[1.85] mb-5">
+        <p class="text-[#6a5848] leading-[1.85] mb-5">
           Your presence at our wedding is the greatest gift we could ask for. If you'd like to give something more, we'd love your contribution to our honeymoon adventure — surfing the waves of the Maldives together.
         </p>
-        <p class="text-[#6a5e54] leading-[1.85] mb-8">
+        <p class="text-[#6a5848] leading-[1.85] mb-8">
           A traditional registry is on its way — we'll share the link here as soon as it's ready.
         </p>
         <div class="flex flex-wrap gap-3">
@@ -1183,10 +1183,10 @@ img { display: block; max-width: 100%; }
                onmouseenter="this.style.transform='scale(1.04)'"
                onmouseleave="this.style.transform=''">
         </div>
-        <div class="absolute -bottom-4 -left-4 bg-[#faf8f5] rounded-2xl p-4 text-center"
+        <div class="absolute -bottom-4 -left-4 bg-[#fdf9f4] rounded-2xl p-4 text-center"
              style="box-shadow:0 8px 32px rgba(58,50,40,0.14); min-width:128px;">
           <div class="text-3xl mb-1" aria-hidden="true">🌊</div>
-          <p class="text-[#6a5e54] text-xs leading-snug font-light">Surfing the<br>Maldives</p>
+          <p class="text-[#6a5848] text-xs leading-snug font-light">Surfing the<br>Maldives</p>
         </div>
       </div>
 
@@ -1196,23 +1196,23 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ RSVP ═══════════════════ -->
-<section id="rsvp" class="bg-[#f5f0e8] py-24 md:py-32">
+<section id="rsvp" class="bg-[#f7f0e4] py-24 md:py-32">
   <div class="max-w-xl mx-auto px-6 md:px-8">
     <div class="text-center reveal">
       <p class="section-label mb-3">We hope to see you there</p>
       <h2 class="section-title mb-4">RSVP</h2>
       <div class="section-divider mx-auto mb-5"></div>
-      <p class="text-[#6a5e54]">Kindly respond by <strong class="font-normal text-[#b07060]">January 20, 2027</strong></p>
+      <p class="text-[#6a5848]">Kindly respond by <strong class="font-normal text-[#b07060]">January 20, 2027</strong></p>
     </div>
 
-    <div class="mt-10 bg-[#faf8f5] rounded-2xl p-8 md:p-10 reveal d1"
+    <div class="mt-10 bg-[#fdf9f4] rounded-2xl p-8 md:p-10 reveal d1"
          style="box-shadow:0 4px 40px rgba(58,50,40,0.07),0 1px 4px rgba(58,50,40,0.04);">
 
       <!-- Success state -->
       <div id="formSuccess" class="hidden text-center py-8">
         <div class="text-5xl mb-5" aria-hidden="true">🎉</div>
-        <h3 class="font-display text-[#3a3228] font-light mb-3" style="font-size:2rem;">You're on the list!</h3>
-        <p class="text-[#6a5e54]">We can't wait to celebrate with you in Melbourne, Florida.</p>
+        <h3 class="font-display text-[#3a2c1e] font-light mb-3" style="font-size:2rem;">You're on the list!</h3>
+        <p class="text-[#6a5848]">We can't wait to celebrate with you in Melbourne, Florida.</p>
       </div>
 
       <!-- Form -->
@@ -1268,11 +1268,11 @@ img { display: block; max-width: 100%; }
         </div>
 
         <button type="submit" class="btn-submit" id="submitBtn">Send RSVP</button>
-        <p class="text-center text-[#9a8e84] text-xs mt-3">Your response goes directly to Shannon & Sam</p>
+        <p class="text-center text-[#9a8878] text-xs mt-3">Your response goes directly to Shannon & Sam</p>
       </form>
     </div>
 
-    <p class="text-center text-[#9a8e84] text-sm mt-6">
+    <p class="text-center text-[#9a8878] text-sm mt-6">
       Questions? Email <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#b07060] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>
     </p>
   </div>
@@ -1280,32 +1280,32 @@ img { display: block; max-width: 100%; }
 
 
 <!-- ═══════════════════ FOOTER ═══════════════════ -->
-<footer class="bg-[#3a3228] text-[#faf8f5]/45 py-16 text-center">
+<footer class="bg-[#3a2c1e] text-[#fdf9f4]/45 py-16 text-center">
   <div class="max-w-5xl mx-auto px-6">
-    <div class="font-display font-light text-[#faf8f5] mb-2 tracking-[-0.01em]" style="font-size:clamp(2rem,5vw,3rem);">
-      Shannon <span style="font-family:'Great Vibes',cursive; font-size:1.1em; color:#d4a090; font-weight:400; letter-spacing:0;">&amp;</span> Sam
+    <div class="font-display font-light text-[#fdf9f4] mb-2 tracking-[-0.01em]" style="font-size:clamp(2rem,5vw,3rem);">
+      Shannon <span style="font-family:'Great Vibes',cursive; font-size:1.1em; color:#c9917f; font-weight:400; letter-spacing:0;">&amp;</span> Sam
     </div>
     <p class="text-[0.63rem] tracking-[0.25em] uppercase mb-8" style="font-family:'Jost',sans-serif;">February 20, 2027 · Melbourne, Florida</p>
-    <div class="w-10 h-px bg-[#faf8f5]/15 mx-auto mb-6"></div>
+    <div class="w-10 h-px bg-[#fdf9f4]/15 mx-auto mb-6"></div>
     <a href="mailto:shannonandsamuelboyd@gmail.com"
-       class="text-[#d4a090] text-sm"
+       class="text-[#c9917f] text-sm"
        style="transition:opacity 0.28s ease;"
        onmouseenter="this.style.opacity='0.7'"
        onmouseleave="this.style.opacity='1'">
       shannonandsamuelboyd@gmail.com
     </a>
     <ul class="flex flex-wrap justify-center gap-x-7 gap-y-3 list-none mt-10 mb-10">
-      <li><a href="#story"    class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Our Story</a></li>
-      <li><a href="#proposal" class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Proposal</a></li>
-      <li><a href="#schedule" class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Schedule</a></li>
-      <li><a href="#gallery"  class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Gallery</a></li>
-      <li><a href="#travel"   class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Travel</a></li>
-      <li><a href="#recs"     class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Local Tips</a></li>
-      <li><a href="#faq"      class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">FAQ</a></li>
-      <li><a href="#registry" class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Registry</a></li>
-      <li><a href="#rsvp"     class="text-[0.58rem] tracking-[0.2em] uppercase text-[#faf8f5]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">RSVP</a></li>
+      <li><a href="#story"    class="text-[0.58rem] tracking-[0.2em] uppercase text-[#fdf9f4]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Our Story</a></li>
+      <li><a href="#proposal" class="text-[0.58rem] tracking-[0.2em] uppercase text-[#fdf9f4]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Proposal</a></li>
+      <li><a href="#schedule" class="text-[0.58rem] tracking-[0.2em] uppercase text-[#fdf9f4]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Schedule</a></li>
+      <li><a href="#gallery"  class="text-[0.58rem] tracking-[0.2em] uppercase text-[#fdf9f4]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Gallery</a></li>
+      <li><a href="#travel"   class="text-[0.58rem] tracking-[0.2em] uppercase text-[#fdf9f4]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Travel</a></li>
+      <li><a href="#recs"     class="text-[0.58rem] tracking-[0.2em] uppercase text-[#fdf9f4]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Local Tips</a></li>
+      <li><a href="#faq"      class="text-[0.58rem] tracking-[0.2em] uppercase text-[#fdf9f4]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">FAQ</a></li>
+      <li><a href="#registry" class="text-[0.58rem] tracking-[0.2em] uppercase text-[#fdf9f4]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">Registry</a></li>
+      <li><a href="#rsvp"     class="text-[0.58rem] tracking-[0.2em] uppercase text-[#fdf9f4]/30" style="transition:color 0.25s ease;" onmouseenter="this.style.color='rgba(250,248,245,0.7)'" onmouseleave="this.style.color='rgba(250,248,245,0.3)'">RSVP</a></li>
     </ul>
-    <p class="text-[0.68rem] text-[#faf8f5]/18">Made with love for Shannon & Sam · 2027</p>
+    <p class="text-[0.68rem] text-[#fdf9f4]/18">Made with love for Shannon & Sam · 2027</p>
   </div>
 </footer>
 
@@ -1327,7 +1327,7 @@ window.addEventListener('scroll', () => {
   const scrolled = y > 60;
   nav.classList.toggle('scrolled', scrolled);
   // Update hamburger bar color when not scrolled
-  const barColor = scrolled ? '#3a3228' : '#faf8f5';
+  const barColor = scrolled ? '#3a2c1e' : '#fdf9f4';
   b1.style.background = barColor;
   b2.style.background = barColor;
   b3.style.background = barColor;
