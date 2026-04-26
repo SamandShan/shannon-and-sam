@@ -7,15 +7,17 @@
 <meta name="description" content="Shannon Guthrie & Samuel Boyd are getting married February 20, 2027 in Melbourne, Florida. RSVP and find all wedding details here.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&family=Great+Vibes&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        body: ['Jost', 'system-ui', 'sans-serif'],
+        display: ['"Bodoni Moda"', 'Didot', '"Bodoni 72"', 'serif'],
+        script: ['"Great Vibes"', '"Bickham Script Pro"', 'cursive'],
+        body:   ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        ui:     ['Jost', 'Montserrat', 'system-ui', 'sans-serif'],
       },
       colors: {
         linen:  '#e8ddd4',
@@ -39,7 +41,7 @@ tailwind.config = {
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Jost', system-ui, sans-serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 300;
   background: #faf8f5;
   color: #3a3228;
@@ -69,14 +71,21 @@ img { display: block; max-width: 100%; }
   color: #8a9e8c;
 }
 .section-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Bodoni Moda', Didot, 'Bodoni 72', serif;
   font-size: clamp(2.25rem, 5vw, 3.75rem);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: #3a3228;
 }
-.section-title em { font-style: italic; color: #b07060; }
+.section-title em {
+  font-family: 'Great Vibes', 'Bickham Script Pro', cursive;
+  font-style: normal;
+  font-weight: 400;
+  color: #b07060;
+  font-size: 1.18em;
+  letter-spacing: 0;
+}
 .section-divider { width: 48px; height: 1px; background: #d4a090; }
 
 /* ── NAV ── */
@@ -96,10 +105,10 @@ img { display: block; max-width: 100%; }
   box-shadow: 0 1px 0 rgba(58,50,40,0.06), 0 4px 24px rgba(58,50,40,0.06);
 }
 .nav-brand {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Bodoni Moda', Didot, 'Bodoni 72', serif;
   font-size: 1.2rem;
   color: #faf8f5;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   transition: color 0.4s ease;
 }
 #nav.scrolled .nav-brand { color: #3a3228; }
@@ -160,7 +169,7 @@ img { display: block; max-width: 100%; }
 
 /* ── COUNTDOWN ── */
 .cd-sep {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Bodoni Moda', Didot, serif;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   color: rgba(250,248,245,0.32);
   align-self: flex-start;
@@ -308,7 +317,7 @@ img { display: block; max-width: 100%; }
   width: 100%; background: none; border: none; cursor: pointer; text-align: left;
   display: flex; justify-content: space-between; align-items: center; gap: 1rem;
   padding: 1.25rem 0;
-  font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400;
+  font-family: 'Bodoni Moda', Didot, serif; font-size: 1.2rem; font-weight: 400;
   color: #3a3228;
   transition: color 0.25s ease;
 }
@@ -362,7 +371,7 @@ img { display: block; max-width: 100%; }
   width: 100%; background: #f5f0e8;
   border: 1px solid rgba(90,112,96,0.15); border-radius: 6px;
   padding: 0.8rem 1rem;
-  font-family: 'Jost', sans-serif; font-weight: 300; font-size: 0.9rem;
+  font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: 1rem;
   color: #3a3228; outline: none; appearance: none;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -408,7 +417,7 @@ img { display: block; max-width: 100%; }
 
 <!-- ═══════════════════ NAV ═══════════════════ -->
 <nav id="nav" aria-label="Site navigation">
-  <a href="#hero" class="nav-brand">Shannon <em style="font-style:italic;color:#d4a090">&</em> Sam</a>
+  <a href="#hero" class="nav-brand">Shannon <span style="font-family:'Great Vibes',cursive; font-size:1.2em; color:#d4a090; font-weight:400; letter-spacing:0; vertical-align:-0.05em;">&amp;</span> Sam</a>
 
   <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
     <li><a href="#story"    class="nav-link">Our Story</a></li>
@@ -445,14 +454,14 @@ img { display: block; max-width: 100%; }
   <div class="hero-wash"></div>
 
   <div class="relative z-10 text-center text-[#faf8f5] px-6 pb-2">
-    <p class="text-[0.64rem] tracking-[0.3em] uppercase mb-4 opacity-75">We're getting married</p>
+    <p class="text-[0.62rem] tracking-[0.35em] uppercase mb-5 opacity-60" style="font-family:'Jost',sans-serif;">We're getting married</p>
     <h1 class="font-display font-light leading-none tracking-[-0.02em] mb-3"
         style="font-size:clamp(3.75rem, 12vw, 9rem);">
       Shannon<br>
-      <em style="font-size:0.52em; color:#d4a090;">&</em><br>
+      <span style="font-family:'Great Vibes','Bickham Script Pro',cursive; font-size:0.58em; color:#d4a090; font-weight:400; letter-spacing:0;">&amp;</span><br>
       Sam
     </h1>
-    <p class="text-[0.7rem] tracking-[0.25em] uppercase mb-8 opacity-70">
+    <p class="text-[0.62rem] tracking-[0.32em] uppercase mb-8 opacity-60" style="font-family:'Jost',sans-serif;">
       February 20, 2027 &nbsp;·&nbsp; Melbourne, Florida
     </p>
 
@@ -503,7 +512,8 @@ img { display: block; max-width: 100%; }
         <p class="text-[#6a5e54] text-[1.02rem] leading-[1.85] mb-5">
           It started with a shared shift at The Chart House restaurant in Melbourne — Shannon behind the host stand, Sam clearing tables as a busser. Trained together as servers, something clicked from the very first day.
         </p>
-        <blockquote class="font-display italic text-[1.45rem] leading-snug text-[#b07060] my-7 pl-5 border-l-2 border-[#d4a090]">
+        <blockquote class="text-[#b07060] my-7 pl-5 border-l-2 border-[#d4a090]"
+                    style="font-family:'Great Vibes','Bickham Script Pro',cursive; font-size:clamp(1.6rem,3vw,2.1rem); line-height:1.45; font-weight:400;">
           "Friends for 10 years. Together for 5. Partners for life."
         </blockquote>
         <p class="text-[#6a5e54] text-[1.02rem] leading-[1.85] mb-5">
@@ -762,7 +772,12 @@ img { display: block; max-width: 100%; }
               <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#8a9e8c] mb-1">Downtown Melbourne</p>
               <h3 class="font-display text-[#3a3228] font-light text-xl mb-1">Hotel Melby</h3>
               <p class="text-[#6a5e54] text-sm leading-relaxed">Boutique hotel in the heart of downtown — walkable to restaurants, bars, and nightlife.</p>
-              <span class="inline-block mt-2 text-[0.58rem] tracking-[0.1em] uppercase bg-[#e8ddd4] text-[#9a8e84] px-3 py-1 rounded-full">Room block coming soon</span>
+              <div class="mt-2.5 space-y-1.5 text-xs text-[#6a5e54]">
+                <p><span class="text-[#9a8e84]">Group:</span> Shannon and Sam's Wedding &nbsp;·&nbsp; <span class="text-[#9a8e84]">Code:</span> <strong class="font-normal text-[#3a3228]">911</strong></p>
+                <p><span class="text-[#9a8e84]">Discounted valet parking:</span> $15/vehicle/night</p>
+                <p><span class="text-[#9a8e84]">Rate cut-off:</span> January 19, 2027</p>
+              </div>
+              <a href="#" class="inline-block mt-2.5 text-[0.58rem] tracking-[0.1em] uppercase bg-[#5a7060] text-[#faf8f5] px-3 py-1 rounded-full transition-opacity duration-200 hover:opacity-80" style="pointer-events:none;opacity:0.5;">Book Room Block — Link Coming</a>
             </div>
           </article>
           <article class="hotel-card reveal d2 bg-[#faf8f5] rounded-xl p-5 flex gap-4 items-start" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
@@ -775,12 +790,17 @@ img { display: block; max-width: 100%; }
             </div>
           </article>
           <article class="hotel-card reveal d3 bg-[#faf8f5] rounded-xl p-5 flex gap-4 items-start" style="box-shadow:0 2px 12px rgba(58,50,40,0.05);">
-            <div class="w-11 h-11 rounded-full bg-[#c8d0d4] flex items-center justify-center text-lg flex-shrink-0" aria-hidden="true">✈️</div>
+            <div class="w-11 h-11 rounded-full bg-[#c8d0d4] flex items-center justify-center text-lg flex-shrink-0" aria-hidden="true">🌴</div>
             <div>
-              <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#8a9e8c] mb-1">Near Airport</p>
-              <h3 class="font-display text-[#3a3228] font-light text-xl mb-1">Hyatt Place Melbourne Airport</h3>
-              <p class="text-[#6a5e54] text-sm leading-relaxed">Convenient for guests flying into Melbourne International.</p>
-              <span class="inline-block mt-2 text-[0.58rem] tracking-[0.1em] uppercase bg-[#e8ddd4] text-[#9a8e84] px-3 py-1 rounded-full">Room block coming soon</span>
+              <p class="text-[0.59rem] tracking-[0.15em] uppercase text-[#8a9e8c] mb-1">Oceanfront · North A1A</p>
+              <h3 class="font-display text-[#3a3228] font-light text-xl mb-1">Crowne Plaza Melbourne Oceanfront</h3>
+              <p class="text-[#6a5e54] text-sm leading-relaxed">Oceanfront hotel on A1A — great views and easy access to the beach.</p>
+              <div class="mt-2.5 space-y-1.5 text-xs text-[#6a5e54]">
+                <p><span class="text-[#9a8e84]">Group:</span> Guthrie</p>
+              </div>
+              <a href="https://www.ihg.com/crowneplaza/hotels/us/en/find-hotels/select-roomrate?fromRedirect=true&qSrt=sBR&qIta=99801505&icdv=99801505&qSlH=MLBOC&qCiD=18&qCiMy=012027&qCoD=22&qCoMy=012027&qGrpCd=GBW&qAAR=6CBARC&qRtP=6CBARC&setPMCookies=true&qSHBrC=CP&qDest=2605%20North%20A1A,%20Melbourne,%20FL,%20US&showApp=true&adjustMonth=false&srb_u=1&qRmFltr="
+                 target="_blank" rel="noopener"
+                 class="inline-block mt-2.5 text-[0.58rem] tracking-[0.1em] uppercase bg-[#5a7060] text-[#faf8f5] px-3 py-1 rounded-full transition-opacity duration-200 hover:opacity-80">Book Room Block</a>
             </div>
           </article>
         </div>
@@ -1263,9 +1283,9 @@ img { display: block; max-width: 100%; }
 <footer class="bg-[#3a3228] text-[#faf8f5]/45 py-16 text-center">
   <div class="max-w-5xl mx-auto px-6">
     <div class="font-display font-light text-[#faf8f5] mb-2 tracking-[-0.01em]" style="font-size:clamp(2rem,5vw,3rem);">
-      Shannon <em class="italic text-[#d4a090]">&</em> Sam
+      Shannon <span style="font-family:'Great Vibes',cursive; font-size:1.1em; color:#d4a090; font-weight:400; letter-spacing:0;">&amp;</span> Sam
     </div>
-    <p class="text-[0.63rem] tracking-[0.25em] uppercase mb-8">February 20, 2027 · Melbourne, Florida</p>
+    <p class="text-[0.63rem] tracking-[0.25em] uppercase mb-8" style="font-family:'Jost',sans-serif;">February 20, 2027 · Melbourne, Florida</p>
     <div class="w-10 h-px bg-[#faf8f5]/15 mx-auto mb-6"></div>
     <a href="mailto:shannonandsamuelboyd@gmail.com"
        class="text-[#d4a090] text-sm"
