@@ -26,8 +26,8 @@ tailwind.config = {
         sand:   '#e8ddd0',
         stone:  '#a09080',
         taupe:  '#7a6050',
-        blush:  '#c9917f',
-        clay:   '#b07060',
+        blush:  '#727A6F',
+        clay:   '#727A6F',
         bark:   '#3a2c1e',
         drift:  '#6a5848',
         mist:   '#9a8878',
@@ -82,11 +82,11 @@ img { display: block; max-width: 100%; }
   font-family: 'Great Vibes', 'Bickham Script Pro', cursive;
   font-style: normal;
   font-weight: 400;
-  color: #b07060;
+  color: #727A6F;
   font-size: 1.18em;
   letter-spacing: 0;
 }
-.section-divider { width: 48px; height: 1px; background: #c9917f; }
+.section-divider { width: 48px; height: 1px; background: #727A6F; }
 
 /* ── NAV ── */
 #nav {
@@ -113,15 +113,15 @@ img { display: block; max-width: 100%; }
 }
 #nav.scrolled .nav-brand { color: #3a2c1e; }
 .nav-link {
-  font-size: 0.64rem;
+  font-size: 0.96rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(253,249,244,0.85);
   transition: color 0.28s ease;
 }
 #nav.scrolled .nav-link { color: #6a5848; }
-.nav-link:hover { color: #c9917f !important; }
-.nav-link:focus-visible { outline: 2px solid #c9917f; outline-offset: 3px; border-radius: 2px; }
+.nav-link:hover { color: #727A6F !important; }
+.nav-link:focus-visible { outline: 2px solid #727A6F; outline-offset: 3px; border-radius: 2px; }
 
 /* Mobile menu */
 .mob-menu {
@@ -137,7 +137,7 @@ img { display: block; max-width: 100%; }
   font-size: 0.78rem; letter-spacing: 0.25em; text-transform: uppercase;
   color: #3a2c1e; transition: color 0.25s ease;
 }
-.mob-link:hover { color: #c9917f; }
+.mob-link:hover { color: #727A6F; }
 
 /* ── HERO ── */
 .hero {
@@ -247,7 +247,7 @@ img { display: block; max-width: 100%; }
   transition: background 0.2s ease, color 0.2s ease;
 }
 .lb-btn:hover { background: rgba(250,248,245,0.1); color: #fdf9f4; }
-.lb-btn:focus-visible { outline: 2px solid #c9917f; }
+.lb-btn:focus-visible { outline: 2px solid #727A6F; }
 #lbClose { top: 1.5rem; right: 1.5rem; font-size: 1.6rem; }
 #lbPrev  { left: 1.5rem; top: 50%; transform: translateY(-50%); }
 #lbNext  { right: 1.5rem; top: 50%; transform: translateY(-50%); }
@@ -261,7 +261,7 @@ img { display: block; max-width: 100%; }
 }
 .tl-dot {
   position: absolute; left: -1.6rem; top: 0.45rem;
-  width: 8px; height: 8px; border-radius: 50%; background: #c9917f;
+  width: 8px; height: 8px; border-radius: 50%; background: #727A6F;
   transform: translateX(-3px); flex-shrink: 0;
 }
 
@@ -317,7 +317,7 @@ img { display: block; max-width: 100%; }
 /* ── FAQ ── */
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.42s cubic-bezier(0.22,1,0.36,1); }
 .faq-item.open .faq-answer { max-height: 350px; }
-.faq-icon { transition: transform 0.35s cubic-bezier(0.22,1,0.36,1); color: #c9917f; flex-shrink: 0; line-height: 1; }
+.faq-icon { transition: transform 0.35s cubic-bezier(0.22,1,0.36,1); color: #727A6F; flex-shrink: 0; line-height: 1; }
 .faq-item.open .faq-icon { transform: rotate(45deg); }
 .faq-q {
   width: 100%; background: none; border: none; cursor: pointer; text-align: left;
@@ -327,8 +327,8 @@ img { display: block; max-width: 100%; }
   color: #3a2c1e;
   transition: color 0.25s ease;
 }
-.faq-q:hover { color: #b07060; }
-.faq-q:focus-visible { outline: 2px solid #c9917f; outline-offset: 2px; border-radius: 2px; }
+.faq-q:hover { color: #727A6F; }
+.faq-q:focus-visible { outline: 2px solid #727A6F; outline-offset: 2px; border-radius: 2px; }
 
 /* ── BUTTONS ── */
 .btn-olive {
@@ -357,14 +357,14 @@ img { display: block; max-width: 100%; }
 .btn-ghost-olive:active { transform: scale(0.98); }
 
 .btn-submit {
-  width: 100%; background: #b07060; color: #fdf9f4; border: 1px solid #b07060;
+  width: 100%; background: #727A6F; color: #fdf9f4; border: 1px solid #727A6F;
   font-family: 'Jost', sans-serif; font-weight: 300;
   font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
   padding: 1rem 2rem; border-radius: 40px; cursor: pointer;
   transition: background 0.28s ease, color 0.28s ease;
 }
-.btn-submit:hover { background: transparent; color: #b07060; }
-.btn-submit:focus-visible { outline: 2px solid #b07060; outline-offset: 3px; }
+.btn-submit:hover { background: transparent; color: #727A6F; }
+.btn-submit:focus-visible { outline: 2px solid #727A6F; outline-offset: 3px; }
 .btn-submit:active { transform: scale(0.98); }
 .btn-submit:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
 
@@ -382,7 +382,7 @@ img { display: block; max-width: 100%; }
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 .f-input:focus {
-  border-color: #c9917f;
+  border-color: #727A6F;
   box-shadow: 0 0 0 3px rgba(201,145,127,0.14);
 }
 .radio-wrap { position: relative; }
@@ -423,7 +423,7 @@ img { display: block; max-width: 100%; }
 
 <!-- ═══════════════════ NAV ═══════════════════ -->
 <nav id="nav" aria-label="Site navigation">
-  <a href="#hero" class="nav-brand">Shannon <span style="font-family:'Great Vibes',cursive; font-size:1.2em; color:#c9917f; font-weight:400; letter-spacing:0; vertical-align:-0.05em;">&amp;</span> Sam</a>
+  <a href="#hero" class="nav-brand">Shannon <span style="font-family:'Great Vibes',cursive; font-size:1.2em; color:#727A6F; font-weight:400; letter-spacing:0; vertical-align:-0.05em;">&amp;</span> Sam</a>
 
   <ul class="hidden md:flex items-center gap-8 list-none m-0 p-0">
     <li><a href="#story"    class="nav-link">Our Story</a></li>
@@ -464,12 +464,12 @@ img { display: block; max-width: 100%; }
   <div class="hero-wash"></div>
 
   <div class="relative z-10 text-center text-[#fdf9f4] px-6 pb-2">
-    <p class="text-[0.62rem] tracking-[0.35em] uppercase mb-5 opacity-60" style="font-family:'Jost',sans-serif;">We're getting married</p>
+    <p class="text-[0.93rem] tracking-[0.35em] uppercase mb-5 opacity-60" style="font-family:'Jost',sans-serif;">We're getting married</p>
     <h1 class="font-display font-light leading-none tracking-[0.06em] mb-3 whitespace-nowrap"
         style="font-size:clamp(2.6rem, 7.5vw, 7rem);">
       Shannon <span style="font-size:0.62em; font-style:italic; letter-spacing:0.12em; opacity:0.85;">and</span> Samuel
     </h1>
-    <p class="text-[0.62rem] tracking-[0.32em] uppercase mb-8 opacity-60" style="font-family:'Jost',sans-serif;">
+    <p class="text-[0.93rem] tracking-[0.32em] uppercase mb-8 opacity-60" style="font-family:'Jost',sans-serif;">
       February 20, 2027 &nbsp;·&nbsp; Melbourne, Florida
     </p>
 
@@ -520,7 +520,7 @@ img { display: block; max-width: 100%; }
         <p class="text-[#6a5848] text-[1.02rem] leading-[1.85] mb-5">
           It started with a shared shift at The Chart House restaurant in Melbourne — Shannon behind the host stand, Sam clearing tables as a busser. Trained together as servers, something clicked from the very first day.
         </p>
-        <blockquote class="text-[#b07060] my-7 pl-5 border-l-2 border-[#c9917f]"
+        <blockquote class="text-[#727A6F] my-7 pl-5 border-l-2 border-[#727A6F]"
                     style="font-family:'Great Vibes','Bickham Script Pro',cursive; font-size:clamp(1.6rem,3vw,2.1rem); line-height:1.45; font-weight:400;">
           "Friends for 10 years. Together for 5. Partners for life."
         </blockquote>
@@ -535,7 +535,7 @@ img { display: block; max-width: 100%; }
       <!-- Photos -->
       <div class="reveal d2">
         <div class="story-img" style="aspect-ratio:3/4;">
-          <img src="brand_assets/Young photo Fav.jpeg"
+          <img src="brand_assets/Young%20photo%20Fav.jpeg"
                alt="A young Shannon and Sam" loading="lazy">
         </div>
       </div>
@@ -599,16 +599,16 @@ img { display: block; max-width: 100%; }
       <p class="text-[0.64rem] tracking-[0.28em] uppercase text-[#a09080] mb-3">Plan your visit</p>
       <h2 class="font-display font-light text-[#fdf9f4] leading-tight mb-5 tracking-[-0.02em]"
           style="font-size:clamp(2.25rem,5vw,3.75rem);">
-        Wedding <em class="italic text-[#c9917f]">Weekend</em>
+        Wedding <em class="italic text-[#727A6F]">Weekend</em>
       </h2>
-      <div class="w-12 h-px bg-[#c9917f] mx-auto mb-16"></div>
+      <div class="w-12 h-px bg-[#727A6F] mx-auto mb-16"></div>
     </div>
 
     <div class="grid md:grid-cols-2 gap-12 md:gap-20">
 
       <!-- Friday -->
       <div class="reveal d1">
-        <h3 class="font-display text-[#c9917f] font-light text-2xl mb-1">Friday Evening</h3>
+        <h3 class="font-display text-[#727A6F] font-light text-2xl mb-1">Friday Evening</h3>
         <p class="text-[0.68rem] tracking-[0.14em] uppercase text-[#fdf9f4]/38 mb-9">February 19th, 2027</p>
         <div class="timeline space-y-9">
           <div class="relative">
@@ -616,7 +616,7 @@ img { display: block; max-width: 100%; }
             <span class="text-[0.68rem] tracking-[0.1em] text-[#fdf9f4]/40 block mb-1.5">5:00 PM</span>
             <h4 class="font-display text-[#fdf9f4] text-xl font-light mb-1">Rehearsal Dinner</h4>
             <p class="text-[#fdf9f4]/55 text-sm">Casa Bonita, Melbourne FL</p>
-            <span class="inline-block mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase px-3 py-1 rounded-full border border-[#c9917f]/30 text-[#c9917f]">Wedding party only</span>
+            <span class="inline-block mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase px-3 py-1 rounded-full border border-[#727A6F]/30 text-[#727A6F]">Wedding party only</span>
           </div>
           <div class="relative">
             <div class="tl-dot"></div>
@@ -630,7 +630,7 @@ img { display: block; max-width: 100%; }
 
       <!-- Saturday -->
       <div class="reveal d2">
-        <h3 class="font-display text-[#c9917f] font-light text-2xl mb-1">The Big Day</h3>
+        <h3 class="font-display text-[#727A6F] font-light text-2xl mb-1">The Big Day</h3>
         <p class="text-[0.68rem] tracking-[0.14em] uppercase text-[#fdf9f4]/38 mb-9">February 20th, 2027</p>
         <div class="timeline space-y-9">
           <div class="relative">
@@ -653,7 +653,7 @@ img { display: block; max-width: 100%; }
           </div>
         </div>
 
-        <div class="mt-10 p-5 rounded-r-sm border-l-2 border-[#c9917f]" style="background:rgba(250,248,245,0.05);">
+        <div class="mt-10 p-5 rounded-r-sm border-l-2 border-[#727A6F]" style="background:rgba(250,248,245,0.05);">
           <p class="text-[#fdf9f4]/60 text-sm leading-relaxed">
             <span class="text-[#fdf9f4]/80">Dress code:</span> Semi-formal. Fully outdoors on grass — please wear or bring comfortable shoes. February highs average 74°F — expect a perfect evening.
           </p>
@@ -872,7 +872,7 @@ img { display: block; max-width: 100%; }
       <!-- EAT (15) -->
       <div class="rec-card featured" data-cat="eat">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
-        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">The Chart House <span style="color:#c9917f;">★</span></p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">The Chart House <span style="color:#727A6F;">★</span></p>
         <p class="text-[0.7rem] text-[#9a8878] mt-1">Where Shannon & Sam met</p>
       </div>
       <div class="rec-card" data-cat="eat">
@@ -1120,7 +1120,7 @@ img { display: block; max-width: 100%; }
           <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">Plus-ones are by invitation only and will be specified on your individual invitation. Questions? Email us at <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#b07060] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>.</p>
+          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">Plus-ones are by invitation only and will be specified on your individual invitation. Questions? Email us at <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#727A6F] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>.</p>
         </div>
       </div>
       <div class="faq-item border-b border-[rgba(90,112,96,0.12)]">
@@ -1138,7 +1138,7 @@ img { display: block; max-width: 100%; }
           <span class="faq-icon text-2xl select-none" aria-hidden="true">+</span>
         </button>
         <div class="faq-answer" role="region">
-          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">Please note any dietary restrictions in your RSVP, or email us directly at <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#b07060] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>. We want everyone to be well fed!</p>
+          <p class="text-[#6a5848] text-[0.95rem] leading-[1.85] pb-6">Please note any dietary restrictions in your RSVP, or email us directly at <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#727A6F] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>. We want everyone to be well fed!</p>
         </div>
       </div>
     </div>
@@ -1202,7 +1202,7 @@ img { display: block; max-width: 100%; }
       <p class="section-label mb-3">We hope to see you there</p>
       <h2 class="section-title mb-4">RSVP</h2>
       <div class="section-divider mx-auto mb-5"></div>
-      <p class="text-[#6a5848]">Kindly respond by <strong class="font-normal text-[#b07060]">January 20, 2027</strong></p>
+      <p class="text-[#6a5848]">Kindly respond by <strong class="font-normal text-[#727A6F]">January 20, 2027</strong></p>
     </div>
 
     <div class="mt-10 bg-[#fdf9f4] rounded-2xl p-8 md:p-10 reveal d1"
@@ -1273,7 +1273,7 @@ img { display: block; max-width: 100%; }
     </div>
 
     <p class="text-center text-[#9a8878] text-sm mt-6">
-      Questions? Email <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#b07060] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>
+      Questions? Email <a href="mailto:shannonandsamuelboyd@gmail.com" class="text-[#727A6F] underline underline-offset-2">shannonandsamuelboyd@gmail.com</a>
     </p>
   </div>
 </section>
@@ -1283,12 +1283,12 @@ img { display: block; max-width: 100%; }
 <footer class="bg-[#3a2c1e] text-[#fdf9f4]/45 py-16 text-center">
   <div class="max-w-5xl mx-auto px-6">
     <div class="font-display font-light text-[#fdf9f4] mb-2 tracking-[-0.01em]" style="font-size:clamp(2rem,5vw,3rem);">
-      Shannon <span style="font-family:'Great Vibes',cursive; font-size:1.1em; color:#c9917f; font-weight:400; letter-spacing:0;">&amp;</span> Sam
+      Shannon <span style="font-family:'Great Vibes',cursive; font-size:1.1em; color:#727A6F; font-weight:400; letter-spacing:0;">&amp;</span> Sam
     </div>
     <p class="text-[0.63rem] tracking-[0.25em] uppercase mb-8" style="font-family:'Jost',sans-serif;">February 20, 2027 · Melbourne, Florida</p>
     <div class="w-10 h-px bg-[#fdf9f4]/15 mx-auto mb-6"></div>
     <a href="mailto:shannonandsamuelboyd@gmail.com"
-       class="text-[#c9917f] text-sm"
+       class="text-[#727A6F] text-sm"
        style="transition:opacity 0.28s ease;"
        onmouseenter="this.style.opacity='0.7'"
        onmouseleave="this.style.opacity='1'">
