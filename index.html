@@ -702,7 +702,7 @@ img { display: block; max-width: 100%; }
         </div>
         <div style="width:100%; aspect-ratio:4/3; background:#e8ddd0;"></div>
         <div class="px-8 pt-5 pb-7">
-          <h3 class="font-display text-[#3a2c1e] font-light mb-2" style="font-size:1.45rem;">Michael Fagen</h3>
+          <h3 class="font-display text-[#3a2c1e] font-light mb-2" style="font-size:1.45rem;">Michael Fagan</h3>
           <p class="text-[#9a8878] text-sm leading-relaxed">Longtime family friend honored to unite Shannon and Sam in marriage.</p>
         </div>
       </div>
@@ -818,7 +818,7 @@ img { display: block; max-width: 100%; }
     </div>
 
     <div class="flex flex-wrap justify-center gap-2 mt-10 mb-10 reveal d1" role="group" aria-label="Filter recommendations">
-      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="all">All</button>
       <button class="filter-btn" data-filter="eat">Eat</button>
       <button class="filter-btn" data-filter="drink">Drink</button>
       <button class="filter-btn" data-filter="explore">Explore</button>
@@ -1388,6 +1388,8 @@ gItems.forEach((el, i) => el.addEventListener('click', () => lbOpen(gSrcs, i)));
 // ── LOCAL RECS FILTER ────────────────────────────────
 const filterBtns = document.querySelectorAll('.filter-btn');
 const recCards   = document.querySelectorAll('#recsGrid .rec-card');
+
+recCards.forEach(card => card.classList.add('hidden'));
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
