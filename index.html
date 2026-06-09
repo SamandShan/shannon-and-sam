@@ -416,6 +416,9 @@ img { display: block; max-width: 100%; }
 @media (max-width: 480px) {
   section { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
 }
+@media (max-width: 640px) {
+  .hero-name-h1 { font-size: clamp(2.0rem, 7.5vw, 2.4rem) !important; }
+}
 </style>
 </head>
 <body>
@@ -463,12 +466,13 @@ img { display: block; max-width: 100%; }
 
   <div class="relative z-10 text-center text-[#fdf9f4] px-6 pb-2">
     <p class="text-[0.93rem] tracking-[0.35em] uppercase mb-5 opacity-60" style="font-family:'Jost',sans-serif;">We're getting married</p>
-    <h1 class="font-display font-light leading-none tracking-[0.06em] mb-3 whitespace-nowrap"
+    <h1 class="hero-name-h1 font-display font-light leading-none tracking-[0.06em] mb-3 sm:whitespace-nowrap"
         style="font-size:clamp(2.6rem, 7.5vw, 7rem);">
       Shannon <span style="font-size:0.62em; font-style:italic; letter-spacing:0.12em; opacity:0.85;">and</span> Samuel
     </h1>
     <p class="text-[0.93rem] tracking-[0.32em] uppercase mb-8 opacity-60" style="font-family:'Jost',sans-serif;">
-      February 20, 2027 &nbsp;·&nbsp; Melbourne, Florida
+      <span class="hidden sm:inline">February 20, 2027 &nbsp;·&nbsp; Melbourne, Florida</span>
+      <span class="sm:hidden leading-loose">February 20th, 2027<br>Melbourne, FL</span>
     </p>
 
     <!-- Countdown -->
@@ -512,22 +516,22 @@ img { display: block; max-width: 100%; }
 
       <!-- Text -->
       <div class="reveal">
-        <p class="section-label mb-3">A love story</p>
+        <p class="section-label mb-3">Our story</p>
         <h2 class="section-title mb-5">How It All <em>Began</em></h2>
         <div class="section-divider mb-8"></div>
         <p class="text-[#6a5848] text-[1.02rem] leading-[1.85] mb-5">
-          It started with a shared shift at The Chart House restaurant in Melbourne — Shannon behind the host stand, Sam clearing tables as a busser. Trained together as servers, something clicked from the very first day.
+          Our story began over ten years ago at The Chart House in Melbourne. Shannon worked at the host stand, Sam started as a busser, and before long they were training together as servers.
+        </p>
+        <p class="text-[#6a5848] text-[1.02rem] leading-[1.85] mb-5">
+          From the beginning, there was a connection. What started as friendship quickly became one of the most important relationships in their lives. Through new jobs, life changes, beach days, mixtapes, and countless adventures, they were always there for each other. The kind of friendship where you never have to think twice about who you're calling first. Although the spark was always there, the timing wasn't. It wasn't until April 2021 that they finally had the chance to see where that connection could lead. What had been growing for years naturally turned into something more.
+        </p>
+        <p class="text-[#6a5848] text-[1.02rem] leading-[1.85] mb-5">
+          Over the next six years they built a life together filled with laughter, meaningful moments, and the kind of partnership they had both been looking for. Then, on a quiet sunrise morning at their favorite beach, Sam asked Shannon to spend forever with him.
         </p>
         <blockquote class="text-[#727A6F] my-7 pl-5 border-l-2 border-[#727A6F]"
                     style="font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(1.05rem,2vw,1.35rem); line-height:1.2; font-weight:400; font-style:italic;">
-          <span class="md:whitespace-nowrap">"Friends for 10 years. Together for 5. Partners for life."</span>
+          <span class="md:whitespace-nowrap">"Friends for 10 years. Together for 6. Partners for life."</span>
         </blockquote>
-        <p class="text-[#6a5848] text-[1.02rem] leading-[1.85] mb-5">
-          What started as a friendship built on late-night shifts and a shared love of the Florida coast slowly became something more. Through the years, they became each other's person — the one you call first, the one you want beside you on every adventure.
-        </p>
-        <p class="text-[#6a5848] text-[1.02rem] leading-[1.85]">
-          Five years ago, friendship became love. And on one golden sunrise at their beach, it became forever.
-        </p>
       </div>
 
       <!-- Photos -->
@@ -600,16 +604,23 @@ img { display: block; max-width: 100%; }
         <div class="timeline space-y-9">
           <div class="relative">
             <div class="tl-dot"></div>
-            <span class="text-[0.68rem] tracking-[0.1em] text-[#7a6050] block mb-1.5">5:00 PM</span>
-            <h4 class="font-display text-[#3a2c1e] text-xl font-light mb-1">Rehearsal Dinner</h4>
-            <p class="text-[#6a5848] text-sm">Casa Bonita, Melbourne FL</p>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#7a6050] block mb-1.5">3:00 PM</span>
+            <h4 class="font-display text-[#3a2c1e] text-xl font-light mb-1">Wedding Party Gathers</h4>
+            <p class="text-[#6a5848] text-sm">The Guthrie Family Home<br>3306 Calle Del Mar, Melbourne FL</p>
             <span class="inline-block mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase px-3 py-1 rounded-full border border-[#727A6F]/40 text-[#727A6F]">Wedding party only</span>
           </div>
           <div class="relative">
             <div class="tl-dot"></div>
-            <span class="text-[0.68rem] tracking-[0.1em] text-[#7a6050] block mb-1.5">7:00 PM</span>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#7a6050] block mb-1.5">5:00 PM – 7:00 PM</span>
+            <h4 class="font-display text-[#3a2c1e] text-xl font-light mb-1">Rehearsal Dinner</h4>
+            <p class="text-[#6a5848] text-sm">Casa Bonita<br>105 N Riverside Dr, Indialantic FL 32903</p>
+            <span class="inline-block mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase px-3 py-1 rounded-full border border-[#727A6F]/40 text-[#727A6F]">Wedding party only</span>
+          </div>
+          <div class="relative">
+            <div class="tl-dot"></div>
+            <span class="text-[0.68rem] tracking-[0.1em] text-[#7a6050] block mb-1.5">7:00 PM – 9:00 PM</span>
             <h4 class="font-display text-[#3a2c1e] text-xl font-light mb-1">Welcome Party</h4>
-            <p class="text-[#6a5848] text-sm">Location TBD — details coming soon</p>
+            <p class="text-[#6a5848] text-sm">Casa Bonita<br>105 N Riverside Dr, Indialantic FL 32903</p>
             <span class="inline-block mt-2.5 text-[0.58rem] tracking-[0.12em] uppercase px-3 py-1 rounded-full border border-[#a09080]/60 text-[#7a6050]">All guests welcome</span>
           </div>
         </div>
