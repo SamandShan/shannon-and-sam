@@ -1174,48 +1174,45 @@ img { display: block; max-width: 100%; }
         <p class="text-[#6a5848]">We can't wait to celebrate with you in Melbourne, Florida.</p>
       </div>
 
-      <!-- Form -->
-      <form id="rsvpForm" action="https://formspree.io/f/xojppzed" method="POST" novalidate>
-
+      <!-- Step 1: Guest lookup -->
+      <div id="rsvpStep1">
+        <p class="text-[#6a5848] text-sm text-center mb-6">Enter the name on your invitation to find your party.</p>
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div>
-            <label class="f-label" for="firstName">First Name</label>
-            <input class="f-input" type="text" id="firstName" name="firstName" placeholder="Shannon" required autocomplete="given-name">
+            <label class="f-label" for="lookupFirst">First Name</label>
+            <input class="f-input" type="text" id="lookupFirst" placeholder="Shannon" autocomplete="given-name">
           </div>
           <div>
-            <label class="f-label" for="lastName">Last Name</label>
-            <input class="f-input" type="text" id="lastName" name="lastName" placeholder="Guthrie" required autocomplete="family-name">
+            <label class="f-label" for="lookupLast">Last Name</label>
+            <input class="f-input" type="text" id="lookupLast" placeholder="Guthrie" autocomplete="family-name">
           </div>
         </div>
+        <p id="lookupError" class="text-[#b84a3a] text-sm mb-4 hidden text-center leading-relaxed"></p>
+        <button id="lookupBtn" type="button" class="btn-submit">Find My Invitation</button>
+      </div>
 
-        <div class="mb-4">
-          <label class="f-label" for="email">Email Address</label>
-          <input class="f-input" type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email">
-        </div>
+      <!-- Step 2: RSVP form (revealed after successful lookup) -->
+      <form id="rsvpForm" class="hidden" action="https://formspree.io/f/xojppzed" method="POST" novalidate>
+        <input type="hidden" name="Guest Name" id="fieldGuestName">
+        <input type="hidden" name="Party ID" id="fieldPartyId">
 
-        <div class="mb-4">
-          <label class="f-label">Will you be attending?</label>
-          <div class="grid grid-cols-2 gap-3">
-            <div class="radio-wrap">
-              <input type="radio" id="rsvp-yes" name="attending" value="Joyfully Accepts" required>
-              <label class="radio-lbl" for="rsvp-yes">Joyfully Accepts</label>
-            </div>
-            <div class="radio-wrap">
-              <input type="radio" id="rsvp-no" name="attending" value="Regretfully Declines">
-              <label class="radio-lbl" for="rsvp-no">Regretfully Declines</label>
-            </div>
-          </div>
+        <div id="rsvpWelcome" class="text-center mb-7"></div>
+
+        <div class="mb-6">
+          <p class="f-label mb-3">Who will be attending?</p>
+          <div id="partyAttendance" class="divide-y divide-[#ede3d4]"></div>
         </div>
 
         <div class="mb-6">
-          <label class="f-label" for="partyNames">Are you RSVPing for other guests in your party? If so, please list their names:</label>
-          <textarea class="f-input" id="partyNames" name="partyNames" rows="3"
-                    placeholder="e.g. Jane Smith, John Smith…"
-                    style="resize:vertical; min-height:90px;"></textarea>
+          <label class="f-label" for="rsvpEmail">Email Address</label>
+          <input class="f-input" type="email" id="rsvpEmail" name="Email" placeholder="you@email.com" required autocomplete="email">
         </div>
 
         <button type="submit" class="btn-submit" id="submitBtn">Send RSVP</button>
         <p class="text-center text-[#9a8878] text-xs mt-3">Your response goes directly to Shannon & Sam</p>
+        <p class="text-center mt-3">
+          <button type="button" id="startOverBtn" class="text-[#9a8878] text-xs underline underline-offset-2">Not you? Start over</button>
+        </p>
       </form>
     </div>
 
@@ -1418,7 +1415,101 @@ document.querySelectorAll('#faqList .faq-item').forEach(item => {
   });
 });
 
-// ── RSVP FORM ────────────────────────────────────────
+// ── RSVP: GUEST LIST & LOOKUP ────────────────────────
+const GUEST_PARTIES = [[211,["Josh Green","Elyssa Green"]],[202,["Addison Abramson"]],[219,["Leo Alba"]],[123,["Grace Amara","Quinn Graham"]],[263,["Shawna Ambrose"]],[121,["Taylor Anthony","Mike Anthony"]],[173,["Gary Appel","Lisa Appel"]],[152,["Sandi Armstrong"]],[260,["Erik Askeland","Malie Haire"]],[178,["Lexi Bangos"]],[167,["Greg Barger","Wendy Barger"]],[166,["Joe Barger","Kristin Barger"]],[254,["Jessie Barr","Matt Barr"]],[130,["Brooke Bauman"]],[237,["Christine Bauman","Guest of Christine Bauman"]],[115,["Diane Bauman","Sue Bauman"]],[116,["Matt Bauman","Ana Bauman"]],[117,["Ryan Bauman","Kenzie Bauman"]],[177,["Dick Becht","Betty Becht"]],[150,["Erik Beckett","Kelly Beckett","Spencer Beckett","Olivia Beckett"]],[182,["Lisa Bellante","Marc Bellante"]],[156,["Callie Bowman","Sean Bowman"]],[112,["Conrad Boyd","Taylor Livingston"]],[110,["Gabby Boyd","Stephen Deans"]],[160,["Jim Boyd","Gerri Boyd"]],[108,["Keith Boyd","Sandy Boyd"]],[165,["Michelle Boyd","Ben Calderone"]],[111,["Tanner Boyd","Nadia Kelly"]],[236,["John Bridges"]],[258,["Paige Brisbane"]],[124,["Kendall Carmody","Jake Pierson","Freya Roberts"]],[221,["Austin Causey"]],[143,["Judy Chester","John Chester","Anna Chester","Jack Chester","Elizabeth Chester"]],[229,["J.J. Clarke","Ell"]],[201,["Trey Collins","Lauren Collins"]],[220,["Melissa Cotoure"]],[149,["Todd Cumbow","Suzie Cumbow","Hannah Cumbo","Ryan Cumbo"]],[259,["Marguerite Dugas"]],[158,["Christina Eckelt","Dustin Eckelt"]],[226,["Pearce Eisenhart","Brittany Scheifer"]],[243,["Ana Fagan","Michael Fagan"]],[245,["Kelly Fagan","Matteo Mascalchi Calveri"]],[122,["Michael Fagan"]],[161,["John Pflugrad","Dana Pflugrad","Kelsey Pflugrad","Garrett Pflugrad","Jack Wilhelm"]],[125,["Marley Fisher","Austin Ferrante"]],[246,["Megan Foix"]],[217,["Che Geer","Yulia"]],[212,["Andrew Gounaris"]],[199,["Chris Grant","Manuela","Terry Grant"]],[256,["James Gronberg"]],[200,["Flo Guerrero","Kelsey Taylor"]],[139,["George Guthrie","Barbara Guthrie"]],[137,["Kathy Guthrie","Ted O'Toole"]],[140,["Mary Ann Guthrie","Rob"]],[138,["Mike Guthrie","Cheryl Guthrie"]],[133,["Nancy Guthrie"]],[141,["Paul Guthrie"]],[131,["Peter Guthrie","Kathleen Guthrie"]],[142,["Sean Guthrie","Tina Guthrie"]],[136,["Steve Guthrie","Teresa Guthrie"]],[135,["Terry Guthrie"]],[102,["Tom Guthrie","Carol Guthrie"]],[153,["Tom Guthrie","Guest of Tom Guthrie"]],[101,["Shannon Guthrie","Sam Boyd"]],[105,["Caitlyn Guthrie Hélouin","Antione Hélouin","Josephine Lou Guthrie Hélouin","Billie Shay Guthrie Hélouin"]],[104,["Lindsay Guthrie Specian","David Specian"]],[261,["Wyatt Hamilton","Marina"]],[205,["Jeremy Hauf"]],[188,["Holly Hoffman","Caden Larkin"]],[155,["Bonnie Hohman"]],[225,["Johnny Hohman"]],[234,["Paul Jackson"]],[232,["Sean Johnson","Lizzie Robinson"]],[247,["Kim Kehres","Tony Kehres"]],[216,["Tommy Kilseniki","Allee Farris"]],[148,["Tom Koster"]],[223,["Jordan Land","Ryan Land"]],[175,["Kelly Lembach","Mike Lembach"]],[147,["Nancy Marshall"]],[210,["Kali Massa","Tyler Kabdebo"]],[174,["Tom Mather","Bridget Mather"]],[267,["Haley Mays","Brandon Mays"]],[171,["Jim McFaul","Amy McFaul","Hannah McFaul"]],[262,["Shelby McKay","David McKay"]],[154,["Melinda Meginnis","Mac Meginnis"]],[228,["Jack Miller","Guest of Jack Miller"]],[208,["Andrew Mognahan","Jackie Mognahan"]],[126,["Alex Montena"]],[127,["Keith Montena"]],[120,["Wade Montena","Cindy Montena"]],[213,["Matt Muddiman"]],[192,["Maria Munoz","James Finnigan"]],[238,["Luz Myriam Gilmer","Guest of Luz Myriam Gilmer"]],[231,["Max O'Hagen"]],[264,["Nicole Ocasio"]],[206,["Joey Otenesack","Shannon O'Toole"]],[170,["Dan Overtoom","Cathy Overtoom"]],[240,["Kristina Pappademetriou","Peter Pappademetriou"]],[239,["Pamela Pederson","Mark Pederson"]],[266,["Kelsey Pflugrad","Jack","Guest of Kelsey Pflugrad"]],[162,["Max Pflugrad","Sarah Pflugrad"]],[222,["Alex Potter","Shane Potter"]],[180,["Jenifer Preyers","Guest of Jenifer Preyers"]],[181,["Jessica Preyers"]],[119,["Rosemary Preyers"]],[249,["Karen Reibsame","Guest of Karen Reibsame"]],[250,["Patrick Reibsame","Guest of Patrick Reibsame"]],[248,["Susan Reibsame","Pete Reibsame"]],[195,["Adam Rieder"]],[168,["Dan Roberts","Chris Roberts"]],[214,["Zach Roberts","Alyssa"]],[129,["Michael Roecker"]],[118,["Courtney Rogers","Brad Williams"]],[218,["Adam Roland"]],[257,["Tonnie Rozier"]],[209,["Wesley Rumple","Morgan Restivo"]],[253,["Akaila Sack","Harry Sack"]],[183,["Debra Saddler"]],[193,["Jacia Schick"]],[241,["Carly Schuster"]],[252,["Debbi Schuster"]],[242,["Kai Schuster"]],[224,["Maggie Silcott","Braden Silcott"]],[207,["Ben Smith","Kelly Smith"]],[194,["Natasha Smith","Glenn Smith"]],[227,["Tommy St. Clair","Hannah Simon","Halle Simon"]],[159,["Cathy Stith (Gran)"]],[235,["Andrea Swanson","Matt Ryan"]],[203,["Logan Sweeny"]],[198,["Andy Taylor"]],[230,["Josh Thomas"]],[157,["Cindy Thrift","John Phelps"]],[215,["Kyle Tyree","Madelyn"]],[244,["Erin Vijay","Nevin Vijay"]],[176,["Joey Walker","Noelle Walker"]],[134,["Joseph Walker","Lynda Macaluso"]],[132,["Lindsay Walker","Danny Walker"]],[179,["Ricky Walker","Carissa Walker"]],[184,["Bob Wanagill","Barbara Wanagill"]],[169,["Dave Wolf","Cathy Wolf"]],[151,["Vickie Wrenn"]],[251,["Melissa Zimak"]],[128,["Bernie Zutter","Connie Zutter"]]];
+
+// Build name → party lookup (case-insensitive)
+const GUEST_INDEX = {};
+for (const [partyId, members] of GUEST_PARTIES) {
+  for (const name of members) {
+    const key = name.toLowerCase().trim();
+    // Only index names that look like real full names (skip "Guest of X", single words)
+    if (!key.startsWith('guest of') && key.split(' ').length >= 2) {
+      GUEST_INDEX[key] = { partyId, members };
+    }
+  }
+}
+
+function normName(s) { return s.toLowerCase().trim().replace(/\s+/g,' '); }
+
+// ── STEP 1: LOOKUP ───────────────────────────────────
+document.getElementById('lookupBtn').addEventListener('click', handleLookup);
+['lookupFirst','lookupLast'].forEach(id =>
+  document.getElementById(id).addEventListener('keydown', e => { if (e.key==='Enter') handleLookup(); })
+);
+
+function handleLookup() {
+  const first = document.getElementById('lookupFirst').value.trim();
+  const last  = document.getElementById('lookupLast').value.trim();
+  const errEl = document.getElementById('lookupError');
+  errEl.classList.add('hidden');
+
+  if (!first || !last) {
+    errEl.textContent = 'Please enter both your first and last name.';
+    errEl.classList.remove('hidden');
+    return;
+  }
+
+  const match = GUEST_INDEX[normName(first + ' ' + last)];
+  if (!match) {
+    errEl.innerHTML = "We couldn't find your name on the guest list. Please double-check the spelling or <a href='mailto:shannonandsamuelboyd@gmail.com' class='underline'>contact us</a>.";
+    errEl.classList.remove('hidden');
+    return;
+  }
+
+  showRsvpStep(first + ' ' + last, match.partyId, match.members);
+}
+
+function showRsvpStep(name, partyId, members) {
+  document.getElementById('rsvpStep1').classList.add('hidden');
+  document.getElementById('fieldGuestName').value = name;
+  document.getElementById('fieldPartyId').value = partyId;
+
+  // Welcome message
+  const firstName = name.split(' ')[0];
+  document.getElementById('rsvpWelcome').innerHTML =
+    `<p class="font-display text-[#3a2c1e] font-light mb-1" style="font-size:1.5rem;">Welcome, ${firstName}!</p>` +
+    `<p class="text-[#6a5848] text-sm">We found your invitation. Please let us know who can make it.</p>`;
+
+  // Build per-member attendance rows
+  const container = document.getElementById('partyAttendance');
+  container.innerHTML = '';
+  members.forEach((member, i) => {
+    const slug = 'rsvp_' + i + '_' + member.replace(/[^a-zA-Z0-9]/g,'_');
+    const displayName = member.startsWith('Guest of') ? 'Plus One / Guest' : member;
+    container.insertAdjacentHTML('beforeend',
+      `<div class="flex items-center justify-between py-3">
+        <span class="text-[#3a2c1e] text-sm">${displayName}</span>
+        <div class="flex gap-4 shrink-0">
+          <label class="flex items-center gap-1.5 cursor-pointer text-sm text-[#6a5848]">
+            <input type="radio" name="${slug}" value="Attending" required class="accent-[#727A6F]">
+            <span>Attending</span>
+          </label>
+          <label class="flex items-center gap-1.5 cursor-pointer text-sm text-[#6a5848]">
+            <input type="radio" name="${slug}" value="Not Attending" class="accent-[#727A6F]">
+            <span>Not&nbsp;Attending</span>
+          </label>
+        </div>
+      </div>`
+    );
+    // Store the actual name in a hidden field so Formspree captures it clearly
+    container.insertAdjacentHTML('beforeend',
+      `<input type="hidden" name="Party Member ${i+1}" value="${member}">`
+    );
+  });
+
+  document.getElementById('rsvpForm').classList.remove('hidden');
+}
+
+// Start over
+document.getElementById('startOverBtn').addEventListener('click', () => {
+  document.getElementById('rsvpForm').classList.add('hidden');
+  document.getElementById('rsvpStep1').classList.remove('hidden');
+  document.getElementById('lookupFirst').value = '';
+  document.getElementById('lookupLast').value = '';
+});
+
+// ── STEP 2: SUBMIT ───────────────────────────────────
 const rsvpForm = document.getElementById('rsvpForm');
 rsvpForm.addEventListener('submit', async e => {
   e.preventDefault();
@@ -1435,7 +1526,7 @@ rsvpForm.addEventListener('submit', async e => {
       rsvpForm.style.display = 'none';
       document.getElementById('formSuccess').classList.remove('hidden');
     } else {
-      throw new Error('Server error');
+      throw new Error();
     }
   } catch {
     btn.textContent = 'Send RSVP';
