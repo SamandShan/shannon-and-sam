@@ -1223,6 +1223,42 @@ img { display: block; max-width: 100%; }
           <div id="partyAttendance" class="divide-y divide-[#ede3d4]"></div>
         </div>
 
+        <!-- Gentlemen's Toast (built dynamically per party member) -->
+        <div id="toastSection" class="mb-6 hidden">
+          <div class="border-t border-[#ede3d4] pt-6">
+            <p class="f-label mb-1">The Gentlemen's Toast</p>
+            <p class="text-[#9a8878] text-xs leading-relaxed mb-4">
+              Thursday, Feb 18 · 5:00 PM · Bourbon, Cigars & Good Company<br>
+              Sam & Shan's Airbnb Speakeasy · 3496 Mazur Dr, Melbourne FL 32901
+            </p>
+            <div id="toastAttendance" class="divide-y divide-[#ede3d4]"></div>
+          </div>
+        </div>
+
+        <!-- Shuttle bus -->
+        <div class="mb-6 border-t border-[#ede3d4] pt-6">
+          <p class="f-label mb-3">Are you planning on using the shuttle bus for transportation from your hotel?</p>
+          <div class="flex gap-6 mb-4">
+            <label class="flex items-center gap-1.5 cursor-pointer text-sm text-[#6a5848]">
+              <input type="radio" name="Shuttle Bus" value="Yes" id="busYes" class="accent-[#727A6F]">
+              <span>Yes</span>
+            </label>
+            <label class="flex items-center gap-1.5 cursor-pointer text-sm text-[#6a5848]">
+              <input type="radio" name="Shuttle Bus" value="No" id="busNo" class="accent-[#727A6F]">
+              <span>No</span>
+            </label>
+          </div>
+          <div id="hotelDropdownWrap" class="hidden">
+            <label class="f-label mb-2 block" for="hotelSelect">Which hotel are you staying at?</label>
+            <select id="hotelSelect" name="Hotel" class="f-input">
+              <option value="">Select your hotel…</option>
+              <option value="Hotel Melby">Hotel Melby (Downtown Melbourne)</option>
+              <option value="The Element Melbourne Oceanfront">The Element Melbourne Oceanfront</option>
+              <option value="Crowne Plaza Melbourne Oceanfront">Crowne Plaza Melbourne Oceanfront</option>
+            </select>
+          </div>
+        </div>
+
         <div class="mb-6">
           <label class="f-label" for="rsvpEmail">Email Address</label>
           <input class="f-input" type="email" id="rsvpEmail" name="Email" placeholder="you@email.com" required autocomplete="email">
@@ -1564,12 +1600,51 @@ function showRsvpStep(name, partyId, members) {
     );
   });
 
+  // Build per-member Gentlemen's Toast rows
+  const toastContainer = document.getElementById('toastAttendance');
+  toastContainer.innerHTML = '';
+  members.forEach((member, i) => {
+    if (member.toLowerCase().startsWith('guest of')) return;
+    const slug = 'toast_' + i + '_' + member.replace(/[^a-zA-Z0-9]/g,'_');
+    const displayName = member.split(' ')[0];
+    toastContainer.insertAdjacentHTML('beforeend',
+      `<div class="flex items-center justify-between py-3">
+        <span class="text-[#3a2c1e] text-sm">Is ${displayName} attending?</span>
+        <div class="flex gap-4 shrink-0">
+          <label class="flex items-center gap-1.5 cursor-pointer text-sm text-[#6a5848]">
+            <input type="radio" name="Gentlemen's Toast - ${member}" value="Yes" class="accent-[#727A6F]">
+            <span>Yes</span>
+          </label>
+          <label class="flex items-center gap-1.5 cursor-pointer text-sm text-[#6a5848]">
+            <input type="radio" name="Gentlemen's Toast - ${member}" value="No" class="accent-[#727A6F]">
+            <span>No</span>
+          </label>
+        </div>
+      </div>`
+    );
+  });
+  document.getElementById('toastSection').classList.remove('hidden');
+
   document.getElementById('rsvpForm').classList.remove('hidden');
 }
+
+// Bus shuttle show/hide hotel dropdown
+document.getElementById('busYes').addEventListener('change', function() {
+  document.getElementById('hotelDropdownWrap').classList.remove('hidden');
+});
+document.getElementById('busNo').addEventListener('change', function() {
+  document.getElementById('hotelDropdownWrap').classList.add('hidden');
+  document.getElementById('hotelSelect').value = '';
+});
 
 // Start over
 document.getElementById('startOverBtn').addEventListener('click', () => {
   document.getElementById('rsvpForm').classList.add('hidden');
+  document.getElementById('toastSection').classList.add('hidden');
+  document.getElementById('hotelDropdownWrap').classList.add('hidden');
+  document.getElementById('busYes').checked = false;
+  document.getElementById('busNo').checked = false;
+  document.getElementById('hotelSelect').value = '';
   document.getElementById('rsvpStep1').classList.remove('hidden');
   document.getElementById('lookupFirst').value = '';
   document.getElementById('lookupLast').value = '';
