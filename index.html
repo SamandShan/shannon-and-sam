@@ -1500,7 +1500,7 @@ document.querySelectorAll('#faqList .faq-item').forEach(item => {
 });
 
 // ── RSVP: GUEST LIST & LOOKUP ────────────────────────
-const GUEST_PARTIES = [[211,["Josh Green","Elyssa Green"]],[202,["Addison Abramson"]],[219,["Leo Alba"]],[123,["Grace Amara","Quinn Graham"]],[263,["Shawna Ambrose"]],[121,["Taylor Anthony","Mike Anthony"]],[173,["Gary Appel","Lisa Appel"]],[152,["Sandi Armstrong"]],[260,["Erik Askeland","Malie Haire"]],[178,["Lexi Bangos"]],[167,["Greg Barger","Wendy Barger"]],[166,["Joe Barger","Kristin Barger"]],[254,["Jessie Barr","Matt Barr"]],[130,["Brooke Bauman"]],[237,["Christine Bauman","Guest of Christine Bauman"]],[115,["Diane Bauman","Sue Bauman"]],[116,["Matt Bauman","Ana Bauman"]],[117,["Ryan Bauman","Kenzie Bauman"]],[177,["Dick Becht","Betty Becht"]],[150,["Erik Beckett","Kelly Beckett","Spencer Beckett","Olivia Beckett"]],[182,["Lisa Bellante","Marc Bellante"]],[156,["Callie Bowman","Sean Bowman"]],[112,["Conrad Boyd","Taylor Livingston"]],[110,["Gabby Boyd","Stephen Deans"]],[160,["Jim Boyd","Gerri Boyd"]],[108,["Keith Boyd","Sandy Boyd"]],[165,["Michelle Boyd","Ben Calderone"]],[111,["Tanner Boyd","Nadia Kelly"]],[236,["John Bridges"]],[258,["Paige Brisbane"]],[124,["Kendall Carmody","Jake Pierson","Freya Roberts"]],[221,["Austin Causey"]],[143,["Judy Chester","John Chester","Anna Chester","Jack Chester","Elizabeth Chester"]],[229,["J.J. Clarke","Ell"]],[201,["Trey Collins","Lauren Collins"]],[220,["Melissa Cotoure"]],[149,["Todd Cumbow","Suzie Cumbow","Hannah Cumbo","Ryan Cumbo"]],[259,["Marguerite Dugas"]],[158,["Christina Eckelt","Dustin Eckelt"]],[226,["Pearce Eisenhart","Brittany Scheifer"]],[243,["Ana Fagan","Michael Fagan"]],[245,["Kelly Fagan","Matteo Mascalchi Calveri"]],[122,["Michael Fagan"]],[161,["John Pflugrad","Dana Pflugrad","Kelsey Pflugrad","Garrett Pflugrad","Jack Wilhelm"]],[125,["Marley Fisher","Austin Ferrante"]],[246,["Megan Foix"]],[217,["Che Geer","Yulia"]],[212,["Andrew Gounaris"]],[199,["Chris Grant","Manuela","Terry Grant"]],[256,["James Gronberg"]],[200,["Flo Guerrero","Kelsey Taylor"]],[139,["George Guthrie","Barbara Guthrie"]],[137,["Kathy Guthrie","Ted O'Toole"]],[140,["Mary Ann Guthrie","Rob"]],[138,["Mike Guthrie","Cheryl Guthrie"]],[133,["Nancy Guthrie"]],[141,["Paul Guthrie"]],[131,["Peter Guthrie","Kathleen Guthrie"]],[142,["Sean Guthrie","Tina Guthrie"]],[136,["Steve Guthrie","Teresa Guthrie"]],[135,["Terry Guthrie"]],[102,["Tom Guthrie","Carol Guthrie"]],[153,["Tom Guthrie","Guest of Tom Guthrie"]],[101,["Shannon Guthrie","Sam Boyd"]],[105,["Caitlyn Guthrie Hélouin","Antione Hélouin","Josephine Lou Guthrie Hélouin","Billie Shay Guthrie Hélouin"]],[104,["Lindsay Guthrie Specian","David Specian"]],[261,["Wyatt Hamilton","Marina"]],[205,["Jeremy Hauf"]],[188,["Holly Hoffman","Caden Larkin"]],[155,["Bonnie Hohman"]],[225,["Johnny Hohman"]],[234,["Paul Jackson"]],[232,["Sean Johnson","Lizzie Robinson"]],[247,["Kim Kehres","Tony Kehres"]],[216,["Tommy Kilseniki","Allee Farris"]],[148,["Tom Koster"]],[223,["Jordan Land","Ryan Land"]],[175,["Kelly Lembach","Mike Lembach"]],[147,["Nancy Marshall"]],[210,["Kali Massa","Tyler Kabdebo"]],[174,["Tom Mather","Bridget Mather"]],[267,["Haley Mays","Brandon Mays"]],[171,["Jim McFaul","Amy McFaul","Hannah McFaul"]],[262,["Shelby McKay","David McKay"]],[154,["Melinda Meginnis","Mac Meginnis"]],[228,["Jack Miller","Guest of Jack Miller"]],[208,["Andrew Mognahan","Jackie Mognahan"]],[126,["Alex Montena"]],[127,["Keith Montena"]],[120,["Wade Montena","Cindy Montena"]],[213,["Matt Muddiman"]],[192,["Maria Munoz","James Finnigan"]],[238,["Luz Myriam Gilmer","Guest of Luz Myriam Gilmer"]],[231,["Max O'Hagen"]],[264,["Nicole Ocasio"]],[206,["Joey Otenesack","Shannon O'Toole"]],[170,["Dan Overtoom","Cathy Overtoom"]],[240,["Kristina Pappademetriou","Peter Pappademetriou"]],[239,["Pamela Pederson","Mark Pederson"]],[266,["Kelsey Pflugrad","Jack Wilhelm"]],[162,["Max Pflugrad","Sarah Pflugrad"]],[222,["Alex Potter","Shane Potter"]],[180,["Jenifer Preyers","Guest of Jenifer Preyers"]],[181,["Jessica Preyers"]],[119,["Rosemary Preyers"]],[249,["Karen Reibsame","Guest of Karen Reibsame"]],[250,["Patrick Reibsame","Guest of Patrick Reibsame"]],[248,["Susan Reibsame","Pete Reibsame"]],[195,["Adam Rieder"]],[168,["Dan Roberts","Chris Roberts"]],[214,["Zach Roberts","Alyssa"]],[129,["Michael Roecker"]],[118,["Courtney Rogers","Brad Williams"]],[218,["Adam Roland"]],[257,["Tonnie Rozier"]],[209,["Wesley Rumple","Morgan Restivo"]],[253,["Akaila Sack","Harry Sack"]],[183,["Debra Saddler"]],[193,["Jacia Schick"]],[241,["Carly Schuster"]],[252,["Debbi Schuster"]],[242,["Kai Schuster"]],[224,["Maggie Silcott","Braden Silcott"]],[207,["Ben Smith","Kelly Smith"]],[194,["Natasha Smith","Glenn Smith"]],[227,["Tommy St. Clair","Hannah Simon","Halle Simon"]],[159,["Cathy Stith (Gran)"]],[235,["Andrea Swanson","Matt Ryan"]],[203,["Logan Sweeny"]],[198,["Andy Taylor"]],[230,["Josh Thomas"]],[157,["Cindy Thrift","John Phelps"]],[215,["Kyle Tyree","Madelyn"]],[244,["Erin Vijay","Nevin Vijay"]],[176,["Joey Walker","Noelle Walker"]],[134,["Joseph Walker","Lynda Macaluso"]],[132,["Lindsay Walker","Danny Walker"]],[179,["Ricky Walker","Carissa Walker"]],[184,["Bob Wanagill","Barbara Wanagill"]],[169,["Dave Wolf","Cathy Wolf"]],[151,["Vickie Wrenn"]],[251,["Melissa Zimak"]],[128,["Bernie Zutter","Connie Zutter"]]];
+const GUEST_PARTIES = [[211,["Josh Green","Elyssa Green"],["M","F"]],[202,["Addison Abramson"],["M"]],[219,["Leo Alba"],["M"]],[123,["Grace Amara","Quinn Graham"],["F","M"]],[263,["Shawna Ambrose"],["F"]],[121,["Taylor Anthony","Mike Anthony"],["F","M"]],[173,["Gary Appel","Lisa Appel"],["M","F"]],[152,["Sandi Armstrong"],["F"]],[260,["Erik Askeland","Malie Haire"],["M","F"]],[178,["Lexi Bangos"],["F"]],[167,["Greg Barger","Wendy Barger"],["M","F"]],[166,["Joe Barger","Kristin Barger"],["M","F"]],[254,["Jessie Barr","Matt Barr"],["F","M"]],[130,["Brooke Bauman"],["F"]],[237,["Christine Bauman","Guest of Christine Bauman"],["F","?"]],[115,["Diane Bauman","Sue Bauman"],["F","F"]],[116,["Matt Bauman","Ana Bauman"],["M","F"]],[117,["Ryan Bauman","Kenzie Bauman"],["M","F"]],[177,["Dick Becht","Betty Becht"],["M","F"]],[150,["Erik Beckett","Kelly Beckett","Spencer Beckett","Olivia Beckett"],["M","F","M","F"]],[182,["Lisa Bellante","Marc Bellante"],["F","M"]],[156,["Callie Bowman","Sean Bowman"],["F","M"]],[112,["Conrad Boyd","Taylor Livingston"],["M","F"]],[110,["Gabby Boyd","Stephen Deans"],["F","M"]],[160,["Jim Boyd","Gerri Boyd"],["M","F"]],[108,["Keith Boyd","Sandy Boyd"],["M","F"]],[165,["Michelle Boyd","Ben Calderone"],["F","M"]],[111,["Tanner Boyd","Nadia Kelly"],["M","F"]],[236,["John Bridges"],["M"]],[258,["Paige Brisbane"],["F"]],[124,["Kendall Carmody","Jake Pierson","Freya Roberts"],["F","M","F"]],[221,["Austin Causey"],["M"]],[143,["Judy Chester","John Chester","Anna Chester","Jack Chester","Elizabeth Chester"],["F","M","F","M","F"]],[229,["J.J. Clark","Ell"],["M","F"]],[201,["Trey Collins","Lauren Collins"],["M","F"]],[220,["Melissa Cotoure"],["F"]],[149,["Todd Cumbow","Suzie Cumbow","Hannah Cumbo","Ryan Cumbo"],["M","F","F","M"]],[259,["Marguerite Dugas"],["F"]],[158,["Christina Eckelt","Dustin Eckelt"],["F","M"]],[226,["Pearce Eisenhart","Brittany Scheifer"],["M","F"]],[243,["Ana Fagan","Michael Fagan"],["F","M"]],[245,["Kelly Fagan","Matteo Mascalchi Calveri"],["F","M"]],[122,["Michael Fagan"],["M"]],[161,["John Pflugrad","Dana Pflugrad","Kelsey Pflugrad","Garrett Pflugrad","Jack Wilhelm"],["M","F","F","M","M"]],[125,["Marley Fisher","Austin Ferrante"],["F","M"]],[246,["Megan Foix"],["F"]],[217,["Che Geer","Yulia"],["M","F"]],[212,["Andrew Gounaris"],["M"]],[199,["Chris Grant","Manuela","Terry Grant"],["M","F","F"]],[256,["James Gronberg"],["M"]],[200,["Flo Guerrero","Kelsey Taylor"],["F","F"]],[139,["George Guthrie","Barbara Guthrie"],["M","F"]],[137,["Kathy Guthrie","Ted O'Toole"],["F","M"]],[140,["Mary Ann Guthrie","Rob"],["F","M"]],[138,["Mike Guthrie","Cheryl Guthrie"],["M","F"]],[133,["Nancy Guthrie"],["F"]],[141,["Paul Guthrie"],["M"]],[131,["Peter Guthrie","Kathleen Guthrie"],["M","F"]],[142,["Sean Guthrie","Tina Guthrie"],["M","F"]],[136,["Steve Guthrie","Teresa Guthrie"],["M","F"]],[135,["Terry Guthrie"],["F"]],[102,["Tom Guthrie","Carol Guthrie"],["M","F"]],[153,["Tom Guthrie","Guest of Tom Guthrie"],["M","?"]],[101,["Shannon Guthrie","Sam Boyd"],["F","M"]],[105,["Caitlyn Guthrie Hélouin","Antione Hélouin","Josephine Lou Guthrie Hélouin","Billie Shay Guthrie Hélouin"],["F","M","F","F"]],[104,["Lindsay Guthrie Specian","David Specian"],["F","M"]],[261,["Wyatt Hamilton","Marina"],["M","F"]],[205,["Jeremy Hauf"],["M"]],[188,["Holly Hoffman","Caden Larkin"],["F","M"]],[155,["Bonnie Hohman"],["F"]],[225,["Johnny Hohman"],["M"]],[234,["Paul Jackson"],["M"]],[232,["Sean Johnson","Lizzie Robinson"],["M","F"]],[247,["Kim Kehres","Tony Kehres"],["F","M"]],[216,["Tommy Kilseniki","Allee Farris"],["M","F"]],[148,["Tom Koster"],["M"]],[223,["Jordan Land","Ryan Land"],["F","M"]],[175,["Kelly Lembach","Mike Lembach"],["F","M"]],[147,["Nancy Marshall"],["F"]],[210,["Kali Massa","Tyler Kabdebo"],["F","M"]],[174,["Tom Mather","Bridget Mather"],["M","F"]],[267,["Haley Mays","Brandon Mays"],["F","M"]],[171,["Jim McFaul","Amy McFaul","Hannah McFaul"],["M","F","F"]],[262,["Shelby McKay","David McKay"],["F","M"]],[154,["Melinda Meginnis","Mac Meginnis"],["F","M"]],[228,["Jack Miller","Guest of Jack Miller"],["M","?"]],[208,["Andrew Mognahan","Jackie Mognahan"],["M","F"]],[126,["Alex Montena"],["F"]],[127,["Keith Montena"],["M"]],[120,["Wade Montena","Cindy Montena"],["M","F"]],[213,["Matt Muddiman"],["M"]],[192,["Maria Munoz","James Finnigan"],["F","M"]],[238,["Luz Myriam Gilmer","Guest of Luz Myriam Gilmer"],["F","?"]],[231,["Max O'Hagen"],["M"]],[264,["Nicole Ocasio"],["F"]],[206,["Joey Otenesack","Shannon O'Toole"],["M","F"]],[170,["Dan Overtoom","Cathy Overtoom"],["M","F"]],[240,["Kristina Pappademetriou","Peter Pappademetriou"],["F","M"]],[239,["Pamela Pederson","Mark Pederson"],["F","M"]],[266,["Kelsey Pflugrad","Jack Wilhelm"],["F","M"]],[162,["Max Pflugrad","Sarah Pflugrad"],["M","F"]],[222,["Alex Potter","Shane Potter"],["F","M"]],[180,["Jenifer Preyers","Guest of Jenifer Preyers"],["F","?"]],[181,["Jessica Preyers"],["F"]],[119,["Rosemary Preyers"],["F"]],[249,["Karen Reibsame","Guest of Karen Reibsame"],["F","?"]],[250,["Patrick Reibsame","Guest of Patrick Reibsame"],["M","?"]],[248,["Susan Reibsame","Pete Reibsame"],["F","M"]],[195,["Adam Rieder"],["M"]],[168,["Dan Roberts","Chris Roberts"],["M","F"]],[214,["Zach Roberts","Alyssa"],["M","F"]],[129,["Michael Roecker"],["M"]],[118,["Courtney Rogers","Brad Williams"],["F","M"]],[218,["Adam Roland"],["M"]],[257,["Tonnie Rozier"],["M"]],[209,["Wesley Rumple","Morgan Restivo"],["M","F"]],[253,["Akaila Sack","Harry Sack"],["F","M"]],[183,["Debra Saddler"],["F"]],[193,["Jacia Schick"],["F"]],[241,["Carly Schuster"],["F"]],[252,["Debbi Schuster"],["F"]],[242,["Kai Schuster"],["M"]],[224,["Maggie Silcott","Braden Silcott"],["F","M"]],[207,["Ben Smith","Kelly Smith"],["M","F"]],[194,["Natasha Smith","Glenn Smith"],["F","M"]],[227,["Tommy St. Clair","Hannah Simon","Halle Simon"],["M","F","F"]],[159,["Cathy Stith (Gran)"],["F"]],[235,["Andrea Swanson","Matt Ryan"],["F","M"]],[203,["Logan Sweeny"],["M"]],[198,["Andy Taylor"],["M"]],[230,["Josh Thomas"],["M"]],[157,["Cindy Thrift","John Phelps"],["F","M"]],[215,["Kyle Tyree","Madelyn"],["M","F"]],[244,["Erin Vijay","Nevin Vijay"],["F","M"]],[176,["Joey Walker","Noelle Walker"],["M","F"]],[134,["Joseph Walker","Lynda Macaluso"],["M","F"]],[132,["Lindsay Walker","Danny Walker"],["F","M"]],[179,["Ricky Walker","Carissa Walker"],["M","F"]],[184,["Bob Wanagill","Barbara Wanagill"],["M","F"]],[169,["Dave Wolf","Cathy Wolf"],["M","F"]],[151,["Vickie Wrenn"],["F"]],[251,["Melissa Zimak"],["F"]],[128,["Bernie Zutter","Connie Zutter"],["M","F"]]];
 
 // Normalize: lowercase, strip diacritics (é→e), remove apostrophes/periods, collapse spaces
 function normName(s) {
@@ -1527,11 +1527,11 @@ function editDist(a,b) {
 
 // Build exact-match lookup index (normalized keys)
 const GUEST_INDEX = {};
-for (const [partyId, members] of GUEST_PARTIES) {
+for (const [partyId, members, genders] of GUEST_PARTIES) {
   for (const name of members) {
     const key = normName(name);
     if (!key.startsWith('guest of') && key.split(' ').length >= 2) {
-      GUEST_INDEX[key] = { partyId, members };
+      GUEST_INDEX[key] = { partyId, members, genders };
     }
   }
 }
@@ -1563,7 +1563,7 @@ function handleLookup() {
   // 2. Fuzzy match — allow ≤1 edit on first name AND ≤1 edit on last name
   if (!match) {
     let bestScore = Infinity, bestMatch = null;
-    for (const [partyId, members] of GUEST_PARTIES) {
+    for (const [partyId, members, genders] of GUEST_PARTIES) {
       for (const name of members) {
         if (name.toLowerCase().startsWith('guest of')) continue;
         const parts = normName(name).split(' ');
@@ -1574,7 +1574,7 @@ function handleLookup() {
         const dL = editDist(nLast,  gLast);
         if (dF <= 1 && dL <= 1) {
           const score = dF + dL;
-          if (score < bestScore) { bestScore = score; bestMatch = { partyId, members }; }
+          if (score < bestScore) { bestScore = score; bestMatch = { partyId, members, genders }; }
         }
       }
     }
@@ -1587,14 +1587,17 @@ function handleLookup() {
     return;
   }
 
-  showRsvpStep(rawFirst + ' ' + rawLast, match.partyId, match.members);
+  showRsvpStep(rawFirst + ' ' + rawLast, match.partyId, match.members, match.genders);
 }
 
-function buildEventRows(container, members, fieldPrefix, skipGuests) {
+function buildEventRows(container, members, genders, fieldPrefix, maleOnly) {
   container.innerHTML = '';
-  members.forEach((member) => {
-    if (skipGuests && member.toLowerCase().startsWith('guest of')) return;
-    const displayName = member.startsWith('Guest of') ? 'Plus One / Guest' : member.split(' ')[0];
+  members.forEach((member, i) => {
+    const gender = genders ? genders[i] : '?';
+    const isGuestOf = member.toLowerCase().startsWith('guest of');
+    // Toast: only named males; Welcome Party: everyone (Guest of shown as Plus One)
+    if (maleOnly && (isGuestOf || gender !== 'M')) return;
+    const displayName = isGuestOf ? 'Plus One / Guest' : member.split(' ')[0];
     container.insertAdjacentHTML('beforeend',
       `<div class="flex items-center justify-between py-3">
         <span class="text-[#3a2c1e] text-sm">Is ${displayName} attending?</span>
@@ -1624,7 +1627,7 @@ function updateConditionalSections() {
   document.getElementById('sorryMsg').classList.toggle('hidden', !allAnsweredNo);
 }
 
-function showRsvpStep(name, partyId, members) {
+function showRsvpStep(name, partyId, members, genders) {
   document.getElementById('rsvpStep1').classList.add('hidden');
   document.getElementById('fieldGuestName').value = name;
   document.getElementById('fieldPartyId').value = partyId;
@@ -1667,11 +1670,14 @@ function showRsvpStep(name, partyId, members) {
   document.getElementById('extraSections').classList.add('hidden');
   document.getElementById('sorryMsg').classList.add('hidden');
 
-  // Gentlemen's Toast (Thu)
-  buildEventRows(document.getElementById('toastAttendance'), members, "Gentlemen's Toast", true);
+  // Gentlemen's Toast (Thu) — males only; hide section entirely if no males in party
+  const hasMales = genders && genders.some((g, i) => g === 'M' && !members[i].toLowerCase().startsWith('guest of'));
+  const toastWrap = document.getElementById('toastAttendance').closest('.mb-6');
+  toastWrap.classList.toggle('hidden', !hasMales);
+  if (hasMales) buildEventRows(document.getElementById('toastAttendance'), members, genders, "Gentlemen's Toast", true);
 
-  // Welcome Party (Fri)
-  buildEventRows(document.getElementById('welcomeAttendance'), members, 'Welcome Party', false);
+  // Welcome Party (Fri) — all guests
+  buildEventRows(document.getElementById('welcomeAttendance'), members, genders, 'Welcome Party', false);
 
   document.getElementById('rsvpForm').classList.remove('hidden');
 }
