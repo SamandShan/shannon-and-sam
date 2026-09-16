@@ -1249,18 +1249,6 @@ img { display: block; max-width: 100%; }
             </div>
           </div>
 
-          <!-- Friday: Welcome Party -->
-          <div class="mb-6">
-            <div class="border-t border-[#ede3d4] pt-6">
-              <p class="f-label mb-1">Welcome Party</p>
-              <p class="text-[#9a8878] text-xs leading-relaxed mb-4">
-                Friday, Feb 19 · 7:00 PM – 9:00 PM · Cocktails &amp; good company the night before the big day<br>
-                Casa Bonita · 105 N Riverside Dr, Indialantic FL 32903
-              </p>
-              <div id="welcomeAttendance" class="divide-y divide-[#ede3d4]"></div>
-            </div>
-          </div>
-
           <!-- Shuttle bus -->
           <div class="mb-6 border-t border-[#ede3d4] pt-6">
             <p class="f-label mb-3">Are you planning on using the shuttle bus for transportation from your hotel?</p>
@@ -1676,8 +1664,6 @@ function showRsvpStep(name, partyId, members, genders) {
   toastWrap.classList.toggle('hidden', !hasMales);
   if (hasMales) buildEventRows(document.getElementById('toastAttendance'), members, genders, "Gentlemen's Toast", true);
 
-  // Welcome Party (Fri) — all guests
-  buildEventRows(document.getElementById('welcomeAttendance'), members, genders, 'Welcome Party', false);
 
   document.getElementById('rsvpForm').classList.remove('hidden');
 }
