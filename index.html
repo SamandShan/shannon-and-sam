@@ -283,6 +283,7 @@ img { display: block; max-width: 100%; }
 
 /* ── REC CARDS ── */
 .rec-card {
+  display: block; text-decoration: none; color: inherit; cursor: pointer;
   border-radius: 8px; padding: 1rem 1.2rem;
   background: #f7f0e4;
   border: 1px solid rgba(160,144,128,0.18);
@@ -849,175 +850,163 @@ img { display: block; max-width: 100%; }
       <button class="filter-btn" data-filter="eat">Eat</button>
       <button class="filter-btn" data-filter="drink">Drink</button>
       <button class="filter-btn" data-filter="explore">Explore</button>
-      <button class="filter-btn" data-filter="activity">Activities</button>
       <button class="filter-btn" data-filter="shop">Shop</button>
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3" id="recsGrid">
 
-      <!-- EAT (15) -->
-      <div class="rec-card featured" data-cat="eat">
+      <!-- EAT -->
+      <a class="rec-card featured" data-cat="eat" href="https://maps.google.com/?q=The+Chart+House+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">The Chart House <span style="color:#727A6F;">★</span></p>
         <p class="text-[0.7rem] text-[#9a8878] mt-1">Where Shannon & Sam met</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=Djon%27s+Steak+%26+Lobster+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Djon's Steak & Lobster</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=Ichabod%27s+Dockside+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Ichabod's Dockside</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=The+Surfinista+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">The Surfinista</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=Skewers+Mediterranean+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Skewers Mediterranean</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=Red+Ginger+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Red Ginger</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=Trattoria+Bella+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Trattoria Bella</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=Villa+Palma+Ristorante+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Villa Palma Ristorante</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=Mister+O1+Pizza+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Mister O1 Pizza</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=FM+Pizza+Oven+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">FM Pizza Oven</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=Pineapples+restaurant+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Pineapples</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=BJ%27s+Restaurant+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">BJ's Restaurant</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=Bubbakoo%27s+Burritos+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Bubbakoo's Burritos</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=Cowboy+Coffee+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Cowboy Coffee</p>
-      </div>
-      <div class="rec-card" data-cat="eat">
+      </a>
+      <a class="rec-card" data-cat="eat" href="https://maps.google.com/?q=Thai+Thai+II+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Eat</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Thai Thai II</p>
-      </div>
+      </a>
 
-      <!-- DRINK (9) -->
-      <div class="rec-card" data-cat="drink">
+      <!-- DRINK -->
+      <a class="rec-card" data-cat="drink" href="https://maps.google.com/?q=Dolly%27s+Wine+Bar+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Dolly's Wine Bar</p>
-      </div>
-      <div class="rec-card" data-cat="drink">
+      </a>
+      <a class="rec-card" data-cat="drink" href="https://maps.google.com/?q=Hell+n+Blazes+Brewing+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Hell 'n Blazes Brewing</p>
-      </div>
-      <div class="rec-card" data-cat="drink">
+      </a>
+      <a class="rec-card" data-cat="drink" href="https://maps.google.com/?q=Intracoastal+Brewing+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Intracoastal Brewing</p>
-      </div>
-      <div class="rec-card" data-cat="drink">
+      </a>
+      <a class="rec-card" data-cat="drink" href="https://maps.google.com/?q=Lou%27s+Blues+Bar+%26+Grill+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Lou's Blues Bar & Grill</p>
-      </div>
-      <div class="rec-card" data-cat="drink">
+      </a>
+      <a class="rec-card" data-cat="drink" href="https://maps.google.com/?q=Meg+O%27Malley%27s+Irish+Pub+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Meg O'Malley's Irish Pub</p>
-      </div>
-      <div class="rec-card" data-cat="drink">
+      </a>
+      <a class="rec-card" data-cat="drink" href="https://maps.google.com/?q=Monkey+Bar+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Monkey Bar</p>
-      </div>
-      <div class="rec-card" data-cat="drink">
+      </a>
+      <a class="rec-card" data-cat="drink" href="https://maps.google.com/?q=Mainstreet+Pub+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Mainstreet Pub</p>
-      </div>
-      <div class="rec-card" data-cat="drink">
+      </a>
+      <a class="rec-card" data-cat="drink" href="https://maps.google.com/?q=BB%27s+Beach+Bar+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">BB's Beach Bar</p>
-      </div>
-      <div class="rec-card" data-cat="drink">
+      </a>
+      <a class="rec-card" data-cat="drink" href="https://maps.google.com/?q=The+County+Line+Saloon+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">The County Line Saloon</p>
-      </div>
+      </a>
+      <a class="rec-card" data-cat="drink" href="https://maps.google.com/?q=The+Landing+Rooftop+Melbourne+FL" target="_blank" rel="noopener">
+        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Drink</p>
+        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">The Landing Rooftop</p>
+      </a>
 
-      <!-- EXPLORE (6) -->
-      <div class="rec-card" data-cat="explore">
+      <!-- EXPLORE -->
+      <a class="rec-card" data-cat="explore" href="https://maps.google.com/?q=Brevard+Zoo+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Brevard Zoo</p>
-      </div>
-      <div class="rec-card" data-cat="explore">
+      </a>
+      <a class="rec-card" data-cat="explore" href="https://maps.google.com/?q=Canova+Beach+Park+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Canova Beach Park</p>
-      </div>
-      <div class="rec-card" data-cat="explore">
+      </a>
+      <a class="rec-card" data-cat="explore" href="https://maps.google.com/?q=Sebastian+Inlet+State+Park+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Sebastian Inlet State Park</p>
-      </div>
-      <div class="rec-card" data-cat="explore">
+      </a>
+      <a class="rec-card" data-cat="explore" href="https://maps.google.com/?q=Turkey+Creek+Sanctuary+Palm+Bay+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Turkey Creek Sanctuary</p>
-      </div>
-      <div class="rec-card" data-cat="explore">
+      </a>
+      <a class="rec-card" data-cat="explore" href="https://maps.google.com/?q=Bass+Pro+Shops+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Bass Pro Shops</p>
-      </div>
-      <div class="rec-card" data-cat="explore">
+      </a>
+      <a class="rec-card" data-cat="explore" href="https://maps.google.com/?q=Pieloch+Dog+Park+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Explore</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Pieloch Dog Park</p>
-      </div>
+      </a>
 
-      <!-- ACTIVITIES (3) -->
-      <div class="rec-card" data-cat="activity">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Activities</p>
-        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Andretti Thrill Park</p>
-      </div>
-      <div class="rec-card" data-cat="activity">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Activities</p>
-        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Arcade Monsters Melbourne</p>
-      </div>
-      <div class="rec-card" data-cat="activity">
-        <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Activities</p>
-        <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Shore Lanes Palm Bay</p>
-        <p class="text-[0.7rem] text-[#9a8878] mt-1">Bowling!</p>
-      </div>
-
-      <!-- SHOP (5) -->
-      <div class="rec-card" data-cat="shop">
+      <!-- SHOP -->
+      <a class="rec-card" data-cat="shop" href="https://maps.google.com/?q=Casa+Bonita+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Shop</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Casa Bonita</p>
-      </div>
-      <div class="rec-card" data-cat="shop">
+      </a>
+      <a class="rec-card" data-cat="shop" href="https://maps.google.com/?q=Catalyst+Shop+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Shop</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Catalyst Shop</p>
-      </div>
-      <div class="rec-card" data-cat="shop">
+      </a>
+      <a class="rec-card" data-cat="shop" href="https://maps.google.com/?q=The+Salty+Shack+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Shop</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">The Salty Shack</p>
-      </div>
-      <div class="rec-card" data-cat="shop">
+      </a>
+      <a class="rec-card" data-cat="shop" href="https://maps.google.com/?q=Longboard+House+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Shop</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Longboard House</p>
-      </div>
-      <div class="rec-card" data-cat="shop">
+      </a>
+      <a class="rec-card" data-cat="shop" href="https://maps.google.com/?q=Melbourne+Square+Mall+Melbourne+FL" target="_blank" rel="noopener">
         <p class="text-[0.58rem] tracking-[0.18em] uppercase text-[#a09080] mb-1">Shop</p>
         <p class="font-display text-[#3a2c1e]" style="font-size:1.05rem;">Melbourne Square</p>
-      </div>
+      </a>
 
     </div>
   </div>
