@@ -1255,7 +1255,7 @@ img { display: block; max-width: 100%; }
 
           <!-- Shuttle bus -->
           <div class="mb-6 border-t border-[#ede3d4] pt-6">
-            <p class="f-label mb-3">Are you planning on using the shuttle bus for transportation from your hotel?</p>
+            <p class="f-label mb-3">If you are planning on staying at one of the selected hotels, are you planning on using the shuttle bus for transportation?</p>
             <div class="flex gap-6 mb-4">
               <label class="flex items-center gap-1.5 cursor-pointer text-sm text-[#6a5848]">
                 <input type="radio" name="Shuttle Bus" value="Yes" id="busYes" class="accent-[#727A6F]">
@@ -1264,6 +1264,10 @@ img { display: block; max-width: 100%; }
               <label class="flex items-center gap-1.5 cursor-pointer text-sm text-[#6a5848]">
                 <input type="radio" name="Shuttle Bus" value="No" id="busNo" class="accent-[#727A6F]">
                 <span>No</span>
+              </label>
+              <label class="flex items-center gap-1.5 cursor-pointer text-sm text-[#6a5848]">
+                <input type="radio" name="Shuttle Bus" value="Undecided" id="busUndecided" class="accent-[#727A6F]">
+                <span>Undecided</span>
               </label>
             </div>
             <div id="hotelDropdownWrap" class="hidden">
@@ -1676,9 +1680,11 @@ function showRsvpStep(name, partyId, members, genders) {
 document.getElementById('busYes').addEventListener('change', function() {
   document.getElementById('hotelDropdownWrap').classList.remove('hidden');
 });
-document.getElementById('busNo').addEventListener('change', function() {
-  document.getElementById('hotelDropdownWrap').classList.add('hidden');
-  document.getElementById('hotelSelect').value = '';
+['busNo','busUndecided'].forEach(id => {
+  document.getElementById(id).addEventListener('change', function() {
+    document.getElementById('hotelDropdownWrap').classList.add('hidden');
+    document.getElementById('hotelSelect').value = '';
+  });
 });
 
 // Start over
@@ -1689,6 +1695,7 @@ document.getElementById('startOverBtn').addEventListener('click', () => {
   document.getElementById('hotelDropdownWrap').classList.add('hidden');
   document.getElementById('busYes').checked = false;
   document.getElementById('busNo').checked = false;
+  document.getElementById('busUndecided').checked = false;
   document.getElementById('hotelSelect').value = '';
   document.getElementById('rsvpStep1').classList.remove('hidden');
   document.getElementById('lookupFirst').value = '';
